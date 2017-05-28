@@ -1,7 +1,7 @@
 {
-  "name": "victor-hugo",
+  "name": "tedxaccd-2017",
   "version": "1.0.0",
-  "description": "Victor Hugo is a Hugo boilerplate for creating truly epic websites!",
+  "description": "Official site for the 2017 TEDxACCD event.",
   "main": "index.js",
   "scripts": {
     "hugo": "gulp hugo",
