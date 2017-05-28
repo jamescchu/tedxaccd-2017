@@ -1,15 +1,27 @@
 # Victor Hugo
 
-**A [Hugo](http://gohugo.io/) boilerplate for creating truly epic websites**
+**A [Hugo](https://gohugo.io/) boilerplate for creating truly epic websites**
 
-This is a boilerplate for using Hugo as a static site generator and Gulp + Weback as your
+This is a boilerplate for using Hugo as a static site generator and Gulp + Webpack as your
 asset pipeline.
 
 It's setup to use post-css and babel for CSS and JavaScript.
 
+This project is released under the [MIT license](LICENSE). Please make sure you understand its implications and guarantees.
+
 ## Usage
 
-Clone this repository and run:
+Be sure that you have the latest node, npm and [Hugo](https://gohugo.io/) installed. If you need to install hugo on OSX, run:
+
+```bash
+brew install hugo
+```
+
+If you don't use OSX or don't use homebrew, follow the instructions for installation here instead:
+
+http://gohugo.io/overview/installing/
+
+Next, clone this repository and run:
 
 ```bash
 npm install
@@ -37,7 +49,7 @@ npm run build
 |  |--static           // Files in here ends up in the public folder
 |--src                 // Files that will pass through the asset pipeline
 |  |--css              // CSS files in the root of this folder will end up in /css/...
-|  |--js               // app.js will be compiled to /js/app.js with babel
+|  |--js               // app.js will be compiled to /app.js with babel
 ```
 
 ## Basic Concepts
@@ -70,8 +82,10 @@ to `/dist/css/{filename}.css`. Import statements will be resolved as part of the
 
 Now netlify will build and deploy your site whenever you push to git.
 
-##  Enjoy!!
+You can also click this button:
 
-#### License
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/eliwilliamson/victor-hugo)
 
-[MIT](LICENSE)
+
+
+## Enjoy!!
