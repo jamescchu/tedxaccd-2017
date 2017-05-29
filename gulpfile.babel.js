@@ -7,6 +7,7 @@ import cssnext from "postcss-cssnext";
 import BrowserSync from "browser-sync";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
+import beautify from "gulp-html-beautify";
 
 const browserSync = BrowserSync.create();
 const hugoBin = "hugo";
@@ -17,6 +18,12 @@ gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture
 
 gulp.task("build", ["css", "js", "hugo"]);
 gulp.task("build-preview", ["css", "js", "hugo-preview"]);
+
+gulp.task("beautify", () => (
+  gulp.src("./dist/**/*.html")
+    .pipe(beautify())
+    .pipe(gulp.dest("./dist/"))
+));
 
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
@@ -39,7 +46,7 @@ gulp.task("js", (cb) => {
   });
 });
 
-gulp.task("server", ["hugo", "css", "js"], () => {
+gulp.task("server", ["hugo", "css", "js", "beautify"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -47,7 +54,7 @@ gulp.task("server", ["hugo", "css", "js"], () => {
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
   gulp.watch("./src/css/**/*.css", ["css"]);
-  gulp.watch("./site/**/*", ["hugo"]);
+  gulp.watch("./site/**/*", ["hugo", "beautify"]);
 });
 
 function buildSite(cb, options) {
