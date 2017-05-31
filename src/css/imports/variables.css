@@ -1,0 +1,10 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+}
+
+@custom-media --medium (width >= 500px);
+
+@custom-media --large (width >= 1024px);
+
+@custom-media --xlarge (width >= 1200px);

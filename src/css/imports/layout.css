@@ -1,0 +1,21 @@
+.wrapper {
+  margin: 0 1.6rem;
+  @media (--medium) {
+    max-width: 50rem;
+    margin: auto;
+  }
+  @media (--large) {
+    max-width: 75rem;
+    margin: auto;
+  }
+  @media (--xlarge) {
+    max-width: 100rem;
+    margin: auto;
+  }
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
