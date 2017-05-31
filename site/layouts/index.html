@@ -1,12 +1,19 @@
 {{ partial "header" . }}
+{{ partial "svg/inline" . }}
 
 <div class="wrapper">
-  <div class="hero">
-    <h1>We're<br>Back</h1>
-    <p>TEDx is coming back to ArtCenter College of Design this fall.<br>The team is currently hard at work in making it happen.</p>
-    <p><strong>Please check back soon!</strong></p>
-  </div>
+    <header>
+      <div class="logo">
+        <svg role="img" class="logo-white" style="width: 100%; padding-bottom: 92%; overflow: visible">
+          <use xlink:href="#logo-white"></use>
+        </svg>
+      </div>
+    </header>
+    <div class="hero">
+        <h1>We're<br>Back</h1>
+        <p>TEDx is coming back to ArtCenter College of Design this fall.<br>The team is currently hard at work in making it happen.</p>
+        <p><strong>Please check back soon!</strong></p>
+    </div>
 </div>
-
 
 {{ partial "footer" . }}

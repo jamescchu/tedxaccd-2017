@@ -8,6 +8,8 @@ import BrowserSync from "browser-sync";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
 import beautify from "gulp-html-beautify";
+import svgstore from "gulp-svgstore";
+import inject from "gulp-inject";
 
 const browserSync = BrowserSync.create();
 const hugoBin = "hugo";
@@ -24,6 +26,21 @@ gulp.task("beautify", () => (
     .pipe(beautify())
     .pipe(gulp.dest("./dist/"))
 ));
+
+gulp.task("svgstore", () => {
+  const svgs = gulp
+    .src("./src/svg/*.svg")
+    .pipe(svgstore({ inlineSvg: true }));
+
+  function fileContents(filePath, file) {
+      return file.contents.toString();
+  }
+
+  return gulp
+      .src("./site/layouts/partials/svg/inline.html")
+      .pipe(inject(svgs, { transform: fileContents }))
+      .pipe(gulp.dest("./site/layouts/partials/svg/"));
+});
 
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
@@ -46,7 +63,7 @@ gulp.task("js", (cb) => {
   });
 });
 
-gulp.task("server", ["hugo", "css", "js"], () => {
+gulp.task("server", ["svgstore", "hugo", "css", "js"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
