@@ -16,7 +16,7 @@ const defaultArgs = ["-d", "../dist", "-s", "site", "-v"];
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
 
-gulp.task("build", ["css", "js", "hugo"]);
+gulp.task("build", ["css", "js", "hugo", "beautify"]);
 gulp.task("build-preview", ["css", "js", "hugo-preview"]);
 
 gulp.task("beautify", () => (
@@ -46,7 +46,7 @@ gulp.task("js", (cb) => {
   });
 });
 
-gulp.task("server", ["hugo", "css", "js", "beautify"], () => {
+gulp.task("server", ["hugo", "css", "js"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -54,7 +54,7 @@ gulp.task("server", ["hugo", "css", "js", "beautify"], () => {
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
   gulp.watch("./src/css/**/*.css", ["css"]);
-  gulp.watch("./site/**/*", ["hugo", "beautify"]);
+  gulp.watch("./site/**/*", ["hugo"]);
 });
 
 function buildSite(cb, options) {
