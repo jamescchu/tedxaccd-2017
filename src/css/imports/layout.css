@@ -22,12 +22,13 @@ html {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  perspective: 1000px;
+  perspective: 100rem;
 }
 
 .logo {
   width: 15rem;
   margin-top: 2.4rem;
+  perspective: 100rem;
   @media (--medium) {
     width: 20rem;
   }

@@ -37,9 +37,9 @@
   top: 45vh;
   width: 5rem;
   @media (--large) {
-    top: 45vh;
-    left: 55vw;
-    width: 15rem;
+    top: 40vh;
+    left: 65vw;
+    width: 7rem;
   }
 }
 
@@ -50,8 +50,8 @@
   left: 10rem;
   width: 7rem;
   @media (--large) {
-    left: 60rem;
-    width: 14rem;
+    left: 40vw;
+    width: 12rem;
   }
 }
 
@@ -62,6 +62,7 @@
   width: 4rem;
   @media (--large) {
     width: 10rem;
+    left: 80vw;
   }
 }
 
