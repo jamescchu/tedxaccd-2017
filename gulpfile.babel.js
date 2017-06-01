@@ -10,6 +10,7 @@ import webpackConfig from "./webpack.conf";
 import beautify from "gulp-html-beautify";
 import svgstore from "gulp-svgstore";
 import inject from "gulp-inject";
+import svgmin from "gulp-svgmin";
 
 const browserSync = BrowserSync.create();
 const hugoBin = "hugo";
@@ -30,6 +31,7 @@ gulp.task("beautify", () => (
 gulp.task("svgstore", () => {
   const svgs = gulp
     .src("./src/svg/*.svg")
+    .pipe(svgmin())
     .pipe(svgstore({ inlineSvg: true }));
 
   function fileContents(filePath, file) {
