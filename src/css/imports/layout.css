@@ -34,7 +34,29 @@ html {
   }
 }
 
-.icon {
-  width: 2.4rem;
-  height: 2.4rem;
+.social__link {
+  display: block;
+}
+
+.social__icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--black);
+}
+
+.social__icon:hover {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--tedPrimary);
+}
+
+.hero__social {
+  padding-right: 3.2rem;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
