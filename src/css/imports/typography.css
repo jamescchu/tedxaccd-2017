@@ -41,3 +41,7 @@ h1 {
     font-size: 14.8rem;
   }
 }
+
+ul {
+  list-style: none;
+}
