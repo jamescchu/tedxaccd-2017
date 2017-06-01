@@ -3,17 +3,17 @@
   font-style: normal;
   font-weight: 400;
   src:
-    local("Suisse Int'l"),
+    //local("Suisse Int'l"),
     url('/fonts/SuisseIntl-Regular-WebS.woff2') format('woff2'),
     url('/fonts/SuisseIntl-Regular-WebS.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Suisse Intl';
+  font-family: 'Suisse Intl Bold';
   font-style: normal;
   font-weight: 700;
   src:
-    local("Suisse Int'l"),
+    //local("Suisse Int'l"),
     url('/fonts/SuisseIntl-Bold-WebS.woff2') format('woff2'),
     url('/fonts/SuisseIntl-Bold-WebS.woff') format('woff');
 }
@@ -23,6 +23,7 @@ html {
   font-size: 62.5%;
   font-family: 'Suisse Intl', sans-serif;
   font-weight: 400;
+  text-rendering: optimizeLegibility;
 }
 
 p {
@@ -33,11 +34,11 @@ p {
 }
 
 h1 {
-  font-family: 'Suisse Intl', sans-serif;
-  font-size: 7.2rem;
-  line-height: 1;
+  font-family: 'Suisse Intl Bold', sans-serif;
+  font-size: 7.4rem;
+  line-height: 0.9;
   margin: 0;
   @media (--medium) {
-    font-size: 14.4rem;
+    font-size: 14.8rem;
   }
 }
