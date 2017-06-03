@@ -1,2 +1,7 @@
 // JS Goes here - ES6 supported
-import parallax from "parallax-js";
+import Parallax from "parallax-js";
+const scene = document.getElementById('scene');
+const parallax = new Parallax(scene, {
+  scalarX: 4,
+  scalarY: 4
+});
