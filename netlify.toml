@@ -5,5 +5,5 @@
 [context.deploy-preview]
   command = "npm run build-preview"
 
-[context.coming-soon]
-  command = "npm run build"
+[context.2015]
+  command = ""
