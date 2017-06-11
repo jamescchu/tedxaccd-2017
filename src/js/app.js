@@ -5,3 +5,4 @@ const parallax = new Parallax(scene, {
   scalarX: 4,
   scalarY: 4
 });
+import Barba from "barba.js";
