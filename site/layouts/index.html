@@ -1,55 +1,31 @@
-{{ partial "header" . }} {{ partial "svg/inline" . }}
-<div class="wrapper">
-    <div id="scene" class="scene">
-        <div class="layer" data-depth="0.90">
-            <img src="./images/bg-cross.png" class="bg-cross">
-        </div>
-        <div class="layer" data-depth="0.80">
-            <img src="./images/bg-arrow-up.png" class="bg-arrow-up">
-        </div>
-        <div class="layer" data-depth="0.40">
-            <img src="./images/bg-circle.png" class="bg-circle">
-        </div>
-        <div class="layer" data-depth="0.30">
-            <img src="./images/bg-squiggle.png" class="bg-squiggle">
-        </div>
-        <div class="layer" data-depth="0.20">
-            <img src="./images/bg-arrow-down.png" class="bg-arrow-down">
-        </div>
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="container">
+  <div class="splash">
+    <h1>TEDxACCD is Here</h1>
+  </div>
+  <section class="slab">
+    <h2>TEDx</h2>
+    <p>Content content about how TEDx is an independently organized event that has nothing to do with TED and their stuff.</p>
+  </section>
+  <section class="slab">
+    <h2>Key Speakers</h2>
+    <p>Short blurb about how our speakers are the most awesome people on the planet.</p>
+    <div class="slab__speakers">
+
     </div>
-    <header>
-      <svg viewBox="0 0 283 63" role="img" class="logo">
-        <use xlink:href="#logo-white"></use>
-      </svg>
-    </header>
-    <div class="hero">
-        <h1>We’re<br>Back</h1>
-        <p>TEDxACCD is returning this fall.<br>Our team is hard at work to make it happen.</p>
-        <p><strong>Please check back soon for details!</strong></p>
-        <ul>
-            <li class="hero__social">
-              <a class="social__link" href="https://www.facebook.com/tedxaccd/" target="_blank">
-                <svg viewBox="0 0 16 16" role="img" class="social__icon">
-                  <use xlink:href="#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="hero__social">
-              <a class="social__link" href="https://instagram.com/tedxaccd" target="_blank">
-                <svg viewBox="0 0 16 16" role="img" class="social__icon">
-                  <use xlink:href="#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="hero__social">
-              <a class="social__link" href="https://twitter.com/tedxaccd" target="_blank">
-                <svg viewBox="0 0 16 16" role="img" class="social__icon">
-                  <use xlink:href="#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-        </ul>
+  </section>
+  <section class="slab">
+    <h2>Venue and Time</h2>
+    <p>Wonderfully written content that helps explain why ArtCenter is such a beautiful place to be hosting an event in.</p>
+  </section>
+  <section class="slab">
+    <h2>Sponsors</h2>
+    <p>This event is made possible by the following.</p>
+    <div class="slab__sponsors">
+
     </div>
+  </section>
 </div>
 
 {{ partial "footer" . }}
