@@ -64,27 +64,32 @@ h3 {
   text-transform: uppercase;
 }
 
-.timer {
+.details {
   text-align: center;
 }
 
-.timer__date {
+.details__date {
   display: inline-block;
   padding: 0 2.4rem;
 }
 
-.timer__value {
+.details__value {
   color: var(--tedPrimary);
   font-size: 2.4rem;
   display: inline-block;
 }
 
-.timer__label {
+.details__label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+a:link, a:visited {
+  color: var(--tedPrimary);
   font-size: 1.2rem;
   text-transform: uppercase;
 }
 
 a:hover {
-  color: var(--tedPrimary);
   text-decoration: none;
 }
