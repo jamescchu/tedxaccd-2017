@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "TEDxACCD | Coming Soon"
+title = "We're Back - TEDxACCD"
 
 [params]
   author = "TEDxACCD"
-  description = "TEDxACCD is an independently organized TED event. The talk aims to connect ideas and emerging patterns across disciplines. Event is coming soon to ArtCenter College of Design this fall."
+  description = "TEDxACCD is an independently organized TED event. The talk aims to connect ideas and emerging patterns across disciplines. The event is coming soon to ArtCenter College of Design this fall."
