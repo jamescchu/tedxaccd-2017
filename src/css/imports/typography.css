@@ -94,6 +94,15 @@ h3 {
   }
 }
 
+.details__links {
+  font-size: 1.2rem;
+  padding: 0 0 2.4rem 0;
+  @media (--large) {
+    font-size: 1.6rem;
+    padding: 0 0 3.2rem 0;
+  }
+}
+
 a:link, a:visited {
   color: var(--tedPrimary);
   font-size: 1.2rem;
@@ -103,10 +112,15 @@ a:link, a:visited {
   }
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .link--lowercase {
   text-transform: lowercase;
 }
 
-a:hover {
-  text-decoration: none;
+.text--italic {
+  font-family: 'Suisse Works Italic', serif;
+  font-style: italic;
 }
