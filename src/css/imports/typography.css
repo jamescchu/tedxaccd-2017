@@ -1,27 +1,37 @@
 @font-face {
-  font-family: 'Suisse Intl';
+  font-family: 'Suisse Works';
   font-style: normal;
   font-weight: 400;
   src:
     //local("Suisse Int'l"),
-    url('/fonts/SuisseIntl-Regular-WebS.woff2') format('woff2'),
-    url('/fonts/SuisseIntl-Regular-WebS.woff') format('woff');
+    url('/fonts/SuisseWorks-Regular-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseWorks-Regular-WebS.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Suisse Intl Bold';
-  font-style: normal;
-  font-weight: 700;
+  font-family: 'Suisse Works Italic';
+  font-style: italic;
+  font-weight: 400;
   src:
     //local("Suisse Int'l"),
-    url('/fonts/SuisseIntl-Bold-WebS.woff2') format('woff2'),
-    url('/fonts/SuisseIntl-Bold-WebS.woff') format('woff');
+    url('/fonts/SuisseWorks-RegularItalic-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseWorks-RegularItalic-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Intl Mono';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    //local("Suisse Int'l"),
+    url('/fonts/SuisseIntlMono-Regular-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntlMono-Regular-WebS.woff') format('woff');
 }
 
 body,
 html {
   font-size: 62.5%;
-  font-family: 'Suisse Intl', sans-serif;
+  font-family: 'Suisse Works', serif;
   font-weight: 400;
 }
 
@@ -33,10 +43,13 @@ p {
 }
 
 h1 {
-  font-family: 'Suisse Intl Bold', sans-serif;
-  font-size: 7.4rem;
-  line-height: 0.9;
-  margin: 0;
+  font-family: 'Suisse Works', serif;
+  color: var(--tedPrimary);
+  font-weight: 400;
+  font-size: 6.2rem;
+  text-align: center;
+  line-height: 1.2;
+  margin: 3.2rem 0;
   @media (--medium) {
     font-size: 14.8rem;
   }
