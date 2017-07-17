@@ -31,7 +31,7 @@
 body,
 html {
   font-size: 62.5%;
-  font-family: 'SuisseWorks', serif;
+  font-family: 'SuisseIntlMono', serif;
   font-weight: 400;
 }
 
@@ -56,12 +56,31 @@ h1 {
 }
 
 h3 {
-  font-family: 'SuisseIntlMono', serif;
   color: var(--black);
   font-weight: 400;
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.timer {
+  text-align: center;
+}
+
+.timer__date {
+  display: inline-block;
+  padding: 0 2.4rem;
+}
+
+.timer__value {
+  color: var(--tedPrimary);
+  font-size: 2.4rem;
+  display: inline-block;
+}
+
+.timer__label {
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
