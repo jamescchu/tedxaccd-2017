@@ -65,6 +65,9 @@ h3 {
   text-align: center;
   margin-bottom: 0.8rem;
   text-transform: uppercase;
+  @media (--medium) {
+    font-size: 1.4rem;
+  }
   @media (--large) {
     font-size: 1.6rem;
   }
@@ -81,6 +84,9 @@ h3 {
   color: var(--tedPrimary);
   font-size: 2.4rem;
   display: inline-block;
+  @media (--medium) {
+    font-size: 4.8rem;
+  }
   @media (--large) {
     font-size: 7.2rem;
   }
@@ -89,6 +95,9 @@ h3 {
 .details__label {
   font-size: 1.2rem;
   text-transform: uppercase;
+  @media (--medium) {
+    font-size: 1.4rem;
+  }
   @media (--large) {
     font-size: 1.6rem;
   }
@@ -107,6 +116,9 @@ a:link, a:visited {
   color: var(--tedPrimary);
   font-size: 1.2rem;
   text-transform: uppercase;
+  @media (--medium) {
+    font-size: 1.4rem;
+  }
   @media (--large) {
     font-size: 1.6rem;
   }
