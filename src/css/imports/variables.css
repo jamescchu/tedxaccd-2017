@@ -1,11 +1,13 @@
 :root {
   --black: #000000;
+  --med-black: #7f7f7f;
+  --light-background: #f1f1f1;
   --white: #ffffff;
 
   --tedPrimary: #FF2B06;
 }
 
-@custom-media --medium (width >= 500px);
+@custom-media --medium (width >= 600px);
 
 @custom-media --large (width >= 1024px);
 

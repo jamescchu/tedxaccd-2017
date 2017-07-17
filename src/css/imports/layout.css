@@ -1,62 +1,29 @@
 html {
-  background-color: var(--white);
+  background-color: var(--light-background);
 }
 
 .wrapper {
-  margin: 0 1.6rem;
-  @media (--medium) {
-    max-width: 50rem;
-    margin: auto;
-  }
+  margin: 0 2.4rem;
   @media (--large) {
-    max-width: 75rem;
-    margin: auto;
+    margin: 0 4.8rem;
   }
-  @media (--xlarge) {
-    max-width: 100rem;
-    margin: auto;
-  }
+}
+
+header {
+  padding: 1.6rem 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--med-black);
 }
 
 .hero {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  perspective: 100rem;
+  width: 95%;
 }
 
 .logo {
-  width: 15rem;
-  margin-top: 2.4rem;
-  perspective: 100rem;
+  display: block;
+  margin: auto;
+  width: 14rem;
   @media (--medium) {
     width: 20rem;
   }
-}
-
-.social__link {
-  display: block;
-}
-
-.social__icon {
-  width: 3.2rem;
-  height: 3.2rem;
-  color: var(--black);
-}
-
-.social__icon:hover {
-  width: 3.2rem;
-  height: 3.2rem;
-  color: var(--tedPrimary);
-}
-
-.hero__social {
-  padding-right: 3.2rem;
-  display: inline-block;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
