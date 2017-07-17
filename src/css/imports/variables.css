@@ -11,4 +11,4 @@
 
 @custom-media --large (width >= 1024px);
 
-@custom-media --xlarge (width >= 1200px);
+@custom-media --xlarge (width >= 1920px);

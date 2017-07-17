@@ -26,12 +26,35 @@ header {
   @media (--medium) {
     width: 20rem;
   }
+  @media (--large) {
+    display: inline-block;
+    margin: 0 4.8rem;
+  }
 }
+
+.details__date {
+  display: inline-block;
+  padding: 0 2.4rem 0 0;
+  @media (--large) {
+    padding: 0 3.2rem 0 0;
+  }
+}
+
+.details__date--last {
+  padding: 0;
+}
+
 
 .details__timer {
   padding: 0 0 4.8rem 0;
+  @media (--large) {
+    padding: 0 0 7.2rem 0;
+  }
 }
 
 .details__links {
   padding: 0 0 2.4rem 0;
+  @media (--large) {
+    padding: 0 0 3.2rem 0;
+  }
 }
