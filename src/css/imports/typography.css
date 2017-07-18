@@ -102,8 +102,3 @@ a:hover {
 .link--lowercase {
   text-transform: lowercase;
 }
-
-.text--italic {
-  font-family: 'Suisse Works Italic', serif;
-  font-style: italic;
-}
