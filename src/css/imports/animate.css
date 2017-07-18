@@ -1,40 +1,53 @@
 .ani-glitch {
   position: relative;
-  text-style: italic;
   display: inline;
 }
 .ani-glitch::before {
   content: attr(data-text);
   position: absolute;
-  left: -3px;
-  text-shadow: 5px 0 var(--tedPrimary);
-  top: 15px;
+  left: -0.2rem;
   color: var(--tedPrimary);
+  text-shadow: 0.1rem 0.2rem var(--tedPrimary);
+  letter-spacing: 0.3rem;
+  top: 0.3rem;
+  width: 101%;
   background: var(--light-background);
   overflow: hidden;
-  clip: rect(0,900px,0,0);
-  -webkit-clip: rect(0,900px,0,0);
-  animation: noise-anim-2 13s infinite linear alternate-reverse;
+  -webkit-clip: rect(0px, 9999px, 0px, 0);
+  clip: rect(0px, 9999px, 0px, 0);
+  animation: noise-anim-2 10s infinite linear alternate-reverse;
+  @media (--medium) {
+    text-shadow: 0.5rem 0.2rem var(--tedPrimary);
+    top: 1.5rem;
+    letter-spacing: 1rem;
+  }
 }
 .ani-glitch::after {
   content: attr(data-text);
   position: absolute;
   left: 0;
-  text-shadow: -3px 0 var(--tedPrimary);
-  top: 8px;
+  text-shadow: -0.1rem 0 var(--tedPrimary);
+  letter-spacing: 0.3rem;
+  top: 0.2rem;
+  width: 101%;
   color: var(--tedPrimary);
   background: var(--light-background);
   overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  -webkit-clip: rect(0, 900px, 0, 0);
+  -webkit-clip: rect(0px, 9999px, 0px, 0);
+  clip: rect(0px, 9999px, 0px, 0);
   animation: noise-anim 13s infinite linear;
+  @media (--medium) {
+    text-shadow: -0.2rem 0 var(--tedPrimary);
+    top: 0.8rem;
+    letter-spacing: 1rem;
+  }
 }
 
 @keyframes noise-anim {
   1.47253% {
     clip: rect(0px, 9999px, 0px, 0); }
-  4.94505% {
-    clip: rect(1px, 9999px, 167px, 0); }
+  2.94505% {
+    clip: rect(13px, 9999px, 167px, 0); }
   5.76923% {
     clip: rect(2px, 9999px, 58px, 0); }
   6.59341% {
@@ -42,8 +55,6 @@
   7.41758% {
     clip: rect(13px, 9999px, 83px, 0); }
   8.24176% {
-    clip: rect(0px, 9999px, 0px, 0); }
-  23.07692% {
     clip: rect(0px, 9999px, 0px, 0); }
   100% {
     clip: rect(0px, 9999px, 0px, 0); }
@@ -62,8 +73,6 @@
   6.53846% {
     clip: rect(18px, 9999px, 50px, 0); }
   7.69231% {
-    clip: rect(0px, 9999px, 0px, 0); }
-  23.07692% {
     clip: rect(0px, 9999px, 0px, 0); }
   100% {
     clip: rect(0px, 9999px, 0px, 0); }
