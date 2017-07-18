@@ -1,0 +1,70 @@
+.ani-glitch {
+  position: relative;
+  text-style: italic;
+  display: inline;
+}
+.ani-glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -3px;
+  text-shadow: 5px 0 var(--tedPrimary);
+  top: 15px;
+  color: var(--tedPrimary);
+  background: var(--light-background);
+  overflow: hidden;
+  clip: rect(0,900px,0,0);
+  -webkit-clip: rect(0,900px,0,0);
+  animation: noise-anim-2 13s infinite linear alternate-reverse;
+}
+.ani-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  text-shadow: -3px 0 var(--tedPrimary);
+  top: 8px;
+  color: var(--tedPrimary);
+  background: var(--light-background);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  -webkit-clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 13s infinite linear;
+}
+
+@keyframes noise-anim {
+  1.47253% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  4.94505% {
+    clip: rect(1px, 9999px, 167px, 0); }
+  5.76923% {
+    clip: rect(2px, 9999px, 58px, 0); }
+  6.59341% {
+    clip: rect(72px, 9999px, 24px, 0); }
+  7.41758% {
+    clip: rect(13px, 9999px, 83px, 0); }
+  8.24176% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  23.07692% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  100% {
+    clip: rect(0px, 9999px, 0px, 0); }
+}
+@keyframes noise-anim-2 {
+  1.53846% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  1.92308% {
+    clip: rect(2px, 9999px, 21px, 0); }
+  3.07692% {
+    clip: rect(17px, 9999px, 147px, 0); }
+  4.23077% {
+    clip: rect(36px, 9999px, 59px, 0); }
+  4.61538% {
+    clip: rect(59px, 9999px, 183px, 0); }
+  6.53846% {
+    clip: rect(18px, 9999px, 50px, 0); }
+  7.69231% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  23.07692% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  100% {
+    clip: rect(0px, 9999px, 0px, 0); }
+}
