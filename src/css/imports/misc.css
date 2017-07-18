@@ -10,3 +10,13 @@
     width: 1px;
     white-space: nowrap; /* 1 */
 }
+
+::selection {
+  background: var(--tedPrimary); /* WebKit/Blink Browsers */
+  color: var(--white);
+}
+
+::-moz-selection {
+  background: var(--tedPrimary); /* Gecko Browsers */
+  color: var(--white);
+}
