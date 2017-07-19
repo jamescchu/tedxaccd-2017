@@ -4,7 +4,7 @@
   --light-background: #f1f1f1;
   --white: #ffffff;
 
-  --tedPrimary: #FF2B06;
+  --tedPrimary: #FE2703;
 }
 
 @custom-media --medium (width >= 600px);
