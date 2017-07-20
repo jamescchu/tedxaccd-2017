@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "We're Back - TEDxACCD"
+title = "TEDx is Back - TEDxACCD"
 
 [params]
   author = "TEDxACCD"
