@@ -19,5 +19,17 @@
   <p>We invited professionals from various disciplines to share their own interpretation of what failure is to them, and how it serves to reveal their inner, and utmost potential.</p>
   <a href="#" class="slab__link--arrow">View Speakers</a>
 </section>
+{{ range $.Site.Data.team}}
+<section>
+  <h2>{{ .name }}</h2>
+  <p>{{ .major }}</p>
+  <p>{{ .team }}</p>
+  <p>{{ .role }}</p>
+  <p>{{ .bio }}</p>
+  <p>{{ .quote }}</p>
+  {{ if .author }}
+    <p>- {{ .author }}</p>
+  {{ end }}
+{{ end }}
 
 {{ partial "footer" . }}
