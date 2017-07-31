@@ -5,3 +5,68 @@ title = "TEDxACCD | Coming Soon"
 [params]
   author = "TEDxACCD"
   description = "TEDxACCD is an independently organized TED event. The talk aims to connect ideas and emerging patterns across disciplines. Event is coming soon to ArtCenter College of Design this fall."
+
+  [params.index]
+    heading = "The beautiful potential of failure"
+    date = "November 04, 2017"
+    location = "ArtCenter College of Design"
+
+    [[params.index.section]]
+      heading = "Thought provoking experience"
+      body = "TEDxACCD is a bi-annual event uniquely led by students to create passionate conversations within the commnity by sharing and spreading ideas intersecting in technology, entertainment, and design."
+      cta = "Get Tickets"
+
+    [[params.index.section]]
+      heading = "Inspire, encourage and catalyze"
+      body = "We invitied a group of visionaries, game-changers, innovators, creatives, learners, and mentors to share their unique insights and ideas on failure."
+      cta = "View Speakers"
+
+  [params.about]
+    heading = "What to expect"
+
+    [[params.about.section]]
+      heading = "Summary"
+      body = "On November 4th, join us to hear 14 unique and diverse topics related to failure. The day will be broken into 3 sessions filled inbetween with interactive booths and activities. Lunch and snacks will be provided followed by a reception."
+      cta = "Get Tickets"
+
+    [[params.about.section]]
+      heading = "About the theme"
+      body = "Failure is an inherent and fundamental experience of life. As human beings, we walk blindly into the world, striving to satisfy our needs, passions, and dreams although our fulfillment is not guaranteed. However, failure is a purifying process that strips away the inessential, revealing our inner selves and utmost potential. Do you dare to fail?"
+      cta = ""
+
+    [[params.about.section]]
+      heading = "About TEDx, x = independently organized event"
+      body = "Failure is an inherent and fundamental experience of life. As human beings, we walk blindly into the world, striving to satisfy our needs, passions, and dreams although our fulfillment is not guaranteed. However, failure is a purifying process that strips away the inessential, revealing our inner selves and utmost potential. Do you dare to fail?"
+      cta = ""
+
+    [[params.about.section]]
+      heading = "About TED"
+      body = "TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman. ##/N## The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; the Open Translation Project, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established the annual TED Prize, where exceptional individuals with a wish to change the world get help translating their wishes into action; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities."
+      cta = ""
+
+  [params.venue]
+    heading = ""
+
+    [[params.venue.section]]
+      heading = ""
+      section = ""
+
+  [params.speaker]
+    heading = "TEDxACCD invited professionals from various disciplines to share their own interpretation of what failure is to them, and how it serves to reveal their inner, and utmost potential."
+
+  [params.team]
+    heading = "TEDxACCD team is a group made up of creative and passionate ArtCenter students who aim to challenge the notion of failure and create change in their diverse disciplines."
+
+    [[params.team.section]]
+      heading = ""
+
+  [params.partner]
+    heading = ""
+
+    [[params.partner.section]]
+      heading = ""
+     body = ""
+
+    [[params.partner.section.list]]
+      name = ""
+      logo = ""
