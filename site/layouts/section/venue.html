@@ -1,0 +1,16 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__heading">
+    <h1>{{ $.Site.Params.venue.heading | title }}</h1>
+  </div>
+</div>
+
+{{ range $.Site.Params.venue.section }}
+  <h2>{{ .heading }}</h2>
+  <p>{{ .section | safeHTML }}</p>
+  <p>{{ .address | safeHTML }}</p>
+{{ end }}
+
+<!-- TODO: INSERT MAPS -->
+{{ partial "footer" . }}

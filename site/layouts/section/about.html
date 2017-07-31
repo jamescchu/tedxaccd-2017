@@ -8,7 +8,7 @@
 {{ range $.Site.Params.about.section }}
 <section class="slab">
   <h4>{{ .heading }}</h4>
-  <p>{{ .body }}</p>
+  <p>{{ .body | safeHTML }}</p>
   <a href="#" class="slab__link--arrow">{{ .cta }}</a>
 </section>
 {{ end }}

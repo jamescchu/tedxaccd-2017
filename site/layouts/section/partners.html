@@ -1,0 +1,18 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__heading">
+    <h1>{{ $.Site.Params.about.heading | title }}</h1>
+  </div>
+</div>
+<section class="slab">
+  <h2>{{ $.Site.Params.partner.become.heading }}</h4>
+  <p>{{ $.Site.Params.partner.become.body | safeHTML }}</p>
+  <h3>{{ $.Site.Params.partner.become.role }}</h3>
+  <p>{{ $.Site.Params.partner.become.contact }}</p>
+  <a href="#" class="slab__link--arrow">{{ $.Site.Params.partner.become.email }}</a>
+</section>
+
+<!-- TODO: ADD PARTNERS -->
+
+{{ partial "footer" . }}

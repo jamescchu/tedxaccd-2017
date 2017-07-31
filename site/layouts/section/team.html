@@ -10,6 +10,7 @@
 {{ range sort $.Site.Data.team ".id" }}
   <h2>{{ .name }}</h2>
   <p>{{ .role }}</p>
+  <!-- TODO: ADD PROFILE PHOTO -->
   <a href="#" class="slab__link--arrow">View Profile</a>
 {{ end }}
 
@@ -17,6 +18,7 @@
 {{ range $.Site.Data.advisors }}
   <h2>{{ .name }}</h2>
   <p>{{ .role }}</p>
+  <!-- TODO: ADD PROFILE PHOTO -->
   <a href="#" class="slab__link--arrow">View Profile</a>
 {{ end }}
 
