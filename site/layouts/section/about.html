@@ -1,5 +1,16 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
 
-
+<div class="hero">
+  <div class="hero__heading">
+    <h1>{{ $.Site.Params.about.heading | title }}</h1>
+  </div>
+</div>
+{{ range $.Site.Params.about.section }}
+<section class="slab">
+  <h4>{{ .heading }}</h4>
+  <p>{{ .body }}</p>
+  <a href="#" class="slab__link--arrow">{{ .cta }}</a>
+</section>
+{{ end }}
 
 {{ partial "footer" . }}
