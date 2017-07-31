@@ -1,0 +1,23 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__heading">
+    <h1>{{ $.Site.Params.team.heading | title }}</h1>
+  </div>
+</div>
+
+<h3>Students</h3>
+{{ range sort $.Site.Data.team ".id" }}
+  <h2>{{ .name }}</h2>
+  <p>{{ .role }}</p>
+  <a href="#" class="slab__link--arrow">View Profile</a>
+{{ end }}
+
+<h3>Advisors</h3>
+{{ range $.Site.Data.advisors }}
+  <h2>{{ .name }}</h2>
+  <p>{{ .role }}</p>
+  <a href="#" class="slab__link--arrow">View Profile</a>
+{{ end }}
+
+{{ partial "footer" . }}
