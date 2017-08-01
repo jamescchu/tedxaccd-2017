@@ -75,3 +75,28 @@ title = "TEDxACCD | Coming Soon"
       role = "Sponsorship Coordinator"
       contact = "Sophia de Lara"
       email = "sophia@tedxaccd.com"
+
+  [params.footer]
+    [[params.footer.social]]
+      name = "Facebook"
+      url = "//www.facebook.com/tedxaccd"
+
+    [[params.footer.social]]
+      name = "Instagram"
+      url = "//www.instagram.com/tedxaccd"
+
+    [[params.footer.social]]
+      name = "Twitter"
+      url = "//twitter.com/tedxaccd"
+
+    [[params.footer.links]]
+      name = "Privacy"
+      url = "#"
+
+    [[params.footer.links]]
+      name = "Terms & Conditions"
+      url = "#"
+
+    [[params.footer.links]]
+      name = "Contact"
+      url = "mailto:info@tedxaccd.com"

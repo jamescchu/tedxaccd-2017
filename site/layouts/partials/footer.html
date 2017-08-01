@@ -5,7 +5,24 @@
     <div class="footer__copy">
       &copy; TEDxACCD
     </div>
+    <div class="footer__cta">
+      <a href="#" class="footer__link--arrow">Get Tickets</a>
+    </div>
+    <div class="footer__social">
+      Follow Us
+      <div class="footer__social-link">
+        {{ range $i, $e := $.Site.Params.footer.social }}
+          {{ if $i }}
+            <span class="footer__spacer">/</span>
+          {{ end }}
+          <a href="{{ .url }}" class="footer__link footer__link--inline">{{ .name }}</a>
+        {{ end }}
+      </div>
+    </div>
     <div class="footer__nav">
+      {{ range $.Site.Params.footer.links }}
+        <a href="{{ .url }}" class="footer__link">{{ .name }}</a>
+      {{ end }}
     </div>
   </footer>
 

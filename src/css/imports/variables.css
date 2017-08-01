@@ -2,6 +2,9 @@
   --black: #000000;
   --white: #ffffff;
 
+  /*Equals to black at 60% opacity*/
+  --med-grey: #999999;
+
   --primary: #FE2703;
   --secondary: #003CA6;
 
