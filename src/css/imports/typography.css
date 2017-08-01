@@ -34,6 +34,15 @@
     url('/fonts/SuisseWorks-RegularItalic-WebS.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Suisse Intl Mono';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/SuisseIntlMono-Regular-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntlMono-Regular-WebS.woff') format('woff');
+}
+
 body,
 html {
   font-size: 62.5%;

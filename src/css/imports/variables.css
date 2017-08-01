@@ -9,6 +9,7 @@
   --sans-medium: 'Suisse Intl Medium', sans-serif;
   --serif: 'Suisse Works', serif;
   --serif-italic: 'Suisse Works Italic', serif;
+  --mono: 'Suisse Intl Mono', monospace;
 }
 
 @custom-media --medium (width >= 500px);
