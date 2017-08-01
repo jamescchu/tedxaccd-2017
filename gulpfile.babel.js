@@ -68,7 +68,7 @@ gulp.task("js", (cb) => {
   });
 });
 
-gulp.task("server", ["svgstore", "hugo", "css", "js"], () => {
+gulp.task("server", ["clean", "svgstore", "hugo", "css", "js"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -76,7 +76,7 @@ gulp.task("server", ["svgstore", "hugo", "css", "js"], () => {
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
   gulp.watch("./src/css/**/*.css", ["css"]);
-  gulp.watch("./site/**/*", ["clean", "hugo"]);
+  gulp.watch("./site/**/*", ["hugo"]);
 });
 
 function buildSite(cb, options) {
