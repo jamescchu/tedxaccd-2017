@@ -1,19 +1,32 @@
+<input type="checkbox" id="id__menu-state" class="header__menu-state">
 <header class="header">
   <svg viewBox="0 0 283 63" role="img" class="logo">
     <use xlink:href="#logo-white"></use>
   </svg>
-
-  <nav class="nav">
-    <ul>
-      <li><a href="{{ .Site.BaseURL }}">Home</a></li>
-      <li><a href="{{ .Site.BaseURL }}about">About</a></li>
-      <li><a href="{{ .Site.BaseURL }}speakers">Speakers</a></li>
-      <li><a href="{{ .Site.BaseURL }}venue">Venue</a></li>
-      <li><a href="{{ .Site.BaseURL }}team">Team</a></li>
-      <li><a href="{{ .Site.BaseURL }}partners">Partners</a></li>
-    </ul>
-  </nav>
+  <div class="header__menu-icon">
+    <label for="id__menu-state">
+      <span class="header__bread">
+        <span class="header__bun header__bun--top"></span>
+      </span>
+      <span class="header__bread">
+        <span class="header__bun header__bun--mid"></span>
+      </span>
+      <span class="header__bread">
+        <span class="header__bun header__bun--btm"></span>
+      </span>
+    </label>
+  </div>
 </header>
+<nav class="nav">
+  <ul class="nav__list">
+    <li><a href="{{ .Site.BaseURL }}" class="nav__link">Home</a></li>
+    <li><a href="{{ .Site.BaseURL }}about" class="nav__link">About</a></li>
+    <li><a href="{{ .Site.BaseURL }}speakers" class="nav__link">Speakers</a></li>
+    <li><a href="{{ .Site.BaseURL }}venue" class="nav__link">Venue</a></li>
+    <li><a href="{{ .Site.BaseURL }}team" class="nav__link">Team</a></li>
+    <li><a href="{{ .Site.BaseURL }}partners" class="nav__link">Partners</a></li>
+  </ul>
+</nav>
 
 <div class="logotype">
   <div class="logotype__mobile">
