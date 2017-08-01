@@ -3,46 +3,83 @@
   font-style: normal;
   font-weight: 400;
   src:
-    //local("Suisse Int'l"),
     url('/fonts/SuisseIntl-Regular-WebS.woff2') format('woff2'),
     url('/fonts/SuisseIntl-Regular-WebS.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Suisse Intl Bold';
+  font-family: 'Suisse Intl Medium';
   font-style: normal;
   font-weight: 700;
   src:
-    //local("Suisse Int'l"),
-    url('/fonts/SuisseIntl-Bold-WebS.woff2') format('woff2'),
-    url('/fonts/SuisseIntl-Bold-WebS.woff') format('woff');
+    url('/fonts/SuisseIntl-Medium-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseIntl-Medium-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Works';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/SuisseWorks-Regular-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseWorks-Regular-WebS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Suisse Works Italic';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url('/fonts/SuisseWorks-RegularItalic-WebS.woff2') format('woff2'),
+    url('/fonts/SuisseWorks-RegularItalic-WebS.woff') format('woff');
 }
 
 body,
 html {
   font-size: 62.5%;
-  font-family: 'Suisse Intl', sans-serif;
+  font-family: var(--sans);
   font-weight: 400;
 }
 
-p {
-  font-size: 1.4rem;
-  @media (--medium) {
-    font-size: 1.6rem;
-  }
+h1 {
+  color: var(--primary);
+  font-weight: 400;
+  font-family: var(--serif);
+  font-size: 4.8rem;
 }
 
-h1 {
-  font-family: 'Suisse Intl Bold', sans-serif;
-  font-size: 7.4rem;
-  line-height: 0.9;
-  margin: 0;
-  @media (--medium) {
-    font-size: 14.8rem;
-  }
+h2 {
+  color: var(--primary);
+  font-weight: 400;
+  font-family: var(--serif);
+  font-size: 2.4rem;
+}
+
+h3 {
+  color: var(--secondary);
+  font-weight: 400;
+  font-family: var(--sans);
+  font-size: 1.6rem;
+}
+
+p {
+  color: var(--secondary);
+  font-family: var(--sans);
+  font-size: 1.6rem;
+  padding: .8rem 0;
+}
+
+a::after {
+  content: " \203A";
+}
+
+a:link, a:visited {
+  font-family: var(--serif-italic);
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.6rem;
 }
 
 a:hover {
-  color: var(--tedPrimary);
-  text-decoration: none;
+  text-decoration: underline;
 }
