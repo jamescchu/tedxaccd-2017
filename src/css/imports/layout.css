@@ -114,6 +114,7 @@ label[for="id__menu-state"] {
 
 #id__menu-state:checked ~ .nav {
   opacity: 1;
+  pointer-events:all;
 }
 
 #id__menu-state:checked ~ .header {
@@ -129,6 +130,7 @@ label[for="id__menu-state"] {
   height: 100%;
   z-index: 5;
   opacity: 0;
+  pointer-events:none;
   transition: opacity ease 0.2s;
 }
 

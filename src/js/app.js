@@ -7,11 +7,28 @@
 // });
 
 import Barba from "barba.js";
+
+// const links = document.querySelectorAll('a[href]');
+// const cbk = e => {
+//  if(e.currentTarget.href === window.location.href) {
+//    e.preventDefault();
+//    e.stopPropagation();
+//  }
+// };
+//
+// for(let i = 0; i < links.length; i++) {
+//   links[i].addEventListener('click', cbk);
+// }
+
 const dom = Barba.Pjax.Dom;
 dom.wrapperId = "js-wrapper";
 dom.containerClass = "js-container";
 
 Barba.Pjax.start();
+Barba.Prefetch.init();
+Barba.Dispatcher.on('transitionCompleted', () => {
+  document.getElementById("id__menu-state").checked = false;
+});
 
 // document.addEventListener("DOMContentLoaded", () => {
 //     Barba.Pjax.init();
