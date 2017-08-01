@@ -6,10 +6,10 @@
   </div>
 </div>
 {{ range $.Site.Params.about.section }}
-<section class="slab">
-  <h4>{{ .heading }}</h4>
+<section class="content">
+  <h2>{{ .heading }}</h2>
   <p>{{ .body | safeHTML }}</p>
-  <a href="#" class="slab__link--arrow">{{ .cta }}</a>
+  <a href="#" class="content__link--arrow">{{ .cta }}</a>
 </section>
 {{ end }}
 

@@ -6,20 +6,31 @@
   </div>
 </div>
 
-<h3>Students</h3>
-{{ range sort $.Site.Data.team ".id" }}
-  <h2>{{ .name }}</h2>
-  <p>{{ .role }}</p>
-  <!-- TODO: ADD PROFILE PHOTO -->
-  <a href="#" class="slab__link--arrow">View Profile</a>
-{{ end }}
+<section class="content">
+  <h3>Students</h3>
+  {{ range sort $.Site.Data.team ".id" }}
+    <div class="content__list">
+      <!-- TODO: ADD PROFILE PHOTO -->
+      <div class="content__thumb"><img src="http://via.placeholder.com/500x500"></div>
+      <h2>{{ .name }}</h2>
+      <p>{{ .role }}</p>
+      <a href="#" class="content__link--arrow">View Profile</a>
+    </div>
+  {{ end }}
+</section>
 
-<h3>Advisors</h3>
-{{ range $.Site.Data.advisors }}
-  <h2>{{ .name }}</h2>
-  <p>{{ .role }}</p>
-  <!-- TODO: ADD PROFILE PHOTO -->
-  <a href="#" class="slab__link--arrow">View Profile</a>
-{{ end }}
+<section class="content">
+  <h3>Advisors</h3>
+  {{ range $.Site.Data.advisors }}
+  <div class="content__list">
+    <!-- TODO: ADD PROFILE PHOTO -->
+    <div class="content__thumb"><img src="http://via.placeholder.com/500x500"></div>
+    <h2>{{ .name }}</h2>
+    <p>{{ .role }}</p>
+    <a href="#" class="content__link--arrow">View Profile</a>
+  </div>
+  {{ end }}
+</section>
+
 
 {{ partial "footer" . }}
