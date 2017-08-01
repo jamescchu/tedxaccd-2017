@@ -11,6 +11,7 @@ import beautify from "gulp-html-beautify";
 import svgstore from "gulp-svgstore";
 import inject from "gulp-inject";
 import svgmin from "gulp-svgmin";
+import del from "del";
 
 const browserSync = BrowserSync.create();
 const hugoBin = "hugo";
@@ -44,6 +45,8 @@ gulp.task("svgstore", () => {
       .pipe(gulp.dest("./site/layouts/partials/svg/"));
 });
 
+gulp.task("clean", () => del ("./dist/**/*"));
+
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
     .pipe(postcss([cssImport({from: "./src/css/main.css"}), cssnext()]))
@@ -73,7 +76,7 @@ gulp.task("server", ["svgstore", "hugo", "css", "js"], () => {
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
   gulp.watch("./src/css/**/*.css", ["css"]);
-  gulp.watch("./site/**/*", ["hugo"]);
+  gulp.watch("./site/**/*", ["clean", "hugo"]);
 });
 
 function buildSite(cb, options) {
