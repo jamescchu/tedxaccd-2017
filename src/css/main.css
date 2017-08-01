@@ -1,5 +1,6 @@
 @import "imports/variables.css";
-@import "imports/sanitize.css";
+/*@import "imports/sanitize.css";*/
+@import "imports/minireset.css";
 @import "imports/typography.css";
 @import "imports/grid.css";
 @import "imports/layout.css";
