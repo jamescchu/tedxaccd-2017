@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'Suisse Intl Medium';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   src:
     url('/fonts/SuisseIntl-Medium-WebS.woff2') format('woff2'),
     url('/fonts/SuisseIntl-Medium-WebS.woff') format('woff');
@@ -57,8 +57,7 @@ h2 {
 
 h3 {
   color: var(--secondary);
-  font-weight: 400;
-  font-family: var(--sans);
+  font-family: var(--sans-medium);
   font-size: 1.6rem;
 }
 
@@ -67,10 +66,6 @@ p {
   font-family: var(--sans);
   font-size: 1.6rem;
   padding: .8rem 0;
-}
-
-a::after {
-  content: " \203A";
 }
 
 a:link, a:visited {
