@@ -18,8 +18,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 80vh;
-  padding: 20vh 0 0 0;
+  height: 100%;
+  padding: 40vh 0 0 0;
 }
 
 .hero--index {
@@ -60,6 +60,7 @@ header {
 /*TODO: NAV BURGER*/
 nav {
   float: right;
+  /*display: none;*/
 }
 
 section {
