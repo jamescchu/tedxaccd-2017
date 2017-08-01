@@ -1,22 +1,20 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
 
 <div class="hero hero--index">
-  <div class="hero__wrapper">
-    <div class="hero__heading">
-      <h1>{{ $.Site.Params.index.heading | title }}</h1>
-    </div>
-    <div class="hero__details">
-      <h3>{{ $.Site.Params.index.date }}</h3>
-      <h3>{{ $.Site.Params.index.location }}</h3>
-    </div>
+  <div class="hero__heading">
+    <h1>{{ $.Site.Params.index.heading | title }}</h1>
+  </div>
+  <div class="hero__details">
+    <h3>{{ $.Site.Params.index.date }}</h3>
+    <h3>{{ $.Site.Params.index.location }}</h3>
   </div>
 </div>
 {{ range $.Site.Params.index.section }}
 <section class="content">
   <h2>{{ .heading }}</h2>
   <p>{{ .body }}</p>
-  {{ if .cta }}
-  <a href="#" >{{ .cta }}</a>
+  {{ if or (.cta) (.url) }}
+    <a href="{{ .url | safeURL }}" class="content__link--arrow">{{ .cta }}</a>
   {{ end }}
 </section>
 {{ end }}

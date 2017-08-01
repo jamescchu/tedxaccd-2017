@@ -9,7 +9,9 @@
 <section class="content">
   <h2>{{ .heading }}</h2>
   <p>{{ .body | safeHTML }}</p>
-  <a href="#" class="content__link--arrow">{{ .cta }}</a>
+  {{ if or (.cta) (.url) }}
+    <a href="{{ .url | safeURL }}" class="content__link--arrow">{{ .cta }}</a>
+  {{ end }}
 </section>
 {{ end }}
 

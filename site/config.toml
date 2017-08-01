@@ -15,11 +15,13 @@ title = "TEDxACCD | Coming Soon"
       heading = "Thought provoking experience"
       body = "TEDxACCD is a bi-annual event uniquely led by students to create passionate conversations within the commnity by sharing and spreading ideas intersecting in technology, entertainment, and design."
       cta = "Get Tickets"
+      url = "#"
 
     [[params.index.section]]
       heading = "Inspire, encourage and catalyze"
       body = "We invitied a group of visionaries, game-changers, innovators, creatives, learners, and mentors to share their unique insights and ideas on failure."
       cta = "View Speakers"
+      url = "/speakers"
 
   [params.about]
     heading = "What to expect"
@@ -28,6 +30,7 @@ title = "TEDxACCD | Coming Soon"
       heading = "Summary"
       body = "On November 4th, join us to hear 14 unique and diverse topics related to failure. The day will be broken into 3 sessions filled inbetween with interactive booths and activities. Lunch and snacks will be provided followed by a reception."
       cta = "Get Tickets"
+      url = ""
 
     [[params.about.section]]
       heading = "About the theme"
