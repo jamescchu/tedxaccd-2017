@@ -135,10 +135,17 @@ a:hover {
 }
 
 .content__quote {
-  margin: 2.4rem 0 2.4rem 7.2rem;
+  margin: 2.4rem 0 0 7.2rem;
   font-style: italic;
   @media (--medium) {
-    margin: 3.2rem 0 3.2rem 7.2rem;
+    margin: 3.2rem 0 0 7.2rem;
+  }
+}
+
+.content__about {
+  margin: 2.4rem 0 0 0;
+  @media (--medium) {
+    margin: 3.2rem 0 0 0;
   }
 }
 

@@ -1,5 +1,5 @@
 +++
-title = "Michelle Kim"
+title = "Clint Disharoon"
 group = "team"
 class = "student"
 type = "section"

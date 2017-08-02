@@ -1,7 +1,7 @@
 +++
-title = "Michelle Kim"
+title = "Gerardo Herrera"
 group = "team"
-class = "student"
+class = "advisor"
 type = "section"
 layout = "profile"
 +++
