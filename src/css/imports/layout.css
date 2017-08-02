@@ -44,14 +44,43 @@ html {
   position: fixed;
   text-transform: uppercase;
   font-family: var(--sans-medium);
-  margin: 2.4rem;
+  margin: 9.6rem 2.4rem 0;
   font-size: 2.4rem;
+  width: calc(100vw - (100vw - 100%));
+  height: 100vh;
+  @media (--medium) {
+    margin: 10.8rem 2.4rem 0;
+  }
 }
 
 .logotype--rotate-left {
   transform: rotate(90deg);
   transform-origin: left top 0;
   margin-left: 2.4rem;
+}
+
+.logotype--rotate-right {
+  display: inline;
+  @media (--medium) {
+    display: block;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    margin: 3.6rem 4rem 0 0;
+    float: right;
+  }
+}
+
+.logotype--rotate-btm {
+  display: inline;
+  @media (--medium) {
+    display: block;
+    position: fixed;
+    transform: rotate(180deg);
+    transform-origin: right bottom 0;
+    float: right;
+    right: 7.2rem;
+    bottom: 4.8rem;
+  }
 }
 
 .logotype--fixed {

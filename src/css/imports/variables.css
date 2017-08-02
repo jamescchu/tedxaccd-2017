@@ -16,6 +16,8 @@
 
   --med-width: 64rem;
   --large-width: 96rem;
+
+  --scrollbar-width: (100vw - 100%);
 }
 
 @custom-media --medium (width >= 600px);
