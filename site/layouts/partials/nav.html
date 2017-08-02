@@ -18,23 +18,23 @@
     </label>
   </div>
 </header>
-<nav class="nav">
+<nav class="nav" id="js--nav">
   <ul class="nav__list">
-    <li><a href="{{ .Site.BaseURL }}" class="nav__link">Home</a></li>
-    <li><a href="{{ .Site.BaseURL }}about" class="nav__link">About</a></li>
-    <li><a href="{{ .Site.BaseURL }}speakers" class="nav__link">Speakers</a></li>
-    <li><a href="{{ .Site.BaseURL }}venue" class="nav__link">Venue</a></li>
-    <li><a href="{{ .Site.BaseURL }}team" class="nav__link">Team</a></li>
-    <li><a href="{{ .Site.BaseURL }}partners" class="nav__link">Partners</a></li>
+    <li class="nav__item nav__cta"><a href="{{ .Site.BaseURL }}" class="nav__link nav__link--arrow">Get Tickets</a></li>
+    <li class="nav__item"><a href="{{ .Site.BaseURL }}" class="nav__link">Home</a></li>
+    <li class="nav__item"><a href="{{ .Site.BaseURL }}about" class="nav__link">About</a></li>
+    <li class="nav__item"><a href="{{ .Site.BaseURL }}speakers" class="nav__link">Speakers</a></li>
+    <li class="nav__item"><a href="{{ .Site.BaseURL }}venue" class="nav__link">Venue</a></li>
+    <li class="nav__item"><a href="{{ .Site.BaseURL }}team" class="nav__link">Team</a></li>
+    <li class="nav__item"><a href="{{ .Site.BaseURL }}partners" class="nav__link">Partners</a></li>
   </ul>
 </nav>
 
-<div class="logotype">
-  <div class="logotype__mobile">
-    <div class="logotype--straight">Beauty<div class="logotype--rotate-right">of</div>
-    <div class="logotype--rotate-btm">the</div></div>
+<div class="logotype" id="js--logotype">
+    <div class="logotype--straight">Beauty</div>
+    <div class="logotype--rotate-right">of</div>
+    <div class="logotype--rotate-btm">the</div>
     <div class="logotype--rotate-left">fall</div>
-  </div>
 </div>
 
 <div class="wrapper" id="js-wrapper">
