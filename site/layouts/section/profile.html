@@ -1,0 +1,25 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__return">
+    <a href="{{ .Site.BaseURL }}{{ .Params.group }}" class="hero__link--arrow">{{ .Params.group | title }}</a>
+  </div>
+  <div class="hero__heading">
+    <h1>{{ (index $.Site.Data.team .Params.slug).name | title }}</h1>
+  </div>
+</div>
+
+<section class="content">
+  <div class="content__photo"><img src="http://via.placeholder.com/500x500"></div>
+  <h2>{{ (index $.Site.Data.team .Params.slug).role | title }}</h2>
+  <blockquote class="content__quote">
+    "{{ (index $.Site.Data.team .Params.slug).quote }}"
+    <span class="content__author">
+      - {{ (index $.Site.Data.team .Params.slug).author }}
+    </span>
+  </blockquote>
+  <h3>About</h3>
+  <p>{{ (index $.Site.Data.team .Params.slug).bio }}</p>
+</section>
+
+{{ partial "footer" . }}

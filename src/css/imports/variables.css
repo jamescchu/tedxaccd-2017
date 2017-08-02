@@ -13,10 +13,13 @@
   --serif: 'Suisse Works', serif;
   --serif-italic: 'Suisse Works Italic', serif;
   --mono: 'Suisse Intl Mono', monospace;
+
+  --med-width: 64rem;
+  --large-width: 96rem;
 }
 
-@custom-media --medium (width >= 500px);
+@custom-media --medium (width >= 600px);
 
 @custom-media --large (width >= 1024px);
 
-@custom-media --xlarge (width >= 1200px);
+@custom-media --xlarge (width >= 1920px);
