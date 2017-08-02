@@ -39,7 +39,7 @@ title = "TEDxACCD | Coming Soon"
 
     [[params.about.section]]
       heading = "About TEDx, x = independently organized event"
-      body = "Failure is an inherent and fundamental experience of life. As human beings, we walk blindly into the world, striving to satisfy our needs, passions, and dreams although our fulfillment is not guaranteed. However, failure is a purifying process that strips away the inessential, revealing our inner selves and utmost potential. Do you dare to fail?"
+      body = "In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)"
       cta = ""
 
     [[params.about.section]]
@@ -54,6 +54,7 @@ title = "TEDxACCD | Coming Soon"
       heading = "About ArtCenter"
       section = "ArtCenter College of Design is located on the iconic Hillside Campus in Pasadena, Ca. For more than 80 years ArtCenter has trained generations of artists and designers all around the globe who are creating influential change in their fields of advertising, entertainment design, environmental design, photography, film, fine art, graphic design, illustration, interaction design, product design, and transportation design.<br/>Being the first design school to receive international certification as a Non-Governmental Organization (NGO) by the United Nations, ArtCenter is leading a new generation of designers to think about design and its impact in people’s lives."
       address = "ArtCenter Hillside Campus<br/>1700 Lida Street<br/>Pasadena, CA 91103"
+      map = "true"
 
     [[params.venue.section]]
       heading = "Parking"
