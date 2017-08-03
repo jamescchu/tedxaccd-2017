@@ -36,21 +36,24 @@ function scriptc(a,b){
 Barba.Pjax.start();
 Barba.Prefetch.init();
 Barba.Dispatcher.on('transitionCompleted', () => {
-  document.getElementById("id__menu-state").checked = false;
+  // document.getElementById("id__menu-state").checked = false;
+  if ( isNavVisible(navMenu) ) {
+    navMenu.classList.remove('nav--active');
+  }
   const js = document.getElementById("js--script-map");
   if(js != null){
     eval(js.innerHTML);
   }
 });
 const logotype = document.getElementById("js--logotype");
-const nav = document.getElementById("js--header");
-let scrolled = false;
-const stickPoint = getDistance();
-
-function getDistance() {
-  const topDist = nav.offsetTop + nav.offsetHeight;
-  return topDist;
-}
+// const nav = document.getElementById("js--header");
+// let scrolled = false;
+// const stickPoint = getDistance();
+//
+// function getDistance() {
+//   const topDist = nav.offsetTop + nav.offsetHeight;
+//   return topDist;
+// }
 
 // window.onscroll = e => {
 //   const distance = getDistance() - window.pageYOffset;
@@ -63,6 +66,10 @@ function getDistance() {
 //     scrolled = false;
 //   }
 // }
+
+
+const menuIcon = document.getElementById("js--menu-icon");
+const navMenu = document.getElementById("js--nav");
 
 // grab an element
 var header = document.querySelector("header");
@@ -79,6 +86,14 @@ var headroom  = new Headroom(header, {
   },
   onUnpin: function() {
     logotype.classList.add('logotype--scrolled');
+    if ( isNavVisible(navMenu) ) {
+      this.elem.classList.remove(this.classes.unpinned);
+      this.elem.classList.add(this.classes.pinned);
+    }
+    else {
+      this.elem.classList.add(this.classes.unpinned);
+      this.elem.classList.remove(this.classes.pinned);
+    }
   },
   onPin: function() {
     logotype.classList.remove('logotype--scrolled');
@@ -86,6 +101,15 @@ var headroom  = new Headroom(header, {
 });
 // initialise
 headroom.init();
+
+function isNavVisible(nav) {
+  return ( nav.classList.contains('nav--active') ? true : false );
+}
+
+menuIcon.onclick = function() {
+
+    navMenu.classList.toggle("nav--active");
+}
 
 // document.addEventListener("DOMContentLoaded", () => {
 //     Barba.Pjax.init();
