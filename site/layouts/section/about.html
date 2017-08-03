@@ -6,7 +6,7 @@
   </div>
 </div>
 {{ range $.Site.Params.about.section }}
-<section class="content">
+<section class="content  content--wrap">
   <h2>{{ .heading }}</h2>
   <p>{{ .body | safeHTML }}</p>
   {{ if and (.cta) (.url) }}

@@ -7,16 +7,18 @@
 </div>
 
 {{ range $.Site.Params.venue.section }}
-<section class="content">
+<section class="content content--wrap">
   <h2>{{ .heading }}</h2>
   <p>{{ .section | safeHTML }}</p>
   {{ if .address }}
     <p class="content__format">{{ .address | safeHTML }}</p>
   {{ end }}
-  {{ if .map }}
-    <div class="content__map" id="js--map"></div>
-  {{ end }}
 </section>
+  {{ if .map }}
+    <section class="conten">
+      <div class="content__map" id="js--map"></div>
+    </section>
+  {{ end }}
 {{ end }}
 
 <script>

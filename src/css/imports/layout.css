@@ -2,14 +2,6 @@ html {
   background-color: var(--white);
 }
 
-.content__map {
-  margin: 6.4rem 0 0 0;
-  height: 50rem;
-  width: 60vw;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .wrapper {
   margin: 0 2.4rem 0 4.8rem;
   width: initial;
@@ -57,8 +49,10 @@ html {
   width: calc(100vw - (100vw - 100%));
   height: 100vh;
   pointer-events: none;
+  user-select: none;
   /*transform: translate(0, 8.4rem);*/
   margin: 8rem 0 0 0;
+  z-index: 10;
   @media (--medium) {
     font-size: 3.6rem;
     margin: 9.2rem 0 0 0;
@@ -247,8 +241,16 @@ label[for="id__menu-state"] {
 
 .content {
   padding: 8.8rem 0 4rem 0;
+}
+
+.content--wrap {
+  width: inital;
   @media (--medium) {
     padding: 9.6rem 0 4rem 0;
+    width: calc(var(--med-width) - 16rem);
+  }
+  @media (--large) {
+    width: calc(var(--large-width) - 24rem);
   }
 }
 
@@ -287,6 +289,19 @@ label[for="id__menu-state"] {
 
 .content__photo {
   margin: 0 0 4.8rem 0;
+}
+
+.content__map {
+  height: 50rem;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  @media (--medium) {
+    width: calc(var(--med-width) + 8rem);
+  }
+  @media (--large) {
+    width: calc(var(--large-width) + 32rem);
+  }
 }
 
 .footer {
