@@ -43,26 +43,49 @@ Barba.Dispatcher.on('transitionCompleted', () => {
   }
 });
 const logotype = document.getElementById("js--logotype");
-const nav = document.getElementById("js--nav");
+const nav = document.getElementById("js--header");
 let scrolled = false;
 const stickPoint = getDistance();
 
 function getDistance() {
-  const topDist = logotype.offsetTop;
+  const topDist = nav.offsetTop + nav.offsetHeight;
   return topDist;
 }
 
-window.onscroll = e => {
-  const distance = getDistance() - window.pageYOffset;
-  const offset = window.pageYOffset;
-  if (( distance <= 0) && !scrolled) {
+// window.onscroll = e => {
+//   const distance = getDistance() - window.pageYOffset;
+//   const offset = window.pageYOffset;
+//   if (( distance <= 0) && !scrolled) {
+//     logotype.classList.add('logotype--scrolled');
+//     scrolled = true;
+//   } else if (scrolled && (offset <= stickPoint)) {
+//     logotype.classList.remove('logotype--scrolled');
+//     scrolled = false;
+//   }
+// }
+
+// grab an element
+var header = document.querySelector("header");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(header, {
+  classes: {
+    inital: "header",
+    pinned: "header--hide",
+    unpinned: "header--show",
+    top: "header--top",
+    notTop: "header--offset",
+    bottom: "header--btm",
+    notBottom: "header--float"
+  },
+  onUnpin: function() {
     logotype.classList.add('logotype--scrolled');
-    scrolled = true;
-  } else if (scrolled && (offset <= stickPoint)) {
+  },
+  onPin: function() {
     logotype.classList.remove('logotype--scrolled');
-    scrolled = false;
   }
-}
+});
+// initialise
+headroom.init();
 
 // document.addEventListener("DOMContentLoaded", () => {
 //     Barba.Pjax.init();
