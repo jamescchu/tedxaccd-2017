@@ -112,7 +112,7 @@ menuIcon.onclick = function() {
 }
 
 // Define barba properties
-Barba.transitionLength = 500;
+Barba.transitionLength = 250;
 
 // Define transition
 var Transition = Barba.BaseTransition.extend({

@@ -5,6 +5,7 @@ html {
 
 .js--container {
   opacity: 1;
+  will-change: opacity;
 }
 
 .js--fade-out {
