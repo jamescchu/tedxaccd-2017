@@ -1,5 +1,20 @@
 html {
   background-color: var(--white);
+  overflow-y: scroll;
+}
+
+.js--container {
+  opacity: 1;
+}
+
+.js--fade-out {
+  transition: opacity 0.1s ease;
+  opacity: 0;
+}
+
+.js--fade-in {
+  transition: opacity 0.1s ease;
+  opacity: 1;
 }
 
 .wrapper {
