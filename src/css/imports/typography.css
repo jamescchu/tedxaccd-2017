@@ -105,12 +105,29 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .hero__link--arrow::before {
   content: "\2039  ";
+  position: absolute;
   font-style: italic;
+  transition: transform 0.1s ease-in-out;
+  transform: translateX(-1rem);
+  @media (--medium) {
+    transform: translateX(-1.5rem);
+  }
+}
+
+.hero__link--arrow:hover::before {
+  position: absolute;
+  content: "\2039  ";
+  font-style: italic;
+  transform: translateX(-1.5rem);
+  transition: transform 0.1s ease-in-out;
+  @media (--medium) {
+    transform: translateX(-2.4rem);
+  }
 }
 
 .content__link--arrow::after,
@@ -118,6 +135,20 @@ a:hover {
 .nav__link--arrow::after {
   content: " \203A";
   font-style: italic;
+  margin: 0;
+  transition: margin 0.1s ease-in-out;
+}
+
+.content__link--arrow:hover::after,
+.footer__link--arrow:hover::after,
+.nav__link--arrow:hover::after{
+  content: " \203A";
+  font-style: italic;
+  margin: 0 0 0 0.8rem;
+  transition: margin 0.1s ease-in-out;
+  @media (--medium) {
+    margin: 0 0 0 1.6rem;
+  }
 }
 
 .content__link--arrow {
@@ -142,6 +173,11 @@ a:hover {
   @media (--medium) {
     font-size: 2.4rem;
   }
+}
+
+.content__list-text {
+  list-style: initial;
+  font-size: 1.6rem;
 }
 
 .content__quote {
@@ -197,4 +233,9 @@ a:hover {
   @media (--medium) {
     font-size: 1.4rem;
   }
+}
+
+.footer__link:hover {
+  color: var(--primary);
+  text-decoration: none;
 }
