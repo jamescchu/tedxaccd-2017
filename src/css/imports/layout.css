@@ -3,6 +3,7 @@ html {
 }
 
 #map {
+  margin: 6.4rem 0 0 0;
   height: 50rem;
   width: 60vw;
   left: 50%;

@@ -10,9 +10,30 @@
 <section class="content">
   <h2>{{ .heading }}</h2>
   <p>{{ .section | safeHTML }}</p>
-  <p class="content__format">{{ .address | safeHTML }}</p>
+  {{ if .address }}
+    <p class="content__format">{{ .address | safeHTML }}</p>
+  {{ end }}
+  {{ if .map }}
+    <div id="map"></div>
+  {{ end }}
 </section>
 {{ end }}
 
-<!-- TODO: INSERT MAPS -->
+<script>
+function initMap() {
+  var locationRio = {lat: -22.915, lng: -43.197};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 13,
+    center: locationRio,
+    gestureHandling: 'none',
+    scrollwheel: false,
+    disableDoubleClickZoom: true,
+    zoomControl: false
+  });
+}
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojAEP9SRzgDtxxnmeUWwKgCxUooLxGng&callback=initMap">
+</script>
 {{ partial "footer" . }}
