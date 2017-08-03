@@ -15,13 +15,13 @@
   {{ end }}
 </section>
   {{ if .map }}
-    <section class="conten">
+    <section class="content">
       <div class="content__map" id="js--map"></div>
     </section>
   {{ end }}
 {{ end }}
 
-<script>
+<script id="js--script-map">
 function initMap() {
   var locationACCD = {lat: 34.168871, lng: -118.185157};
   var map = new google.maps.Map(document.getElementById('js--map'), {
@@ -35,10 +35,12 @@ function initMap() {
     map: map,
     title: 'ArtCenter College of Design'
   });
+  console.log("map-loaded");
 }
+initMap();
+console.log("loadmap");
 </script>
 
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojAEP9SRzgDtxxnmeUWwKgCxUooLxGng&callback=initMap">
-</script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojAEP9SRzgDtxxnmeUWwKgCxUooLxGng&callback=initMap">
+</script> -->
 {{ partial "footer" . }}

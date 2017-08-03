@@ -21,15 +21,27 @@ import Barba from "barba.js";
 // }
 
 const dom = Barba.Pjax.Dom;
-dom.wrapperId = "js-wrapper";
-dom.containerClass = "js-container";
+dom.wrapperId = "js--wrapper";
+dom.containerClass = "js--container";
+
+function scriptc(a,b){
+  var __d=document;
+  var __h = __d.getElementsByTagName("head")[0];
+  var s = __d.createElement("script");
+  s.setAttribute("src", a);
+  s.id = b;
+  __h.appendChild(s);
+}
 
 Barba.Pjax.start();
 Barba.Prefetch.init();
 Barba.Dispatcher.on('transitionCompleted', () => {
   document.getElementById("id__menu-state").checked = false;
+  const js = document.getElementById("js--script-map");
+  if(js != null){
+    eval(js.innerHTML);
+  }
 });
-
 const logotype = document.getElementById("js--logotype");
 const nav = document.getElementById("js--nav");
 let scrolled = false;
