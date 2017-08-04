@@ -165,7 +165,7 @@ var Transition = Barba.BaseTransition.extend({
         element.style.animationDelay = '0s';
         element.style.animationName = element.dataset.transition;
         element.style.animationFillMode = 'forwards';
-        element.style.animationDirection = 'alternate-reverse';
+        element.style.animationDirection = 'reverse';
       }
 
     }, transitionTimeout);
