@@ -1,12 +1,12 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
 
-<div class="hero">
+<div class="hero section">
   <div class="hero__heading">
     <h1>{{ $.Site.Params.team.heading | title }}</h1>
   </div>
 </div>
 
-<section class="content">
+<section class="content section fp-auto-height">
   <h3>Students</h3>
   <div class=" content--flex">
   {{ range sort $.Site.Data.team ".id" }}
@@ -21,7 +21,7 @@
   </div>
 </section>
 
-<section class="content">
+<section class="content section fp-auto-height">
   <h3>Advisors</h3>
   <div class=" content--flex">
   {{ range $.Site.Data.advisors }}

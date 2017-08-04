@@ -33,8 +33,8 @@ dom.containerClass = "js--container";
 //   __h.appendChild(s);
 // }
 
-Barba.Pjax.start();
-Barba.Prefetch.init();
+// Barba.Pjax.start();
+// Barba.Prefetch.init();
 Barba.Dispatcher.on('transitionCompleted', () => {
   // document.getElementById("id__menu-state").checked = false;
   if ( isNavVisible(navMenu) ) {
@@ -207,37 +207,6 @@ Barba.Pjax.getTransition = function() {
   return Transition;
 };
 
-
-// const fadeTransition = Barba.BaseTransition.extend({
-//   start() {
-//     Promise
-//       .all([this.newContainerLoading, this.fadeOut()])
-//       .then(this.fadeIn.bind(this));
-//   },
-//
-//   fadeOut() {
-//     return this.oldContainer.classList.add("js--fade-out").promimse();
-//   },
-//
-//   fadeIn() {
-//     return this.newContainer.classList.add("js--fade-in").done();
-//   }
-// });
-//
-// Barba.Pjax.getTransition = () =>
-// FadeTransition;
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     Barba.Pjax.init();
-//     Barba.Prefetch.init();
-//
-//     // Scroll to the wrapper
-//     Barba.Dispatcher.on('transitionCompleted', () => {
-//         window.scrollTo(0, 0);
-//     });
-//
-//     // Add transition to barba
-//     Barba.Pjax.getTransition = () => Transition;
-//
-//     Barba.transitionLength = 250;
-// });
+$(document).ready(function() {
+  $('#js--page').fullpage();
+});
