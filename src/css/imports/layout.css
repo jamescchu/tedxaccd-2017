@@ -137,7 +137,7 @@ html {
   border-bottom: 1px var(--med-grey) solid;
   position: fixed;
   width: 100%;
-  background: var(--white);
+  background: var(--light-grey);
   z-index: 10;
   transform: translateY(0);
   will-change: transform;
