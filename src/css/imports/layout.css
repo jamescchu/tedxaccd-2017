@@ -69,7 +69,7 @@ html {
   /*transform: translate(0, 8.4rem);*/
   margin: 8rem 0 0 0;
   z-index: 5;
-  transition: margin 0.1s ease;
+  transition: margin 0.2s ease-in-out;
   @media (--medium) {
     font-size: 3.6rem;
     margin: 9.2rem 0 0 0;
@@ -141,7 +141,7 @@ html {
   z-index: 10;
   transform: translateY(0);
   will-change: transform;
-  transition: transform 0.1s ease;
+  transition: transform 0.2s ease-in-out;
 }
 
 .header--hide {
@@ -158,6 +158,7 @@ html {
   right: 0;
   width: 7.2rem;
   height: 8.1rem;
+  cursor: pointer;
   @media (--medium) {
     width: 8.2rem;
     height: 9.1rem;
@@ -285,7 +286,7 @@ label[for="id__menu-state"] {
     width: calc(var(--med-width) - 16rem);
   }
   @media (--large) {
-    width: calc(var(--large-width) - 24rem);
+    width: calc(var(--large-width) - 0rem);
   }
 }
 

@@ -15,7 +15,7 @@
   --mono: 'Suisse Intl Mono', monospace;
 
   --med-width: 64rem;
-  --large-width: 96rem;
+  --large-width: 120rem;
 
   --scrollbar-width: (100vw - 100%);
 }
