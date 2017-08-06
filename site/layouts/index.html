@@ -1,6 +1,7 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
-<div id="js--page">
-  <div class="hero hero--index section">
+
+<div class="js--page">
+  <section class="hero hero--index">
     <div class="hero__heading">
       <h1>{{ $.Site.Params.index.heading | title }}</h1>
     </div>
@@ -8,11 +9,11 @@
       <h3>{{ $.Site.Params.index.date }}</h3>
       <h3>{{ $.Site.Params.index.location }}</h3>
     </div>
-  </div>
+  </section>
 
   {{ range $.Site.Params.index.section }}
 
-    <section class="content content--wrap section">
+    <section class="content">
       <h2>{{ .heading }}</h2>
       <p>{{ .body }}</p>
       {{ if and (.cta) (.url) }}
@@ -22,6 +23,7 @@
 
   {{ end }}
 </div>
+
 
 
 {{ partial "footer" . }}

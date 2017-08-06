@@ -1,12 +1,12 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
 
-<div class="hero section">
+<section class="hero hero--index">
   <div class="hero__heading ">
     <h1>{{ $.Site.Params.about.heading | title }}</h1>
   </div>
-</div>
+</section>
 {{ range $.Site.Params.about.section }}
-<section class="content  content--wrap section">
+<section class="content">
   <h2>{{ .heading }}</h2>
   <p>{{ .body | safeHTML }}</p>
   {{ if and (.cta) (.url) }}
