@@ -280,6 +280,9 @@ label[for="id__menu-state"] {
 
 .content {
   padding: 8.8rem 0 4rem 0;
+}
+
+.content__section {
   height: 100vh;
   display: flex;
   flex-direction: column;

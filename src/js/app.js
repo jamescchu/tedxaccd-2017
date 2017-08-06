@@ -160,7 +160,7 @@ Barba.Pjax.getTransition = function() {
 onePageScroll("#js--wrapper", {
   sectionContainer: "section",
    easing: "ease",
-   animationTime: 1000,
+   animationTime: 700,
    pagination: true,
    updateURL: false,
    beforeMove: function(index) {},
