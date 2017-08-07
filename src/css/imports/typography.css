@@ -81,7 +81,10 @@ h3 {
   font-family: var(--sans-medium);
   font-size: 1.6rem;
   @media (--medium) {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  @media (--medium) {
+    font-size: 2.4rem;
   }
 }
 
@@ -189,6 +192,9 @@ a:hover {
   color: var(--secondary);
   @media (--medium) {
     font-size: 2.4rem;
+  }
+  @media (--large) {
+    font-size: 3.6rem;
   }
 }
 
