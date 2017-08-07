@@ -53,6 +53,12 @@ html {
 .hero__details {
   position: absolute;
   bottom: 1.6rem;
+  @media (--medium) {
+    bottom: 2.4rem;
+  }
+  @media (--large) {
+    bottom: 3.6rem;
+  }
 }
 
 .logotype {
@@ -293,10 +299,17 @@ label[for="id__menu-state"] {
   }
 }
 
-.content--flex {
+.content--flex-between {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.content--flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 .content__list {
@@ -335,6 +348,7 @@ label[for="id__menu-state"] {
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
+  margin: -4.8rem 0 0 0;
   @media (--medium) {
     width: calc(var(--med-width) + 8rem);
   }

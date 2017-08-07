@@ -10,7 +10,7 @@
   </div>
 </div>
 {{ range $.Site.Params.index.section }}
-<section class="content content--wrap">
+<section class="content content--wrap content--flex-center">
   <h2>{{ .heading }}</h2>
   <p>{{ .body }}</p>
   {{ if and (.cta) (.url) }}
