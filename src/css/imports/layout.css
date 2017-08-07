@@ -218,7 +218,7 @@ label[for="id__menu-state"] {
 
 .nav {
   background: var(--white);
-  margin: 10rem auto;
+  margin: 9rem auto;
   text-align: left;
   position: fixed;
   width: 100%;

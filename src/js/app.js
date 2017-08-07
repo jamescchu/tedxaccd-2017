@@ -48,6 +48,7 @@ var headroom  = new Headroom(header, {
     if ( isNavVisible(navMenu) ) {
       this.elem.classList.remove(this.classes.unpinned);
       this.elem.classList.add(this.classes.pinned);
+      logotype.classList.remove('logotype--scrolled');
     }
     else {
       this.elem.classList.add(this.classes.unpinned);
