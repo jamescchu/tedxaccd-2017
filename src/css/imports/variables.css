@@ -21,8 +21,8 @@
   --scrollbar-width: (100vw - 100%);
 }
 
-@custom-media --medium (width >= 600px);
+@custom-media --medium (width >= 800px);
 
-@custom-media --large (width >= 1024px);
+@custom-media --large (width >= 1280px);
 
 @custom-media --xlarge (width >= 1920px);
