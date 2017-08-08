@@ -14,10 +14,10 @@
 {{ range $.Site.Params.index.section }}
 <section class="content content--flex-center {{ if .section }}{{ .section }}{{ end }}">
   <div class="content__container content--wrap">
-    <h2>{{ .heading }}</h2>
+    <h2{{ if .section }} class="color--white" {{ end }}>{{ .heading }}</h2>
     <p{{ if .section }} class="color--white" {{ end }}>{{ .body }}</p>
     {{ if and (.cta) (.url) }}
-      <a href="{{ .url | safeURL }}" class="content__link--arrow">{{ .cta }}</a>
+      <a href="{{ .url | safeURL }}" class="content__link--arrow {{ if .section }} color--white {{ end }}">{{ .cta }}</a>
     {{ end }}
   </div>
 </section>
