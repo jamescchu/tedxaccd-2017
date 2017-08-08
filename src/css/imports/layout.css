@@ -18,10 +18,6 @@ html {
   opacity: 1;
 }
 
-.wrapper {
-
-}
-
 .hero__container,
 .content__container {
   margin: 0 2.4rem 0 4.8rem;
@@ -140,6 +136,20 @@ html {
 
 .logotype--fixed {
   position: fixed;
+}
+
+.logotype__progress {
+  position: fixed;
+  bottom: 1.1rem;
+  background: var(--black);
+  height: 0.4rem;
+  max-width: calc(100vh - 18rem);
+  transition: max-width 0.1s ease;
+}
+
+.logotype__progress--scrolled {
+  max-width: calc(100vh - 27rem);
+  transition: max-width 0.1s ease;
 }
 
 .header {

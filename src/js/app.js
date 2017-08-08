@@ -45,10 +45,12 @@ var headroom  = new Headroom(header, {
   },
   onUnpin: function() {
     logotype.classList.add('logotype--scrolled');
+    progressBar.classList.remove('logotype__progress--scrolled');
     if ( isNavVisible(navMenu) ) {
       this.elem.classList.remove(this.classes.unpinned);
       this.elem.classList.add(this.classes.pinned);
       logotype.classList.remove('logotype--scrolled');
+      progressBar.classList.add('logotype__progress--scrolled');
     }
     else {
       this.elem.classList.add(this.classes.unpinned);
@@ -57,6 +59,8 @@ var headroom  = new Headroom(header, {
   },
   onPin: function() {
     logotype.classList.remove('logotype--scrolled');
+    progressBar.classList.add('logotype__progress--scrolled');
+
   }
 });
 // initialise
@@ -166,3 +170,14 @@ var Transition = Barba.BaseTransition.extend({
 Barba.Pjax.getTransition = function() {
   return Transition;
 };
+
+const progressBar = document.getElementById("js--progress");
+const trackContent = document.querySelector("body");
+progressBar.style.width = '0%';
+window.onscroll = function(event) {
+  const pageHeight = window.innerHeight;
+  const adjustedHeight = trackContent.clientHeight - pageHeight;
+  const progress = ((window.pageYOffset / adjustedHeight) * 100);
+
+  progressBar.style.width = `${progress}%`;
+}
