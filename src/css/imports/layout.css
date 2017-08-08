@@ -19,6 +19,11 @@ html {
 }
 
 .wrapper {
+
+}
+
+.hero__container,
+.content__container {
   margin: 0 2.4rem 0 4.8rem;
   width: initial;
   @media (--medium) {
@@ -142,7 +147,7 @@ html {
   border-bottom: 1px var(--med-grey) solid;
   position: fixed;
   width: 100%;
-  background: var(--light-grey);
+  background: var(--white);
   z-index: 15;
   transform: translateY(0);
   will-change: transform;
@@ -326,6 +331,10 @@ label[for="id__menu-state"] {
     content: '';
     width: calc(var(--large-width)/3 - 4.8rem);
   }
+}
+
+.content--secondary {
+  background: var(--secondary);
 }
 
 .content__list:first-of-type {

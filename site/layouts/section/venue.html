@@ -1,18 +1,22 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
 
 <div class="hero">
-  <div class="hero__heading">
-    <h1>{{ $.Site.Params.venue.heading | title }}</h1>
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ $.Site.Params.venue.heading | title }}</h1>
+    </div>
   </div>
 </div>
 
 {{ range $.Site.Params.venue.section }}
-<section class="content content--wrap">
-  <h2>{{ .heading }}</h2>
-  <p>{{ .section | safeHTML }}</p>
-  {{ if .address }}
-    <p class="content__format">{{ .address | safeHTML }}</p>
-  {{ end }}
+<section class="content">
+  <div class="content__container content--wrap">
+    <h2>{{ .heading }}</h2>
+    <p>{{ .section | safeHTML }}</p>
+    {{ if .address }}
+      <p class="content__format">{{ .address | safeHTML }}</p>
+    {{ end }}
+  </div>
 </section>
   {{ if .map }}
     <section class="content">

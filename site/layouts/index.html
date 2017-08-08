@@ -1,21 +1,25 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
 
 <div class="hero hero--section">
-  <div class="hero__heading">
-    <h1>{{ $.Site.Params.index.heading | title }}</h1>
-  </div>
-  <div class="hero__details">
-    <h3>{{ $.Site.Params.index.date }}</h3>
-    <h3>{{ $.Site.Params.index.location }}</h3>
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ $.Site.Params.index.heading | title }}</h1>
+    </div>
+    <div class="hero__details">
+      <h3>{{ $.Site.Params.index.date }}</h3>
+      <h3>{{ $.Site.Params.index.location }}</h3>
+    </div>
   </div>
 </div>
 {{ range $.Site.Params.index.section }}
-<section class="content content--wrap content--flex-center">
-  <h2>{{ .heading }}</h2>
-  <p>{{ .body }}</p>
-  {{ if and (.cta) (.url) }}
-    <a href="{{ .url | safeURL }}" class="content__link--arrow">{{ .cta }}</a>
-  {{ end }}
+<section class="content content--flex-center {{ if .section }}{{ .section }}{{ end }}">
+  <div class="content__container content--wrap">
+    <h2>{{ .heading }}</h2>
+    <p{{ if .section }} class="color--white" {{ end }}>{{ .body }}</p>
+    {{ if and (.cta) (.url) }}
+      <a href="{{ .url | safeURL }}" class="content__link--arrow">{{ .cta }}</a>
+    {{ end }}
+  </div>
 </section>
 {{ end }}
 

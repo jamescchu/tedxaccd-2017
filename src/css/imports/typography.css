@@ -119,6 +119,14 @@ a {
   }*/
 }
 
+.color--white {
+  color: var(--white);
+}
+
+.color--black {
+  color: var(--black);
+}
+
 a:hover {
   text-decoration: none;
 }

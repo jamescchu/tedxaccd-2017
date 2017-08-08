@@ -1,16 +1,20 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
 
 <div class="hero">
-  <div class="hero__heading">
-    <h1>{{ $.Site.Params.about.heading | title }}</h1>
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ $.Site.Params.about.heading | title }}</h1>
+    </div>
   </div>
 </div>
-<section class="content  content--wrap">
-  <h2>{{ $.Site.Params.partner.become.heading }}</h2>
-  <p>{{ $.Site.Params.partner.become.body | safeHTML }}</p>
-  <p><strong>{{ $.Site.Params.partner.become.role }}</strong><br/>
-    {{ $.Site.Params.partner.become.contact }}</p>
-  <a href="#" class="content__link--arrow">{{ $.Site.Params.partner.become.email }}</a>
+<section class="content">
+  <div class="content__container content--wrap">
+    <h2>{{ $.Site.Params.partner.become.heading }}</h2>
+    <p>{{ $.Site.Params.partner.become.body | safeHTML }}</p>
+    <p><strong>{{ $.Site.Params.partner.become.role }}</strong><br/>
+      {{ $.Site.Params.partner.become.contact }}</p>
+    <a href="#" class="content__link--arrow">{{ $.Site.Params.partner.become.email }}</a>
+  </div>
 </section>
 
 <!-- TODO: ADD PARTNERS -->
