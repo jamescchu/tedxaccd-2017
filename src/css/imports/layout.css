@@ -336,7 +336,7 @@ label[for="id__menu-state"] {
   }
 }
 
-.content--flex::after {
+.content--flex-between::after {
   @media (--medium) {
     content: '';
     width: calc(var(--large-width)/3 - 4.8rem);
