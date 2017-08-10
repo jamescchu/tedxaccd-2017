@@ -173,11 +173,16 @@ Barba.Pjax.getTransition = function() {
 
 const progressBar = document.getElementById("js--progress");
 const trackContent = document.querySelector("body");
+const push = document.getElementById("js--push");
+push.style.marginLeft = 0;
 progressBar.style.width = '0%';
 window.onscroll = function(event) {
   const pageHeight = window.innerHeight;
   const adjustedHeight = trackContent.clientHeight - pageHeight;
   const progress = ((window.pageYOffset / adjustedHeight) * 100);
 
+  console.log(pageHeight);
+
   progressBar.style.width = `${progress}%`;
+  push.style.marginLeft = `${progress}%`;
 }
