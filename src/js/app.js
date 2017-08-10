@@ -1,17 +1,12 @@
 // JS Goes here - ES6 supported
 
 import Barba from "barba.js";
+import Headroom from "./headroom.min.js";
 // import Rellax from "./rellax.js";
 
 const dom = Barba.Pjax.Dom;
 dom.wrapperId = "js--wrapper";
 dom.containerClass = "js--container";
-
-function addScript( src ) {
-  var s = document.createElement( 'script' );
-  s.setAttribute( 'src', src );
-  document.body.appendChild( s );
-};
 
 function initMap() {
   var locationACCD = {lat: 34.168871, lng: -118.185157};
