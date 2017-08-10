@@ -76,7 +76,7 @@ h2 {
   }
 }
 
-h3 {
+h3, .hero--subheading {
   color: var(--secondary);
   font-family: var(--sans-medium);
   font-size: 1.6rem;
