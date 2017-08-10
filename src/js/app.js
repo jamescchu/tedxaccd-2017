@@ -1,7 +1,7 @@
 // JS Goes here - ES6 supported
 
 import Barba from "barba.js";
-import Rellax from "./rellax.js";
+// import Rellax from "./rellax.js";
 
 const dom = Barba.Pjax.Dom;
 dom.wrapperId = "js--wrapper";
@@ -34,10 +34,11 @@ function loadMap() {
   }
 };
 
-window.onload  = () => {loadMap()};
-
-Barba.Pjax.start();
-Barba.Prefetch.init();
+window.onload  = () => {
+  Barba.Pjax.start();
+  Barba.Prefetch.init();
+  loadMap();
+};
 Barba.Dispatcher.on('transitionCompleted', () => {
   // document.getElementById("id__menu-state").checked = false;
   if ( isNavVisible(navMenu) ) {
