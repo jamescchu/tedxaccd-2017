@@ -19,6 +19,7 @@ Barba.Dispatcher.on('transitionCompleted', () => {
   if(js != null){
     eval(js.innerHTML);
   }
+  _setMetrics();
 });
 const logotype = document.getElementById("js--logotype");
 
