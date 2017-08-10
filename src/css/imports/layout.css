@@ -397,7 +397,8 @@ label[for="id__menu-state"] {
 
 .footer__nav,
 .footer__social,
-.footer__cta {
+.footer__cta,
+.footer__copy {
   padding: 2.4rem 0 0 0;
 }
 
