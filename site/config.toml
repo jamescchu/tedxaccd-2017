@@ -2,6 +2,7 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "TEDxACCD 2017"
+enableRobotsTXT = true
 
 [params]
   author = "TEDxACCD"
