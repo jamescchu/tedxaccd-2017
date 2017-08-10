@@ -93,7 +93,7 @@ title = "TEDxACCD 2017"
 
     [[params.footer.links]]
       name = "Terms & Conditions"
-      url = "#"
+      url = "/terms"
 
     [[params.footer.links]]
       name = "Contact"
