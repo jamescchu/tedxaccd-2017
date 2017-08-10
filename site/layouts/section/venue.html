@@ -20,30 +20,13 @@
 </section>
   {{ if .map }}
     <section class="content">
-      <div class="content__map" id="js--map"></div>
+      <div class="content__container">
+        <div class="content__map" id="js--map"></div>
+      </div>
+
     </section>
   {{ end }}
 {{ end }}
-
-<script id="js--script-map">
-function initMap() {
-  var locationACCD = {lat: 34.168871, lng: -118.185157};
-  var map = new google.maps.Map(document.getElementById('js--map'), {
-    zoom: 17,
-    center: locationACCD,
-    gestureHandling: 'cooperative',
-    scrollwheel: false
-  });
-  var marker = new google.maps.Marker({
-    position: locationACCD,
-    map: map,
-    title: 'ArtCenter College of Design'
-  });
-  console.log("map-loaded");
-}
-initMap();
-console.log("loadmap");
-</script>
 
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojAEP9SRzgDtxxnmeUWwKgCxUooLxGng&callback=initMap">
 </script> -->

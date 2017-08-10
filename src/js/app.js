@@ -7,6 +7,34 @@ const dom = Barba.Pjax.Dom;
 dom.wrapperId = "js--wrapper";
 dom.containerClass = "js--container";
 
+function addScript( src ) {
+  var s = document.createElement( 'script' );
+  s.setAttribute( 'src', src );
+  document.body.appendChild( s );
+};
+
+function initMap() {
+  var locationACCD = {lat: 34.168871, lng: -118.185157};
+  var map = new google.maps.Map(document.getElementById('js--map'), {
+    zoom: 17,
+    center: locationACCD,
+    gestureHandling: 'cooperative',
+    scrollwheel: false
+  });
+  var marker = new google.maps.Marker({
+    position: locationACCD,
+    map: map,
+    title: 'ArtCenter College of Design'
+  });
+};
+
+function loadMap() {
+  if (window.location.href.indexOf("venue") != -1) {
+    initMap()
+  }
+};
+
+window.onload  = () => {loadMap()};
 
 Barba.Pjax.start();
 Barba.Prefetch.init();
@@ -15,11 +43,12 @@ Barba.Dispatcher.on('transitionCompleted', () => {
   if ( isNavVisible(navMenu) ) {
     navMenu.classList.remove('nav--active');
   }
-  const js = document.getElementById("js--script-map");
-  if(js != null){
-    eval(js.innerHTML);
-  }
   _setMetrics();
+
+  if (window.location.href.indexOf("venue") != -1) {
+
+    initMap()
+  }
 });
 const logotype = document.getElementById("js--logotype");
 
