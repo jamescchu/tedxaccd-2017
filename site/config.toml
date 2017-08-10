@@ -90,11 +90,11 @@ enableRobotsTXT = true
 
     [[params.footer.links]]
       name = "Privacy"
-      url = "/privacy"
+      url = "/privacy/"
 
     [[params.footer.links]]
       name = "Terms & Conditions"
-      url = "/terms"
+      url = "/terms/"
 
     [[params.footer.links]]
       name = "Contact"
