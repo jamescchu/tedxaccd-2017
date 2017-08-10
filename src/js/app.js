@@ -22,7 +22,6 @@ Barba.Dispatcher.on('transitionCompleted', () => {
 });
 const logotype = document.getElementById("js--logotype");
 
-
 const menuIcon = document.getElementById("js--menu-icon");
 const navMenu = document.getElementById("js--nav");
 
@@ -46,11 +45,13 @@ var headroom  = new Headroom(header, {
   onUnpin: function() {
     logotype.classList.add('logotype--scrolled');
     progressBar.classList.remove('logotype__progress--scrolled');
+    push.classList.remove('logotype__progress--scrolled');
     if ( isNavVisible(navMenu) ) {
       this.elem.classList.remove(this.classes.unpinned);
       this.elem.classList.add(this.classes.pinned);
       logotype.classList.remove('logotype--scrolled');
       progressBar.classList.add('logotype__progress--scrolled');
+      push.classList.add('logotype__progress--scrolled');
     }
     else {
       this.elem.classList.add(this.classes.unpinned);
@@ -60,6 +61,7 @@ var headroom  = new Headroom(header, {
   onPin: function() {
     logotype.classList.remove('logotype--scrolled');
     progressBar.classList.add('logotype__progress--scrolled');
+    push.classList.add('logotype__progress--scrolled');
 
   }
 });
@@ -172,17 +174,44 @@ Barba.Pjax.getTransition = function() {
 };
 
 const progressBar = document.getElementById("js--progress");
-const trackContent = document.querySelector("body");
+// const trackContent = document.querySelector("body");
 const push = document.getElementById("js--push");
+const body = document.body;
 push.style.marginLeft = 0;
 progressBar.style.width = '0%';
-window.onscroll = function(event) {
-  const pageHeight = window.innerHeight;
-  const adjustedHeight = trackContent.clientHeight - pageHeight;
-  const progress = ((window.pageYOffset / adjustedHeight) * 100);
+// window.onscroll = function(event) {
+//   const pageHeight = window.innerHeight;
+//   const adjustedHeight = trackContent.clientHeight - pageHeight;
+//   const progress = ((window.pageYOffset / adjustedHeight) * 100);
+//
+//   console.log(pageHeight);
+//
+//   progressBar.style.width = `${progress}%`;
+//   push.style.marginLeft = `${progress}%`;
+// }
 
-  console.log(pageHeight);
+let progress = 0;
+let endPoint;
 
-  progressBar.style.width = `${progress}%`;
-  push.style.marginLeft = `${progress}%`;
-}
+var _setProgress = () => {
+    try {
+        const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        progress = y / endPoint * 100;
+        progressBar.style.width = `${progress}%`;
+        push.style.marginLeft = `${progress}%`;
+    } catch (e) {
+        console.error(e);
+    }
+};
+
+var _setMetrics = () => {
+    endPoint = _getEndPoint();
+    _setProgress();
+};
+
+var _getEndPoint = () => body.scrollHeight - (window.innerHeight || document.documentElement.clientHeight);
+
+_setMetrics();
+
+window.onscroll = () => {_setProgress()};
+window.onresize = () => {_setMetrics()};

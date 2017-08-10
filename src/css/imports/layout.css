@@ -99,6 +99,7 @@ html {
   transform: rotate(90deg);
   transform-origin: left top 0;
   margin: 0 0 0 2.4rem;
+  max-width: calc(100vh - 19rem);
   @media (--medium) {
     margin: 0 0 0 3.6rem;
   }
@@ -141,9 +142,9 @@ html {
 .logotype__progress {
   position: fixed;
   bottom: 1.1rem;
+  margin-left: -0.1rem;
   background: var(--black);
   height: 0.4rem;
-  max-width: calc(100vh - 18rem);
   transition: max-width 0.1s ease;
 }
 
