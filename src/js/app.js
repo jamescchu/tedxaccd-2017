@@ -197,7 +197,10 @@ var _setProgress = () => {
     try {
         const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
         progress = y / endPoint * 100;
-        if (progress > 0) {
+        if (progress > 0 && isMobileDevice()) {
+          progressBar.style.width = `${progress}%`;
+          push.style.marginLeft = `${progress}%`;
+        } else {
           progressBar.style.width = `${progress}%`;
           push.style.marginLeft = `${progress}%`;
         }
@@ -217,3 +220,7 @@ _setMetrics();
 
 window.onscroll = () => {_setProgress()};
 window.onresize = () => {_setMetrics()};
+
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
