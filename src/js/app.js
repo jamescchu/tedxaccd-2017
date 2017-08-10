@@ -220,6 +220,7 @@ let progress = 0;
 let endPoint;
 
 var _setProgress = () => {
+    ticking = false;
     try {
         const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
         progress = y / endPoint * 100;
@@ -243,9 +244,23 @@ var _setMetrics = () => {
 var _getEndPoint = () => body.scrollHeight - (window.innerHeight || document.documentElement.clientHeight);
 
 _setMetrics();
+window.addEventListener('scroll', onScroll, false);
+window.addEventListener('resize', _setMetrics, false);
 
-window.onscroll = () => {_setProgress()};
-window.onresize = () => {_setMetrics()};
+var ticking = false;
+
+function requestTick() {
+	if(!ticking) {
+		requestAnimationFrame(_setProgress);
+	}
+	ticking = true;
+}
+// window.onscroll = () => {_setProgress()};
+// window.onresize = () => {_setMetrics()};
+
+function onScroll() {
+  requestTick();
+}
 
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
