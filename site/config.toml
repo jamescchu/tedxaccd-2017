@@ -23,7 +23,7 @@ title = "TEDxACCD 2017"
       heading = "Inspire, encourage and catalyze"
       body = "We invited a group of visionaries, game-changers, innovators, creatives, learners, and mentors to share their unique insights and ideas on failure."
       cta = "View Speakers"
-      url = "/speakers" 
+      url = "/speakers"
 
   [params.about]
     heading = "What to expect"
@@ -89,7 +89,7 @@ title = "TEDxACCD 2017"
 
     [[params.footer.links]]
       name = "Privacy"
-      url = "#"
+      url = "/privacy"
 
     [[params.footer.links]]
       name = "Terms & Conditions"
