@@ -105,7 +105,7 @@ p {
   }*/
 }
 
-a {
+a, .faux--link {
   font-family: var(--serif-italic);
   color: var(--primary);
   text-decoration: none;
@@ -119,6 +119,9 @@ a {
   }*/
 }
 
+.faux--link {
+  cursor: default;
+}
 .color--white {
   color: var(--white);
 }
