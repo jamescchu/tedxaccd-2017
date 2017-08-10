@@ -162,6 +162,10 @@ html {
   }
 }
 
+.logotype__push {
+  position: absolute;
+}
+
 .header {
   padding: 2.5rem 2.4rem 2.4rem;
   border-bottom: 1px var(--med-grey) solid;
