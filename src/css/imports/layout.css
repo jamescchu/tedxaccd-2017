@@ -99,9 +99,12 @@ html {
   transform: rotate(90deg);
   transform-origin: left top 0;
   margin: 0 0 0 2.4rem;
-  max-width: calc(100vh - 19rem);
+  min-width: calc(100vh - 13rem);
+  z-index: 10;
   @media (--medium) {
     margin: 0 0 0 3.6rem;
+    min-width: initial;
+    max-width: calc(100vh - 18rem);
   }
 }
 
@@ -153,8 +156,10 @@ html {
 }
 
 .logotype__progress--scrolled {
-  max-width: calc(100vh - 27rem);
   transition: max-width 0.1s ease;
+  @media (--medium) {
+    max-width: calc(100vh - 27rem);
+  }
 }
 
 .header {
@@ -244,7 +249,6 @@ label[for="id__menu-state"] {
 
 .nav {
   background: var(--white);
-  margin: 9rem auto;
   text-align: left;
   position: fixed;
   width: 100%;
@@ -263,11 +267,9 @@ label[for="id__menu-state"] {
 
 .nav__list {
   margin: 2.4rem;
+  padding-top: 10rem;
   width: calc(100vw - (100vw - 100%));
   height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
   @media (--medium) {
     width: var(--med-width);
     margin: 2.4rem auto;
@@ -275,13 +277,11 @@ label[for="id__menu-state"] {
 }
 
 .nav__item {
-  width: 40%;
   margin: 1.6rem 0 0 0;
   height: 2.4rem;
   @media (--medium) {
     margin: 2.4rem 0 0 0;
     height: 3.6rem;
-    width: 50%;
   }
 }
 

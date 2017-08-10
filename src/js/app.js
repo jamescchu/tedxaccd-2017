@@ -197,8 +197,10 @@ var _setProgress = () => {
     try {
         const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
         progress = y / endPoint * 100;
-        progressBar.style.width = `${progress}%`;
-        push.style.marginLeft = `${progress}%`;
+        if (progress > 0) {
+          progressBar.style.width = `${progress}%`;
+          push.style.marginLeft = `${progress}%`;
+        }
     } catch (e) {
         console.error(e);
     }
