@@ -289,7 +289,7 @@ label[for="id__menu-state"] {
 }
 
 .nav__list {
-  margin: 2.4rem;
+  margin: 0;
   padding-top: 10rem;
   width: calc(100vw - (100vw - 100%));
   height: 100vh;
