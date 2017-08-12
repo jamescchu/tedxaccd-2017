@@ -240,7 +240,7 @@ var _setProgress = () => {
 
 var _setMetrics = () => {
     endPoint = _getEndPoint();
-    _setProgress();
+    requestTick();
 };
 
 var _getEndPoint = () => body.scrollHeight - (window.innerHeight || document.documentElement.clientHeight);
