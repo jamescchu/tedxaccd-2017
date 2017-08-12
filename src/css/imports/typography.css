@@ -263,6 +263,9 @@ a:hover {
   font-family: var(--mono);
   font-size: 1rem;
   @media (--medium) {
+    font-size: 1.2rem;
+  }
+  @media (--large) {
     font-size: 1.4rem;
   }
 }
@@ -278,6 +281,9 @@ a:hover {
   font-size: 1rem;
   font-style: normal;
   @media (--medium) {
+    font-size: 1.2rem;
+  }
+  @media (--large) {
     font-size: 1.4rem;
   }
 }
