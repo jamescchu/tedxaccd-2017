@@ -3,10 +3,10 @@
 <div class="hero hero--section">
   <div class="hero__container">
     <div class="hero__heading">
-      <h1>{{ $.Site.Params.index.heading | title }}</h1>
+      <h1>{{ $.Site.Params.index.heading | safeHTML }}</h1>
     </div>
     <div class="hero__details">
-      <h2 class="hero--subheading">{{ $.Site.Params.index.date }}</h2>
+      <!-- <h2 class="hero--subheading">{{ $.Site.Params.index.date }}</h2> -->
       <!-- <h3>{{ $.Site.Params.index.location }}</h3> -->
       <h2 class="hero--subheading">Tickets Coming Soon</h2>
     </div>
@@ -15,8 +15,8 @@
 {{ range $.Site.Params.index.section }}
 <section class="content content--flex-center {{ if .section }}{{ .section }}{{ end }}">
   <div class="content__container content--wrap">
-    <h2{{ if .section }} class="color--white" {{ end }}>{{ .heading }}</h2>
-    <p{{ if .section }} class="color--white" {{ end }}>{{ .body }}</p>
+    <h2>{{ .heading }}</h2>
+    <p>{{ .body }}</p>
     {{ if and (.cta) (.url) }}
       <a href="{{ .url | safeURL }}" class="content__link--arrow {{ if .section }} color--white {{ end }}">{{ .cta }}</a>
     {{ end }}

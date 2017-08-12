@@ -355,7 +355,7 @@ label[for="id__menu-state"] {
 }
 
 .content--secondary {
-  background: var(--secondary);
+  background: var(--light-grey);
 }
 
 .content__list:first-of-type {

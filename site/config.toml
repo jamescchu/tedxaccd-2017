@@ -9,7 +9,7 @@ enableRobotsTXT = true
   description = "TEDxACCD is an independently organized TED event. The talk aims to connect ideas and emerging patterns across disciplines. Event is coming soon to ArtCenter College of Design this fall."
 
   [params.index]
-    heading = "The beautiful potential of failure"
+    heading = "The Potential of Failure"
     date = "November 04, 2017"
     location = "ArtCenter College of Design"
 
