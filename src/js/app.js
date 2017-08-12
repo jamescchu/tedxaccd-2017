@@ -3,6 +3,8 @@
 import Barba from "barba.js";
 // import Headroom from "./headroom.min.js";
 // import Rellax from "./rellax.js";
+import ScrollTrigger from "./ScrollTrigger.js";
+// import AOS from "./aos.js";
 
 const dom = Barba.Pjax.Dom;
 dom.wrapperId = "js--wrapper";
@@ -29,11 +31,13 @@ function loadMap() {
   }
 };
 
-window.onload  = () => {
+document.addEventListener('DOMContentLoaded', function(){
   Barba.Pjax.start();
   Barba.Prefetch.init();
   loadMap();
-};
+  var trigger = new ScrollTrigger();
+});
+
 Barba.Dispatcher.on('transitionCompleted', () => {
   // document.getElementById("id__menu-state").checked = false;
   if ( isNavVisible(navMenu) ) {
@@ -224,13 +228,8 @@ var _setProgress = () => {
     try {
         const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
         progress = y / endPoint * 100;
-        if (progress > 0 && isMobileDevice()) {
-          progressBar.style.width = `${progress}%`;
-          push.style.marginLeft = `${progress}%`;
-        } else {
-          progressBar.style.width = `${progress}%`;
-          push.style.marginLeft = `${progress}%`;
-        }
+        progressBar.style.width = `${progress}%`;
+        push.style.marginLeft = `${progress}%`;
     } catch (e) {
         console.error(e);
     }

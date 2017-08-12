@@ -99,7 +99,7 @@ html {
   transform: rotate(90deg);
   transform-origin: left top 0;
   margin: 0 0 0 2.4rem;
-  min-width: calc(100vh - 13rem);
+  min-width: calc(100vh - 23rem);
   z-index: 10;
   @media (--medium) {
     margin: 0 0 0 3.6rem;
@@ -148,19 +148,19 @@ html {
   margin-left: -0.1rem;
   background: var(--black);
   height: 0.26rem;
-  transition: max-width 0.1s ease;
+  /*transition: max-width 0.1s ease;*/
   @media (--medium) {
     height: 0.4rem;
     bottom: 1.1rem;
   }
 }
 
-.logotype__progress--scrolled {
+/*.logotype__progress--scrolled {
   transition: max-width 0.1s ease;
   @media (--medium) {
     max-width: calc(100vh - 27rem);
   }
-}
+}*/
 
 .logotype__push {
   position: absolute;
