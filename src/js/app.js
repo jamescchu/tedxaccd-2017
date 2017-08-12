@@ -1,7 +1,7 @@
 // JS Goes here - ES6 supported
 
 import Barba from "barba.js";
-import Headroom from "./headroom.min.js";
+// import Headroom from "./headroom.min.js";
 // import Rellax from "./rellax.js";
 
 const dom = Barba.Pjax.Dom;
@@ -54,45 +54,45 @@ const navMenu = document.getElementById("js--nav");
 // grab an element
 var header = document.querySelector("header");
 // construct an instance of Headroom, passing the element
-var headroom  = new Headroom(header, {
-  tolerance: {
-    up: 10,
-    down: 5
-  },
-  classes: {
-    inital: "header",
-    pinned: "header--hide",
-    unpinned: "header--show",
-    top: "header--top",
-    notTop: "header--offset",
-    bottom: "header--btm",
-    notBottom: "header--float"
-  },
-  onUnpin: function() {
-    logotype.classList.add('logotype--scrolled');
-    progressBar.classList.remove('logotype__progress--scrolled');
-    push.classList.remove('logotype__progress--scrolled');
-    if ( isNavVisible(navMenu) ) {
-      this.elem.classList.remove(this.classes.unpinned);
-      this.elem.classList.add(this.classes.pinned);
-      logotype.classList.remove('logotype--scrolled');
-      progressBar.classList.add('logotype__progress--scrolled');
-      push.classList.add('logotype__progress--scrolled');
-    }
-    else {
-      this.elem.classList.add(this.classes.unpinned);
-      this.elem.classList.remove(this.classes.pinned);
-    }
-  },
-  onPin: function() {
-    logotype.classList.remove('logotype--scrolled');
-    progressBar.classList.add('logotype__progress--scrolled');
-    push.classList.add('logotype__progress--scrolled');
-
-  }
-});
+// var headroom  = new Headroom(header, {
+//   tolerance: {
+//     up: 10,
+//     down: 5
+//   },
+//   classes: {
+//     inital: "header",
+//     pinned: "header--hide",
+//     unpinned: "header--show",
+//     top: "header--top",
+//     notTop: "header--offset",
+//     bottom: "header--btm",
+//     notBottom: "header--float"
+//   },
+//   onUnpin: function() {
+//     logotype.classList.add('logotype--scrolled');
+//     progressBar.classList.remove('logotype__progress--scrolled');
+//     push.classList.remove('logotype__progress--scrolled');
+//     if ( isNavVisible(navMenu) ) {
+//       this.elem.classList.remove(this.classes.unpinned);
+//       this.elem.classList.add(this.classes.pinned);
+//       logotype.classList.remove('logotype--scrolled');
+//       progressBar.classList.add('logotype__progress--scrolled');
+//       push.classList.add('logotype__progress--scrolled');
+//     }
+//     else {
+//       this.elem.classList.add(this.classes.unpinned);
+//       this.elem.classList.remove(this.classes.pinned);
+//     }
+//   },
+//   onPin: function() {
+//     logotype.classList.remove('logotype--scrolled');
+//     progressBar.classList.add('logotype__progress--scrolled');
+//     push.classList.add('logotype__progress--scrolled');
+//
+//   }
+// });
 // initialise
-headroom.init();
+//headroom.init();
 
 function isNavVisible(nav) {
   return ( nav.classList.contains('nav--active') ? true : false );
