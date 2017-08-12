@@ -50,6 +50,8 @@ Barba.Dispatcher.on('transitionCompleted', () => {
 
     initMap()
   }
+
+   AOS.refresh();
 });
 const logotype = document.getElementById("js--logotype");
 

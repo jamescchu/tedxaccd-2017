@@ -10,10 +10,10 @@
 {{ range $.Site.Params.about.section }}
 <section class="content">
   <div class="content__container content--wrap">
-    <h2>{{ .heading }}</h2>
-    <p>{{ .body | safeHTML }}</p>
+    <h2 data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    <p data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="50">{{ .body | safeHTML }}</p>
     {{ if and (.cta) (.url) }}
-      <a href="{{ .url | safeURL }}" class="content__link--arrow">{{ .cta }}</a>
+      <a href="{{ .url | safeURL }}" class="content__link--arrow" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="100">{{ .cta }}</a>
     {{ end }}
   </div>
 </section>
