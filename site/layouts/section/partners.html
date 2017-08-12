@@ -13,7 +13,7 @@
     <p>{{ $.Site.Params.partner.become.body | safeHTML }}</p>
     <p><strong>{{ $.Site.Params.partner.become.role }}</strong><br/>
       {{ $.Site.Params.partner.become.contact }}</p>
-    <a href="#" class="content__link--arrow">{{ $.Site.Params.partner.become.email }}</a>
+    <a href="mailto:{{ $.Site.Params.partner.become.email }}" class="content__link--arrow">{{ $.Site.Params.partner.become.email }}</a>
   </div>
 </section>
 
