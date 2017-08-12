@@ -15,10 +15,10 @@
 {{ range $.Site.Params.index.section }}
 <section class="content content--flex-center {{ if .section }}{{ .section }}{{ end }}">
   <div class="content__container content--wrap">
-    <h2 data-scroll="once">{{ .heading }}</h2>
-    <p data-scroll="once">{{ .body }}</p>
+    <h2 data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    <p data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="50">{{ .body }}</p>
     {{ if and (.cta) (.url) }}
-      <a href="{{ .url | safeURL }}" class="content__link--arrow {{ if .section }} color--white {{ end }}" data-scroll="once, offset(0, 200)">{{ .cta }}</a>
+      <a href="{{ .url | safeURL }}" class="content__link--arrow {{ if .section }} color--white {{ end }}" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="100">{{ .cta }}</a>
     {{ end }}
   </div>
 </section>

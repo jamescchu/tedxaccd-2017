@@ -3,8 +3,8 @@
 import Barba from "barba.js";
 // import Headroom from "./headroom.min.js";
 // import Rellax from "./rellax.js";
-import ScrollTrigger from "./ScrollTrigger.js";
-// import AOS from "./aos.js";
+// import ScrollTrigger from "./ScrollTrigger.js";
+import AOS from "./aos.js";
 
 const dom = Barba.Pjax.Dom;
 dom.wrapperId = "js--wrapper";
@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function(){
   Barba.Pjax.start();
   Barba.Prefetch.init();
   loadMap();
-  var trigger = new ScrollTrigger();
+  // var trigger = new ScrollTrigger();
+  AOS.init();
 });
 
 Barba.Dispatcher.on('transitionCompleted', () => {
