@@ -285,11 +285,6 @@ a:hover {
   }
 }
 
-.footer__copy {
-  font-family: var(--mono);
-  color: var(--med-grey);
-}
-
 .footer__link:hover {
   color: var(--primary);
   text-decoration: none;

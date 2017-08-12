@@ -1,33 +1,37 @@
 </div>
 </div>
 
-  <footer class="footer">
-    <div class="footer__cta">
-      <p class="footer__link--arrow faux--link">Tickets Coming Soon</p>
-    </div>
-    <div class="footer__social">
-      Follow Us
-      <div class="footer__social-link">
-        {{ range $i, $e := $.Site.Params.footer.social }}
-          {{ if $i }}
-            <span class="footer__spacer">/</span>
-          {{ end }}
-          <a href="{{ .url }}" class="footer__link footer__link--inline">{{ .name }}</a>
-        {{ end }}
-      </div>
-    </div>
-    <div class="footer__nav">
-      {{ range $.Site.Params.footer.links }}
-        <a href="{{ .url }}" class="footer__link">{{ .name }}</a>
-      {{ end }}
-    </div>
-    <div class="footer__copy">
-       TEDxACCD&copy; 2017
-    </div>
-  </footer>
-  <script src="{{ .Site.BaseURL }}app.js"></script>
-  <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAojAEP9SRzgDtxxnmeUWwKgCxUooLxGng">
-  </script>
+<footer class="footer">
+    <div class="footer__container">
+        <!-- <div class="footer__cta">
+            <p class="footer__link--arrow faux--link">Tickets Coming Soon</p>
+        </div> -->
+        <div class="footer__social">
+            Follow Us
+            <div class="footer__social-link">
+                {{ range $i, $e := $.Site.Params.footer.social }} {{ if $i }}
+                <span class="footer__spacer">/</span> {{ end }}
+                <a href="{{ .url }}" class="footer__link footer__link--inline">{{ .name }}</a> {{ end }}
+            </div>
+        </div>
+        <div class="footer__nav">
+            <div class="footer__copy">
+                TEDxACCD&copy; 2017
+            </div>
+            <div class="footer__nav-link">
+            {{ range $i, $e := $.Site.Params.footer.links }} {{ if $i }}
+            <span class="footer__spacer"></span> {{ end }}
+            <a href="{{ .url }}" class="footer__link footer__link--inline">{{ .name }}</a> {{ end }}
+            </div>
+        </div>
 
-  </body>
+    </div>
+
+</footer>
+<script src="{{ .Site.BaseURL }}app.js"></script>
+<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAojAEP9SRzgDtxxnmeUWwKgCxUooLxGng">
+</script>
+
+</body>
+
 </html>
