@@ -34,6 +34,23 @@ function loadMap() {
 
 const moveTo = new MoveTo();
 
+function refreshLoad() {
+  _setMetrics();
+  loadMap();
+
+  const triggerMove = document.getElementsByClassName('js--trigger');
+  for (var i = 0; i < triggerMove.length; i++) {
+    moveTo.registerTrigger(triggerMove[i]);
+  }
+  if (location.pathname == "/") {
+    downIcon.classList.add('show-icon');
+    downIcon.classList.remove('hide-icon');
+  } else {
+    downIcon.classList.remove('show-icon');
+    downIcon.classList.add('hide-icon');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function(){
   Barba.Pjax.start();
   Barba.Prefetch.init();
@@ -41,14 +58,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // var trigger = new ScrollTrigger();
   AOS.init();
 
-  const triggerMove = document.getElementsByClassName('js--trigger');
-  for (var i = 0; i < triggerMove.length; i++) {
-    moveTo.registerTrigger(triggerMove[i]);
-  }
-  if (window.location.href.indexOf("") != -1) {
-    downIcon.classList.add('show-icon');
-    downIcon.classList.remove('hide-icon');
-  }
+  refreshLoad();
 });
 
 Barba.Dispatcher.on('transitionCompleted', () => {
@@ -56,17 +66,9 @@ Barba.Dispatcher.on('transitionCompleted', () => {
   if ( isNavVisible(navMenu) ) {
     navMenu.classList.remove('nav--active');
   }
-  _setMetrics();
-
-  if (window.location.href.indexOf("venue") != -1) {
-
-    initMap()
-  }
-  const triggerMove = document.getElementsByClassName('js--trigger');
-  for (var i = 0; i < triggerMove.length; i++) {
-    moveTo.registerTrigger(triggerMove[i]);
-  }
    AOS.refresh();
+
+   refreshLoad();
 });
 const logotype = document.getElementById("js--logotype");
 
@@ -95,7 +97,7 @@ function scrollSwitch() {
       logotype.classList.add('logotype--scrolled');
       upIcon.classList.add('show-icon');
       upIcon.classList.remove('hide-icon');
-      if (window.location.href.indexOf("venue") != -1) {
+      if (location.pathname == "/") {
         downIcon.classList.add('hide-icon');
       }
       stuck = true;
@@ -103,7 +105,7 @@ function scrollSwitch() {
       logotype.classList.remove('logotype--scrolled');
       upIcon.classList.remove('show-icon');
       upIcon.classList.add('hide-icon');
-      if (window.location.href.indexOf("venue") != -1) {
+      if (location.pathname == "/") {
         downIcon.classList.add('show-icon');
         downIcon.classList.remove('hide-icon');
       }
