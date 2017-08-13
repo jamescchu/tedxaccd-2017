@@ -10,3 +10,12 @@
     width: 1px;
     white-space: nowrap; /* 1 */
 }
+
+::-moz-selection {
+  background: var(--primary);
+  color: var(--white);
+}
+::selection {
+  background: var(--primary);
+  color: var(--white);
+}
