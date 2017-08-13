@@ -177,16 +177,34 @@ html {
   }
 }
 
-.cta__button {
+.cta {
   position: fixed;
   width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background: var(--primary);
-  right: 2rem;
+  right: 2.8rem;
   top: 50%;
   z-index: 10;
   cursor: pointer;
+}
+
+.icon-ticket {
+  width: 2.4rem;
+  fill: var(--primary);
+}
+
+.icon-down {
+  width: 2.4rem;
+  fill: var(--primary);
+  transform: translateY(0);
+  will-change: transform;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.icon-down:hover {
+  animation-name: downBounce;
+
 }
 
 .header {
