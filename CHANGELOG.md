@@ -62,7 +62,6 @@
 - "L" scroll not updating on page change
 - Layout wrap on large size
 - Map not loading on page refresh
--
 
 ### Removed
 - Unused images
