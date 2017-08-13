@@ -1,5 +1,25 @@
 # Change log
 
+## [0.1.0] - 2017-08-12
+### Added
+- Ticket, Up, Down icons
+- Smooth scroll to sections on index
+- Smooth scroll back to top
+- MoveTo js
+
+### Changed
+- Media query to disregard height for medium size
+- Navlist background from red to light grey
+- Index heading to theme name
+- Fixed typo in Michelle's bio
+- Fixed duplicate section in Terms & Conditions
+- Selection colors to red with white text
+- Header no longer sticks on mobile
+- Text to indicate when tickets go on sale
+
+### Removed
+- Extra text from About TEDx headline
+
 ## [0.0.10] - 2017-08-11
 ### Added
 - JS debouncing for scroll effects to improve performance
