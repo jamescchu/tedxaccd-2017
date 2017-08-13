@@ -60,6 +60,27 @@ const navMenu = document.getElementById("js--nav");
 
 // grab an element
 var header = document.querySelector("header");
+
+let stuck = false;
+const stickPoint = getDistance();
+
+function getDistance() {
+  const topDist = logotype.offsetTop;
+  return topDist;
+}
+
+function scrollSwitch() {
+  ticking = false;
+  const distance = getDistance() - window.pageYOffset;
+  const offset = window.pageYOffset;
+  if ( (distance <= 0) && !stuck) {
+      logotype.classList.add('logotype--scrolled');
+      stuck = true;
+    } else if (stuck && (offset <= stickPoint)){
+      logotype.classList.remove('logotype--scrolled');
+      stuck = false;
+    }
+}
 // construct an instance of Headroom, passing the element
 // var headroom  = new Headroom(header, {
 //   tolerance: {
@@ -254,6 +275,7 @@ var ticking = false;
 function requestTick() {
 	if(!ticking) {
 		requestAnimationFrame(_setProgress);
+    requestAnimationFrame(scrollSwitch);
 	}
 	ticking = true;
 }

@@ -63,7 +63,7 @@ html {
 }
 
 .logotype {
-  position: fixed;
+  position: absolute;
   text-transform: uppercase;
   font-family: var(--sans-medium);
   padding: 2.4rem 0 0 2.4rem;
@@ -75,8 +75,9 @@ html {
   /*transform: translate(0, 8.4rem);*/
   margin: 8rem 0 0 0;
   z-index: 5;
-  transition: margin 0.2s ease-in-out;
+  /*transition: margin 0.2s ease-in-out;*/
   @media (--medium) {
+    position: fixed;
     font-size: 3.6rem;
     margin: 9.2rem 0 0 0;
   }
@@ -93,13 +94,16 @@ html {
   position: fixed;
   /*transform: translate(0, 0rem);*/
   margin: 0;
+  @media (--medium) {
+    margin: 9.2rem 0 0 0;
+  }
 }
 
 .logotype--rotate-left {
   transform: rotate(90deg);
   transform-origin: left top 0;
   margin: 0 0 0 2.4rem;
-  min-width: calc(100vh - 23rem);
+  min-width: calc(100vh - 14rem);
   z-index: 10;
   @media (--medium) {
     margin: 0 0 0 3.6rem;
@@ -186,15 +190,18 @@ html {
 }
 
 .header {
+  position: absolute;
   padding: 2.5rem 2.4rem 2.4rem;
   border-bottom: 1px var(--med-grey) solid;
-  position: fixed;
   width: 100%;
   background: var(--white);
   z-index: 15;
   transform: translateY(0);
   will-change: transform;
   transition: transform 0.2s ease-in-out;
+  @media (--medium) {
+    position: fixed;
+  }
 }
 
 .header--hide {
