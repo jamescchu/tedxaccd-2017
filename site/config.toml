@@ -15,7 +15,7 @@ enableRobotsTXT = true
 
     [[params.index.section]]
       heading = "Thought provoking experience"
-      body = "TEDxACCD is a bi-annual event uniquely led by students to create passionate conversations within the community by sharing and spreading ideas intersecting in technology, entertainment, and design."
+      body = "TEDxACCD is a bi-annual event uniquely led by students to create passionate conversations within the community by sharing and spreading ideas intersecting in technology, entertainment, and design.<br/><br/><strong>Tickets open September 05</strong>"
       cta = ""
       url = "#"
       section = "content--secondary"
