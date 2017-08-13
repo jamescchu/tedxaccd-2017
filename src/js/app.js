@@ -5,6 +5,7 @@ import Barba from "barba.js";
 // import Rellax from "./rellax.js";
 // import ScrollTrigger from "./ScrollTrigger.js";
 import AOS from "./aos.js";
+import MoveTo from "./moveTo.js";
 
 const dom = Barba.Pjax.Dom;
 dom.wrapperId = "js--wrapper";
@@ -31,12 +32,17 @@ function loadMap() {
   }
 };
 
+const moveTo = new MoveTo();
+
 document.addEventListener('DOMContentLoaded', function(){
   Barba.Pjax.start();
   Barba.Prefetch.init();
   loadMap();
   // var trigger = new ScrollTrigger();
   AOS.init();
+
+  const triggerMove = document.getElementsByClassName('js--trigger')[0];
+  moveTo.registerTrigger(triggerMove);
 });
 
 Barba.Dispatcher.on('transitionCompleted', () => {
@@ -50,7 +56,8 @@ Barba.Dispatcher.on('transitionCompleted', () => {
 
     initMap()
   }
-
+  const triggerMove = document.getElementsByClassName('js--trigger')[0];
+  moveTo.registerTrigger(triggerMove);
    AOS.refresh();
 });
 const logotype = document.getElementById("js--logotype");
