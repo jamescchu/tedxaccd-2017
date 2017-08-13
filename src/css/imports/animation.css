@@ -4,11 +4,15 @@
 }
 
 .show-icon {
+  will-change: opacity;
+  visibility: visible;
   opacity: 1;
   transition: opacity 1s ease;
 }
 
 .hide-icon {
+  will-change: opacity;
+  visibility: hidden;
   opacity: 0;
   transition: opacity 1s ease;
 }
