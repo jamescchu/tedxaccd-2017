@@ -66,7 +66,7 @@ enableRobotsTXT = true
     heading = "Passionate creatives eager to challenge the norm"
 
   [params.partner]
-    heading = "Partner with us"
+    heading = "Partner<br/>with us"
 
     [params.partner.become]
       heading = "Become a partner"
