@@ -271,7 +271,7 @@ label[for="id__menu-state"] {
 }*/
 
 .nav {
-  background: var(--primary);
+  background: var(--light-grey);
   text-align: center;
   position: fixed;
   width: 100%;
@@ -302,7 +302,6 @@ label[for="id__menu-state"] {
 .nav__item {
   margin: 1.6rem 0 0 0;
   height: 2.4rem;
-  color: var(--white);
   @media (--medium) {
     margin: 2.4rem 0 0 0;
     height: 3.6rem;
@@ -437,7 +436,7 @@ label[for="id__menu-state"] {
 .footer__social-link,
 .footer__nav-link {
   display: block;
-  padding: 0.8rem 0;
+  padding: 0.8rem 0 0 0;
 }
 
 .footer__link:last-of-type {
