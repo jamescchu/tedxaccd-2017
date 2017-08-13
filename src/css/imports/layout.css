@@ -171,19 +171,11 @@ html {
 }
 
 .cta {
-  display: none;
-  @media (--medium) {
-    display: block;
-  }
-}
-
-.cta {
   position: fixed;
   width: 2rem;
   right: 2.8rem;
-  top: 50%;
+  top: 50vh;
   z-index: 10;
-  cursor: pointer;
 }
 
 .icon-ticket {
@@ -191,7 +183,9 @@ html {
   fill: var(--primary);
 }
 
-.icon-down {
+.icon-down,
+.icon-up {
+  margin: 0.8rem 0;
   width: 2.4rem;
   fill: var(--primary);
   transform: translateY(0);
@@ -204,7 +198,10 @@ html {
 
 .icon-down:hover {
   animation-name: downBounce;
+}
 
+.icon-up:hover {
+  animation-name: upBounce;
 }
 
 .header {

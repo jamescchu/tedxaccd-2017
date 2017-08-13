@@ -41,8 +41,14 @@ document.addEventListener('DOMContentLoaded', function(){
   // var trigger = new ScrollTrigger();
   AOS.init();
 
-  const triggerMove = document.getElementsByClassName('js--trigger')[0];
-  moveTo.registerTrigger(triggerMove);
+  const triggerMove = document.getElementsByClassName('js--trigger');
+  for (var i = 0; i < triggerMove.length; i++) {
+    moveTo.registerTrigger(triggerMove[i]);
+  }
+  if (window.location.href.indexOf("") != -1) {
+    downIcon.classList.add('show-icon');
+    downIcon.classList.remove('hide-icon');
+  }
 });
 
 Barba.Dispatcher.on('transitionCompleted', () => {
@@ -56,14 +62,19 @@ Barba.Dispatcher.on('transitionCompleted', () => {
 
     initMap()
   }
-  const triggerMove = document.getElementsByClassName('js--trigger')[0];
-  moveTo.registerTrigger(triggerMove);
+  const triggerMove = document.getElementsByClassName('js--trigger');
+  for (var i = 0; i < triggerMove.length; i++) {
+    moveTo.registerTrigger(triggerMove[i]);
+  }
    AOS.refresh();
 });
 const logotype = document.getElementById("js--logotype");
 
 const menuIcon = document.getElementById("js--menu-icon");
 const navMenu = document.getElementById("js--nav");
+
+const upIcon = document.getElementById("js--up-icon");
+const downIcon = document.getElementById("js--down-icon");
 
 // grab an element
 var header = document.querySelector("header");
@@ -82,11 +93,23 @@ function scrollSwitch() {
   const offset = window.pageYOffset;
   if ( (distance <= 0) && !stuck) {
       logotype.classList.add('logotype--scrolled');
+      upIcon.classList.add('show-icon');
+      upIcon.classList.remove('hide-icon');
+      if (window.location.href.indexOf("venue") != -1) {
+        downIcon.classList.add('hide-icon');
+      }
       stuck = true;
     } else if (stuck && (offset <= stickPoint)){
       logotype.classList.remove('logotype--scrolled');
+      upIcon.classList.remove('show-icon');
+      upIcon.classList.add('hide-icon');
+      if (window.location.href.indexOf("venue") != -1) {
+        downIcon.classList.add('show-icon');
+        downIcon.classList.remove('hide-icon');
+      }
       stuck = false;
     }
+
 }
 // construct an instance of Headroom, passing the element
 // var headroom  = new Headroom(header, {
