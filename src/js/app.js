@@ -7,35 +7,14 @@ import Barba from "barba.js";
 import AOS from "./aos.js";
 import MoveTo from "./moveTo.js";
 
+const moveTo = new MoveTo();
 const dom = Barba.Pjax.Dom;
+
 dom.wrapperId = "js--wrapper";
 dom.containerClass = "js--container";
 
-function initMap() {
-  var locationACCD = {lat: 34.168871, lng: -118.185157};
-  var map = new google.maps.Map(document.getElementById('js--map'), {
-    zoom: 17,
-    center: locationACCD,
-    gestureHandling: 'cooperative',
-    scrollwheel: false
-  });
-  var marker = new google.maps.Marker({
-    position: locationACCD,
-    map: map,
-    title: 'ArtCenter College of Design'
-  });
-};
-
-function loadMap() {
-  if (window.location.href.indexOf("venue") != -1) {
-    initMap()
-  }
-};
-
-const moveTo = new MoveTo();
-
 function refreshLoad() {
-  _setMetrics();
+  setMetrics();
   loadMap();
 
   const triggerMove = document.getElementsByClassName('js--trigger');
@@ -54,8 +33,6 @@ function refreshLoad() {
 document.addEventListener('DOMContentLoaded', function(){
   Barba.Pjax.start();
   Barba.Prefetch.init();
-  loadMap();
-  // var trigger = new ScrollTrigger();
   AOS.init();
 
   refreshLoad();
@@ -162,6 +139,27 @@ menuIcon.onclick = function() {
     menuIcon.classList.toggle("is-active");
     navMenu.classList.toggle("nav--active");
 }
+
+function initMap() {
+  var locationACCD = {lat: 34.168871, lng: -118.185157};
+  var map = new google.maps.Map(document.getElementById('js--map'), {
+    zoom: 17,
+    center: locationACCD,
+    gestureHandling: 'cooperative',
+    scrollwheel: false
+  });
+  var marker = new google.maps.Marker({
+    position: locationACCD,
+    map: map,
+    title: 'ArtCenter College of Design'
+  });
+};
+
+function loadMap() {
+  if (window.location.href.indexOf("venue") != -1) {
+    initMap()
+  }
+};
 
 // Define barba properties
 Barba.transitionLength = 250;
@@ -279,7 +277,7 @@ progressBar.style.width = '0%';
 let progress = 0;
 let endPoint;
 
-var _setProgress = () => {
+var setProgress = () => {
     ticking = false;
     try {
         const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
@@ -291,22 +289,22 @@ var _setProgress = () => {
     }
 };
 
-var _setMetrics = () => {
-    endPoint = _getEndPoint();
+var setMetrics = () => {
+    endPoint = getEndPoint();
     requestTick();
 };
 
-var _getEndPoint = () => body.scrollHeight - (window.innerHeight || document.documentElement.clientHeight);
+var getEndPoint = () => body.scrollHeight - (window.innerHeight || document.documentElement.clientHeight);
 
-_setMetrics();
+setMetrics();
 window.addEventListener('scroll', onScroll, false);
-window.addEventListener('resize', _setMetrics, false);
+window.addEventListener('resize', setMetrics, false);
 
 var ticking = false;
 
 function requestTick() {
 	if(!ticking) {
-		requestAnimationFrame(_setProgress);
+		requestAnimationFrame(setProgress);
     requestAnimationFrame(scrollSwitch);
 	}
 	ticking = true;
