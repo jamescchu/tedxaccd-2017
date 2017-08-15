@@ -159,7 +159,7 @@ function isNavVisible(nav) {
 }
 
 menuIcon.onclick = function() {
-
+    menuIcon.classList.toggle("is-active");
     navMenu.classList.toggle("nav--active");
 }
 

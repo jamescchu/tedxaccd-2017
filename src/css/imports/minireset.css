@@ -79,3 +79,5 @@ th {
   padding: 0;
   text-align: left;
 }
+
+button:focus {outline:0;}

@@ -40,6 +40,27 @@
   }
 }
 
+.header__menu--squeeze .header__menu-inner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .header__menu--squeeze .header__menu-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+  .header__menu--squeeze .header__menu-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+.header__menu--squeeze.is-active .header__menu-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .header__menu--squeeze.is-active .header__menu-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+  .header__menu--squeeze.is-active .header__menu-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
 [data-aos][data-aos][data-aos-duration="50"],
 body[data-aos-duration="50"] [data-aos] {
     transition-duration: 50ms
