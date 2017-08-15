@@ -16,6 +16,7 @@
 - Selection colors to red with white text
 - Header no longer sticks on mobile
 - Text to indicate when tickets go on sale
+- Footer alignment to "THE" on desktop
 
 ### Removed
 - Extra text from About TEDx headline

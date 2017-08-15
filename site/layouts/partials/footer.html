@@ -21,7 +21,7 @@
             <div class="footer__nav-link">
             {{ range $i, $e := $.Site.Params.footer.links }} {{ if $i }}
             <span class="footer__spacer"></span> {{ end }}
-            <a href="{{ .url }}" class="footer__link footer__link--inline">{{ .name }}</a> {{ end }}
+            <a href="{{ .url }}" class="footer__link footer__link--inline" target="_blank">{{ .name }}</a> {{ end }}
             </div>
         </div>
 
