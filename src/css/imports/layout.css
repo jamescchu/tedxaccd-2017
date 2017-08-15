@@ -30,6 +30,11 @@ html {
     }
 }
 
+.content--shift {
+  margin: 0;
+  width: initial;
+}
+
 .logo {
     height: 3rem;
     @media (--medium) {
@@ -564,6 +569,14 @@ ul {
     padding: 0;
 }
 
-.error--skew {
+.error--header {
   transform: skewX(20deg);
+}
+
+.error--rotate {
+  transform: rotate(20deg);
+}
+
+.error--rotate-left {
+  transform: rotate(-10deg);
 }
