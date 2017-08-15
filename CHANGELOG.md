@@ -1,5 +1,24 @@
 # Change log
 
+## [0.1.1] - 2017-08-15
+### Added
+- More effects to 404 page
+- Glitch effect to index page
+- Scroll animation to Venue page
+- Hover and close animation to menu icon
+
+### Changed
+- Footer links now open new tab
+- Media query sizing again
+- Cleaned up app.js slightly
+- Markup for menu icon
+
+### Fixed
+- Font size inconsistencies on links on medium break
+
+### Removed
+- PJAX from nav and footer links on 404 page
+
 ## [0.1.0] - 2017-08-12
 ### Added
 - Ticket, Up, Down icons
