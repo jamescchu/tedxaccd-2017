@@ -9,7 +9,7 @@ enableRobotsTXT = true
   description = "TEDxACCD is an independently organized TED event. The talk aims to connect ideas and emerging patterns across disciplines. Event is coming soon to ArtCenter College of Design this fall."
 
   [params.index]
-    heading = "Beauty of<br/>the Fall"
+    heading = "Beauty of<br/>the <span class='ani-glitch' data-text='Fail'>Fall</span>"
     date = "November 04, 2017"
     location = "ArtCenter College of Design"
 

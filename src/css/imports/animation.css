@@ -61,6 +61,88 @@
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
+.ani-glitch {
+  position: relative;
+  display: inline;
+}
+.ani-glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  text-shadow: 0.1rem 0.2rem var(--primary);
+  letter-spacing: 0.3rem;
+  top: 0.2rem;
+  width: 101%;
+  background: var(--white);
+  overflow: hidden;
+  -webkit-clip: rect(0px, 9999px, 0px, 0);
+  clip: rect(0px, 9999px, 0px, 0);
+  animation: noise-anim-2 10s infinite linear alternate-reverse;
+  animation-delay: 2s;
+  @media (--medium) {
+    text-shadow: 0.5rem 0.2rem var(--primary);
+    top: 1.5rem;
+    letter-spacing: 1rem;
+  }
+}
+.ani-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  text-shadow: 0.1rem 0.2 var(--primary);
+  letter-spacing: 0.3rem;
+  top: 0.2rem;
+  width: 101%;
+  color: var(--primary);
+  background: var(--white);
+  overflow: hidden;
+  -webkit-clip: rect(0px, 9999px, 0px, 0);
+  clip: rect(0px, 9999px, 0px, 0);
+  animation: noise-anim 13s infinite linear;
+  animation-delay: 2s;
+  @media (--medium) {
+    text-shadow: -0.2rem 0 var(--primary);
+    top: 0.8rem;
+    letter-spacing: 1rem;
+  }
+}
+
+@keyframes noise-anim {
+  1.47253% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  2.34505% {
+    clip: rect(13px, 9999px, 167px, 0); }
+  2.36923% {
+    clip: rect(2px, 9999px, 58px, 0); }
+  2.59341% {
+    clip: rect(72px, 9999px, 24px, 0); }
+  3.41758% {
+    clip: rect(13px, 9999px, 83px, 0); }
+  3.64176% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  100% {
+    clip: rect(0px, 9999px, 0px, 0); }
+}
+@keyframes noise-anim-2 {
+  1.53846% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  1.92308% {
+    clip: rect(50px, 9999px, 121px, 0); }
+  2.07692% {
+    clip: rect(17px, 9999px,97px, 0); }
+  3.23077% {
+    clip: rect(36px, 9999px, 59px, 0); }
+  3.41538% {
+    clip: rect(19px, 9999px, 89px, 0); }
+  3.83846% {
+    clip: rect(18px, 9999px, 50px, 0); }
+  5.19231% {
+    clip: rect(0px, 9999px, 0px, 0); }
+  100% {
+    clip: rect(0px, 9999px, 0px, 0); }
+}
+
 [data-aos][data-aos][data-aos-duration="50"],
 body[data-aos-duration="50"] [data-aos] {
     transition-duration: 50ms
