@@ -11,10 +11,10 @@
 {{ range $.Site.Params.venue.section }}
 <section class="content">
   <div class="content__container content--wrap">
-    <h2>{{ .heading }}</h2>
-    <p>{{ .section | safeHTML }}</p>
+    <h2  data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    <p data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="50">{{ .section | safeHTML }}</p>
     {{ if .address }}
-      <p class="content__format">{{ .address | safeHTML }}</p>
+      <p class="content__format" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="100">{{ .address | safeHTML }}</p>
     {{ end }}
   </div>
 </section>
