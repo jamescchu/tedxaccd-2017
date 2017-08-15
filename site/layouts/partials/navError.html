@@ -1,0 +1,71 @@
+<!-- <input type="checkbox" id="id__menu-state" class="header__menu-state"> -->
+<header class="header" id="js--header">
+  <a href="{{ .Site.BaseURL }}" class="header__link">
+  <svg viewBox="0 0 283 63" role="img" class="logo">
+    <use xlink:href="#logo-white"></use>
+  </svg>
+  TEDxACCD
+  </a>
+
+  <!-- <div class="header__menu-icon"> -->
+    <!-- <label for="id__menu-state"> -->
+    <button class="header__menu-icon header__menu--squeeze" id="js--menu-icon">
+      <span class="header__menu-box">
+        <span class="header__menu-inner"></span>
+      </span>
+    </button>
+      <!-- <span class="header__bread">
+        <span class="header__bun header__bun--top"></span>
+      </span>
+      <span class="header__bread">
+        <span class="header__bun header__bun--mid"></span>
+      </span>
+      <span class="header__bread">
+        <span class="header__bun header__bun--btm"></span>
+      </span> -->
+    <!-- </label> -->
+  <!-- </div> -->
+</header>
+<nav class="nav" id="js--nav">
+  <ul class="nav__list">
+    <!-- <li class="nav__item"><a href="{{ .Site.BaseURL }}" class="nav__link nav__link--arrow">Get Tickets</a></li> -->
+    <li class="nav__item pjax--disable"><a href="{{ .Site.BaseURL }}" class="nav__link">Home</a></li>
+    <li class="nav__item pjax--disable"><a href="{{ .Site.BaseURL }}about/" class="nav__link">About</a></li>
+    <li class="nav__item pjax--disable"><a href="{{ .Site.BaseURL }}speakers/" class="nav__link">Speakers</a></li>
+    <li class="nav__item pjax--disable"><a href="{{ .Site.BaseURL }}venue/" class="nav__link">Venue</a></li>
+    <li class="nav__item pjax--disable"><a href="{{ .Site.BaseURL }}team/" class="nav__link">Team</a></li>
+    <li class="nav__item pjax--disable"><a href="{{ .Site.BaseURL }}partners/" class="nav__link">Partners</a></li>
+  </ul>
+</nav>
+
+<div class="logotype" id="js--logotype">
+    <div class="logotype--straight">Beauty</div>
+    <div class="logotype--rotate-right">of</div>
+    <div class="logotype--rotate-btm">the</div>
+    <div class="logotype--rotate-left">fai<span class="logotype__progress" id="js--progress"></span><span class="logotype__push"id="js--push">l</span></div>
+</div>
+
+<div class="cta">
+  <div class="cta__up">
+    <a href="#" class="js--trigger hide-icon"  id="js--up-icon" data-mt-duration="500">
+    <svg viewBox="0 0 320 512" role="img" class="icon-up">
+      <use xlink:href="#icon-up"></use>
+    </svg>
+    </a>
+  </div>
+  <div class="cta__button" data-balloon="Tickets open September 05" data-balloon-pos="left">
+    <svg viewBox="0 0 576 512" role="img" class="icon-ticket">
+      <use xlink:href="#icon-ticket"></use>
+    </svg>
+  </div>
+  <div class="cta__down">
+    <a href="#scroll-down" class="js--trigger hide-icon" id="js--down-icon" data-mt-duration="1000">
+    <svg viewBox="0 0 320 512" role="img" class="icon-down">
+      <use xlink:href="#icon-down"></use>
+    </svg>
+    </a>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="js--container" data-transition="fadeIn">

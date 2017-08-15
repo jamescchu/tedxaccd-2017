@@ -12,6 +12,7 @@ const dom = Barba.Pjax.Dom;
 
 dom.wrapperId = "js--wrapper";
 dom.containerClass = "js--container";
+Barba.Pjax.ignoreClassLink = "pjax--disable";
 
 function refreshLoad() {
   setMetrics();
