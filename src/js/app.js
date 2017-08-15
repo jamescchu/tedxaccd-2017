@@ -42,6 +42,7 @@ Barba.Dispatcher.on('transitionCompleted', () => {
   // document.getElementById("id__menu-state").checked = false;
   if ( isNavVisible(navMenu) ) {
     navMenu.classList.remove('nav--active');
+    menuIcon.classList.remove('is-active');
   }
    AOS.refresh();
 
