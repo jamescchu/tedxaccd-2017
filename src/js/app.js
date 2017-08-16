@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function(){
   refreshLoad();
 });
 
-Barba.Dispatch.on('newPageReady', () => {
+Barba.Dispatcher.on('newPageReady', () => {
   if ( isNavVisible(navMenu) ) {
     navMenu.classList.remove('nav--active');
     menuIcon.classList.remove('is-active');
