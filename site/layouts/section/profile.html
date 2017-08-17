@@ -1,0 +1,65 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+{{ if eq .Params.class "student" }}
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__return">
+        <a href="{{ .Site.BaseURL }}{{ .Params.group }}" class="hero__link--arrow">{{ .Params.group | title }}</a>
+      </div>
+      <div class="hero__heading">
+        <h1>{{ (index $.Site.Data.team .File.BaseFileName).name | title }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="content__container">
+      <!-- <div class="content__photo"><img src="http://via.placeholder.com/500x500"></div> -->
+      <h2>{{ (index $.Site.Data.team .File.BaseFileName).role | title }}</h2>
+      {{ if (index $.Site.Data.team .File.BaseFileName).quote }}
+      <blockquote class="content__quote">
+        "{{ (index $.Site.Data.team .File.BaseFileName).quote }}"
+        {{ if (index $.Site.Data.team .File.BaseFileName).author }}
+        <span class="content__author">
+          - {{ (index $.Site.Data.team .File.BaseFileName).author }}
+        </span>
+        {{ end }}
+      </blockquote>
+      {{ end }}
+      <h3 class="content__about">About</h3>
+      <p>{{ (index $.Site.Data.team .File.BaseFileName).bio }}</p>
+    </div>
+  </section>
+{{ else if eq .Params.class "advisor" }}
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__return">
+        <a href="{{ .Site.BaseURL }}{{ .Params.group }}" class="hero__link--arrow">{{ .Params.group | title }}</a>
+      </div>
+      <div class="hero__heading">
+        <h1>{{ (index $.Site.Data.advisors .File.BaseFileName).name | title }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="content__container">
+      <!-- <div class="content__photo"><img src="http://via.placeholder.com/500x500"></div> -->
+      <h2>{{ (index $.Site.Data.advisors .File.BaseFileName).role | title }}</h2>
+      {{ if (index $.Site.Data.advisors .File.BaseFileName).quote }}
+      <blockquote class="content__quote">
+        "{{ (index $.Site.Data.advisors .File.BaseFileName).quote }}"
+        {{ if (index $.Site.Data.advisors .File.BaseFileName).author }}
+        <span class="content__author">
+          - {{ (index $.Site.Data.advisors .File.BaseFileName).author }}
+        </span>
+        {{ end }}
+      </blockquote>
+      {{ end }}
+      <h3 class="content__about">About</h3>
+      <p>{{ (index $.Site.Data.advisors .File.BaseFileName).bio }}</p>
+    </div>
+  </section>
+{{ end }}
+
+{{ partial "footer" . }}

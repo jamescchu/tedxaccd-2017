@@ -1,0 +1,22 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ $.Site.Params.about.heading | title }}</h1>
+    </div>
+  </div>
+</div>
+{{ range $.Site.Params.about.section }}
+<section class="content">
+  <div class="content__container content--wrap">
+    <h2 data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    <p data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="50">{{ .body | safeHTML }}</p>
+    {{ if and (.cta) (.url) }}
+      <a href="{{ .url | safeURL }}" class="content__link--arrow" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="100">{{ .cta }}</a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ partial "footer" . }}

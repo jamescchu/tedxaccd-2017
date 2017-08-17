@@ -1,0 +1,19 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ .Params.heading | title }}</h1>
+    </div>
+  </div>
+</div>
+<!-- {{ range $.Site.Params.about.section }}
+<section class="content">
+  <h2>{{ .heading }}</h2>
+  <p>{{ .body | safeHTML }}</p>
+</section>
+{{ end }}}} -->
+
+{{ .Content }}
+
+{{ partial "footer" . }}

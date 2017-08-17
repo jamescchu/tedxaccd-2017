@@ -1,7 +1,101 @@
+
 baseurl = "/"
 languageCode = "en-us"
-title = "TEDxACCD | Coming Soon"
+title = "TEDxACCD 2017"
+enableRobotsTXT = true
 
 [params]
   author = "TEDxACCD"
   description = "TEDxACCD is an independently organized TED event. The talk aims to connect ideas and emerging patterns across disciplines. Event is coming soon to ArtCenter College of Design this fall."
+
+  [params.index]
+    heading = "Beauty of<br/>the <span class='ani-glitch' data-text='Fail'>Fall</span>"
+    date = "November 04, 2017"
+    location = "ArtCenter College of Design"
+
+    [[params.index.section]]
+      heading = "Thought provoking experience"
+      body = "TEDxACCD is a bi-annual event uniquely led by students to create passionate conversations within the community by sharing and spreading ideas intersecting in technology, entertainment, and design.<br/><br/><strong>Tickets open September 05</strong>"
+      cta = ""
+      url = "#"
+      section = "content--secondary"
+
+    [[params.index.section]]
+      heading = "Inspire, encourage and catalyze"
+      body = "We invited a group of visionaries, game-changers, innovators, creatives, learners, and mentors to share their unique insights and ideas on failure."
+      cta = "View Speakers"
+      url = "/speakers"
+
+  [params.about]
+    heading = "What to expect"
+
+    [[params.about.section]]
+      heading = "Summary"
+      body = "On November 4th, join us to hear 14 unique and diverse topics related to failure. The day will be broken into 3 sessions filled in-between with interactive booths and activities. Lunch and snacks will be provided followed by a reception."
+      cta = ""
+      url = ""
+
+    [[params.about.section]]
+      heading = "The theme"
+      body = "Failure is an inherent and fundamental experience of life. As human beings, we walk blindly into the world, striving to satisfy our needs, passions, and dreams although our fulfillment is not guaranteed. However, failure is a purifying process that strips away the inessential, revealing our inner selves and utmost potential. Do you dare to fail?"
+      cta = ""
+
+    [[params.about.section]]
+      heading = "About TEDx"
+      body = "In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)"
+      cta = ""
+
+  [params.venue]
+    heading = "Venue and parking"
+
+    [[params.venue.section]]
+      heading = "About ArtCenter"
+      section = "ArtCenter College of Design is located on the iconic Hillside Campus in Pasadena, Ca. For more than 80 years ArtCenter has trained generations of artists and designers all around the globe who are creating influential change in their fields of advertising, entertainment design, environmental design, photography, film, fine art, graphic design, illustration, interaction design, product design, and transportation design.<br/><br/>Being the first design school to receive international certification as a Non-Governmental Organization (NGO) by the United Nations, ArtCenter is leading a new generation of designers to think about design and its impact in people’s lives."
+      address = "ArtCenter Hillside Campus<br/>1700 Lida Street<br/>Pasadena, CA 91103"
+      map = "true"
+
+    [[params.venue.section]]
+      heading = "Parking"
+      section = "ArtCenter will provide free on-campus parking to all attendees.<br/><br/>All attendees will be able to park in the North Lot at Hillside Campus as directed by Security.<br/><br/>All stakeholders, sponsors, and speakers will receive special parking information before the event."
+      address = ""
+
+  [params.speaker]
+    heading = "Stories by guests from various disciplines"
+
+  [params.team]
+    heading = "Passionate creatives eager to challenge the norm"
+
+  [params.partner]
+    heading = "Partner<br/>with us"
+
+    [params.partner.become]
+      heading = "Become a partner"
+      body = "We welcome you and your company to partner and join the TEDxACCD family. Our student committees goal is to cover all costs for our event and assure the same quality of excellence in future TEDxACCD events. We seek to raise both financial and in-kind sponsorship. Come and be a part of this experience by becoming a TEDxACCD sponsor. Your contribution will help not only this year's team but also the dreams of future TEDxACCD student leaders."
+      role = "Sponsorship Coordinator"
+      contact = "Sophia de Lara"
+      email = "sophia@tedxaccd.com"
+
+  [params.footer]
+    [[params.footer.social]]
+      name = "Facebook"
+      url = "//www.facebook.com/tedxaccd"
+
+    [[params.footer.social]]
+      name = "Instagram"
+      url = "//www.instagram.com/tedxaccd"
+
+    [[params.footer.social]]
+      name = "Twitter"
+      url = "//twitter.com/tedxaccd"
+
+    [[params.footer.links]]
+      name = "Privacy"
+      url = "/privacy/"
+
+    [[params.footer.links]]
+      name = "Terms & Conditions"
+      url = "/terms/"
+
+    [[params.footer.links]]
+      name = "Contact"
+      url = "mailto:info@tedxaccd.com"

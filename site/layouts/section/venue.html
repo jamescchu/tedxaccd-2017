@@ -1,0 +1,33 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ $.Site.Params.venue.heading | title }}</h1>
+    </div>
+  </div>
+</div>
+
+{{ range $.Site.Params.venue.section }}
+<section class="content">
+  <div class="content__container content--wrap">
+    <h2  data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    <p data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="50">{{ .section | safeHTML }}</p>
+    {{ if .address }}
+      <p class="content__format" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="100">{{ .address | safeHTML }}</p>
+    {{ end }}
+  </div>
+</section>
+  {{ if .map }}
+    <section class="content">
+      <div class="content__container">
+        <div class="content__map" id="js--map"></div>
+      </div>
+
+    </section>
+  {{ end }}
+{{ end }}
+
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojAEP9SRzgDtxxnmeUWwKgCxUooLxGng&callback=initMap">
+</script> -->
+{{ partial "footer" . }}

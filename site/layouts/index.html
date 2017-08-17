@@ -1,55 +1,28 @@
-{{ partial "header" . }} {{ partial "svg/inline" . }}
-<div class="wrapper">
-    <div id="scene" class="scene">
-        <div class="layer" data-depth="0.90">
-            <img src="./images/bg-cross.png" class="bg-cross">
-        </div>
-        <div class="layer" data-depth="0.80">
-            <img src="./images/bg-arrow-up.png" class="bg-arrow-up">
-        </div>
-        <div class="layer" data-depth="0.40">
-            <img src="./images/bg-circle.png" class="bg-circle">
-        </div>
-        <div class="layer" data-depth="0.30">
-            <img src="./images/bg-squiggle.png" class="bg-squiggle">
-        </div>
-        <div class="layer" data-depth="0.20">
-            <img src="./images/bg-arrow-down.png" class="bg-arrow-down">
-        </div>
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero hero--section">
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ $.Site.Params.index.heading | safeHTML }}</h1>
     </div>
-    <header>
-      <svg viewBox="0 0 283 63" role="img" class="logo">
-        <use xlink:href="#logo-white"></use>
-      </svg>
-    </header>
-    <div class="hero">
-        <h1>We’re<br>Back</h1>
-        <p>TEDxACCD is returning this fall.<br>Our team is hard at work to make it happen.</p>
-        <p><strong>Please check back soon for details!</strong></p>
-        <ul>
-            <li class="hero__social">
-              <a class="social__link" href="https://www.facebook.com/tedxaccd/" target="_blank">
-                <svg viewBox="0 0 16 16" role="img" class="social__icon">
-                  <use xlink:href="#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="hero__social">
-              <a class="social__link" href="https://instagram.com/tedxaccd" target="_blank">
-                <svg viewBox="0 0 16 16" role="img" class="social__icon">
-                  <use xlink:href="#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="hero__social">
-              <a class="social__link" href="https://twitter.com/tedxaccd" target="_blank">
-                <svg viewBox="0 0 16 16" role="img" class="social__icon">
-                  <use xlink:href="#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-        </ul>
+    <div class="hero__details">
+      <h2 class="hero--subheading">{{ $.Site.Params.index.date }}</h2>
+      <h3>{{ $.Site.Params.index.location }}</h3>
+      <!-- <h2 class="hero--subheading">Tickets Coming Soon</h2> -->
     </div>
+  </div>
 </div>
+<a id="scroll-down"></a>
+{{ range $.Site.Params.index.section }}
+<section class="content content--flex-center {{ if .section }}{{ .section }}{{ end }}">
+  <div class="content__container content--wrap">
+    <h2 data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    <p data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="50">{{ .body | safeHTML }}</p>
+    {{ if and (.cta) (.url) }}
+      <a href="{{ .url | safeURL }}" class="content__link--arrow {{ if .section }} color--white {{ end }}" data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="100">{{ .cta }}</a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
 
 {{ partial "footer" . }}

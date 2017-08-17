@@ -1,0 +1,46 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ $.Site.Params.team.heading | title }}</h1>
+    </div>
+  </div>
+</div>
+
+<section class="content">
+  <div class="content__container">
+    <h3>Students</h3>
+    <div class="content--flex-between">
+    {{ range sort $.Site.Data.team ".id" }}
+      <div class="content__list">
+        <!-- TODO: ADD PROFILE PHOTO -->
+        <!-- <div class="content__thumb"><img src="http://via.placeholder.com/500x500"></div> -->
+        <h2>{{ .name }}</h2>
+        <p>{{ .role }}</p>
+        <a href="{{ $.Site.BaseURL }}team/{{ .slug }}" class="content__link--arrow">View Profile</a>
+      </div>
+    {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="content__container">
+    <h3>Advisors</h3>
+    <div class="content--flex-between">
+    {{ range $.Site.Data.advisors }}
+    <div class="content__list">
+      <!-- TODO: ADD PROFILE PHOTO -->
+      <!-- <div class="content__thumb"><img src="http://via.placeholder.com/500x500"></div> -->
+      <h2>{{ .name }}</h2>
+      <p>{{ .role }}</p>
+      <a href="{{ $.Site.BaseURL }}team/{{ .slug }}" class="content__link--arrow">View Profile</a>
+    </div>
+    {{ end }}
+    </div>
+  </div>
+</section>
+
+
+{{ partial "footer" . }}

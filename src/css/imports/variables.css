@@ -2,11 +2,27 @@
   --black: #000000;
   --white: #ffffff;
 
-  --tedPrimary: #FF2B06;
+  /*Equals to black at 60% opacity*/
+  --med-grey: #999999;
+  --light-grey: #f1f1f1;
+
+  --primary: #FE2703;
+  --secondary: #003CA6;
+
+  --sans: 'Suisse Intl', sans-serif;
+  --sans-medium: 'Suisse Intl Medium', sans-serif;
+  --serif: 'Suisse Works', serif;
+  --serif-italic: 'Suisse Works Italic', serif;
+  --mono: 'Suisse Intl Mono', monospace;
+
+  --med-width: 64rem;
+  --large-width: 120rem;
+
+  --scrollbar-width: (100vw - 100%);
 }
 
-@custom-media --medium (width >= 500px);
+@custom-media --medium (width >= 700px);
 
-@custom-media --large (width >= 1024px);
+@custom-media --large (width >= 1920px) and (height >= 760px);
 
-@custom-media --xlarge (width >= 1200px);
+@custom-media --xlarge (width >= 1920px);
