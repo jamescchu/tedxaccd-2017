@@ -1,1 +1,11 @@
-/            http://2015.tedxaccd.com
+http://www.tedxaccd.com              https://2017.tedxaccd.com/
+http://tedxaccd.com                  https://2017.tedxaccd.com/
+https://www.tedxaccd.com             https://2017.tedxaccd.com
+https://tedxaccd.com                 https://2017.tedxaccd.com
+
+http://www.tedxaccd.com/*            https://2017.tedxaccd.com/:splat
+http://tedxaccd.com/*                https://2017.tedxaccd.com/:splat
+https://www.tedxaccd.com/*           https://2017.tedxaccd.com/:splat
+https://tedxaccd.com/*               https://2017.tedxaccd.com/:splat
+
+/apply                               https://www.surveymonkey.com/r/9WF5YRC     302
