@@ -72,7 +72,7 @@
   color: var(--primary);
   text-shadow: 0.1rem 0.2rem var(--primary);
   letter-spacing: 0.3rem;
-  top: 0.2rem;
+  top: -0.8rem;
   width: 101%;
   background: var(--white);
   overflow: hidden;
@@ -92,7 +92,7 @@
   left: 0;
   text-shadow: 0.1rem 0.2 var(--primary);
   letter-spacing: 0.3rem;
-  top: 0.2rem;
+  top: -0.2rem;
   width: 101%;
   color: var(--primary);
   background: var(--white);
