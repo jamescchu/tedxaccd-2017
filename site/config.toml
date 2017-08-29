@@ -60,10 +60,10 @@ enableRobotsTXT = true
       address = ""
 
   [params.speaker]
-    heading = "Stories by guests from various disciplines"
+    heading = "Stories from diverse fields"
 
   [params.team]
-    heading = "Passionate creatives eager to challenge the norm"
+    heading = "Creatives challenging the norm"
 
   [params.partner]
     heading = "Partner<br/>with us"

@@ -1,5 +1,20 @@
 # Change log
 
+## [1.0.1] - 2017-08-17
+### Changed
+- Speaker and Team headlings
+- James' role title
+
+## [1.0.0] - 2017-08-16
+### Added
+- Redirect file for proper site redirection
+
+### Changed
+- Hide nav faster for better UX
+
+### Fixed
+- Error on dispatcher
+
 ## [0.1.1] - 2017-08-15
 ### Added
 - More effects to 404 page
