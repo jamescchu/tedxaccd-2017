@@ -6,9 +6,13 @@ import Barba from "barba.js";
 // import ScrollTrigger from "./ScrollTrigger.js";
 import AOS from "./aos.js";
 import MoveTo from "./moveTo.js";
+import VanillaModal from "vanilla-modal";
+import Plyr from "plyr";
 
 const moveTo = new MoveTo();
 const dom = Barba.Pjax.Dom;
+const plyr = Plyr;
+
 
 dom.wrapperId = "js--wrapper";
 dom.containerClass = "js--container";
@@ -19,13 +23,25 @@ function refreshLoad() {
   loadMap();
 
   const triggerMove = document.getElementsByClassName('js--trigger');
+  
+  plyr.setup({
+    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+  })
+
+  const modal = new VanillaModal({
+    clickOutside: true,
+    onClose: plyr.get('#promo')[0].restart(),
+  });
+
   for (var i = 0; i < triggerMove.length; i++) {
     moveTo.registerTrigger(triggerMove[i]);
   }
-  if (location.pathname == "/") {
+  if (window.location.href.indexOf("#promo") > -1) {
+    modal.open('#promo');
+  } else if (location.pathname == "/") {
     downIcon.classList.add('show-icon');
     downIcon.classList.remove('hide-icon');
-  } else {
+  }else {
     downIcon.classList.remove('show-icon');
     downIcon.classList.add('hide-icon');
   }
@@ -36,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){
   Barba.Prefetch.init();
   AOS.init();
 
-  refreshLoad();
+  //refreshLoad();
 });
 
 Barba.Dispatcher.on('newPageReady', () => {

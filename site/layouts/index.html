@@ -1,9 +1,9 @@
-{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
-
+{{ partial "header" . }} {{ partial "svg/inline" . }}{{ partial "promo" . }} {{ partial "nav" . }}
 <div class="hero hero--section">
   <div class="hero__container">
     <div class="hero__heading">
       <h1>{{ $.Site.Params.index.heading | safeHTML }}</h1>
+      <a href="#promo" data-modal-open class="content__link--arrow">View Trailer</a>
     </div>
     <div class="hero__details">
       <h2 class="hero--subheading">{{ $.Site.Params.index.date }}</h2>
@@ -12,6 +12,7 @@
     </div>
   </div>
 </div>
+
 <a id="scroll-down"></a>
 {{ range $.Site.Params.index.section }}
 <section class="content content--flex-center {{ if .section }}{{ .section }}{{ end }}">
@@ -24,5 +25,4 @@
   </div>
 </section>
 {{ end }}
-
 {{ partial "footer" . }}

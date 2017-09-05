@@ -3907,6 +3907,10 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
+plyr@^2.0.13:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/plyr/-/plyr-2.0.13.tgz#9b726d2444fd743338c23d3c48ca3416c97712be"
+
 portscanner@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/portscanner/-/portscanner-2.1.1.tgz#eabb409e4de24950f5a2a516d35ae769343fbb96"
@@ -5519,6 +5523,10 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
+
+vanilla-modal@^1.6.5:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/vanilla-modal/-/vanilla-modal-1.6.5.tgz#44958dab9c606170923ec3dd7d22795581a0fdb1"
 
 vendors@^1.0.0:
   version "1.0.1"
