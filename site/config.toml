@@ -6,7 +6,7 @@ enableRobotsTXT = true
 
 [params]
   author = "TEDxACCD"
-  description = "TEDxACCD is an independently organized TED event. The talk aims to connect ideas and emerging patterns across disciplines. Event is coming soon to ArtCenter College of Design this fall."
+  description = "TEDxACCD is an independently organized TED event. The talk aims to connect ideas and emerging patterns across disciplines. Event is coming soon to ArtCenter College of Design on November 4th."
 
   [params.index]
     heading = "Beauty of<br/>the <span class='ani-glitch' data-text='Fail'>Fall</span>"

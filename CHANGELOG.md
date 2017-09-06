@@ -1,5 +1,16 @@
 # Change log
 
+## [1.1.0] - 2017-09-05
+### Added
+- Promo video
+- Modal library
+- Custom JS player
+- Links to Ticket Registration
+
+### Changed
+- Coming soon text to links.
+- Site description
+
 ## [1.0.1] - 2017-08-17
 ### Changed
 - Speaker and Team headlings
