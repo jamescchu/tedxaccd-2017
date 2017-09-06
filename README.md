@@ -1,10 +1,13 @@
 # TEDxACCD 2017 Event Page
 
-A [Hugo](https://gohugo.io/) powered static site utilizing [Gulp](http://gulpjs.com/) and [Webpack](https://webpack.js.org/) as an asset pipeline.
+The official event page for the 2017 TEDxACCD event. TEDxACCD is a
+bi-annual event uniquely led by students to create passionate
+conversations within the community by sharing and spreading ideas
+intersecting in technology, entertainment, and design.
 
-It's setup to use [post-css next](http://cssnext.io/) and [babel](https://babeljs.io/) for CSS and JavaScript.
+[Event Site](https://2017.tedxaccd.com)
 
-## Usage
+## Development
 
 Be sure that you have the latest node, npm and [Hugo](https://gohugo.io/) installed. If you need to install hugo on OSX, run:
 
@@ -32,6 +35,31 @@ To build your static output to the `/dist` folder, use:
 npm run build
 ```
 
-Designed, developed and maintained by James Chu.
+## Tech Stack
+
+- [Hugo](https://gohugo.io/)
+  - A super fast Go-powered static site generator.
+- [Gulp](http://gulpjs.com/)
+  - Handy Javascript task runner for automation.
+- [Webpack](https://webpack.js.org/)
+  - The new and trendy Javascript bundler.
+- [cssnext](http://cssnext.io/)
+  - PostCSS plugin that allows using future CSS features, today.
+- [Babel](https://babeljs.io/)
+  - Transpiler for converting Javascript ES6 into ES5.
+- [BarbaJS](http://barbajs.org/)
+  - Small PJAX library allowing for seamless page transitions.
+- [AOS](http://michalsnik.github.io/aos/)
+  - Adds CSS animations to elements as you scroll.
+- [MoveTo](https://hsnaydd.github.io/moveTo/demo/)
+  - Scroll animations that pushes people up and down the page.
+- [VanillaModal](http://benceg.github.io/vanilla-modal/)
+  - Creates modals with a variety of content.
+- [Plyr](https://plyr.io/)
+  - A simple, accessible HTML5 media player.
+- [Balloon](https://kazzkiq.github.io/balloon.css/)
+  - CSS driven tool-tips.
+- [minireset](http://jgthms.com/minireset.css/)
+  - Tiny CSS reset for consistency across browsers.
 
 Based on [Victor Hugo](https://github.com/netlify/victor-hugo) boilerplate by [Netlify](https://www.netlify.com/).

@@ -1,5 +1,12 @@
 # Change log
 
+## [1.1.1] - 2017-09-06
+### Added
+- Video thumbnail
+
+### Fixed
+- Problems with video overflow when window height is small
+
 ## [1.1.0] - 2017-09-05
 ### Added
 - Promo video
@@ -8,10 +15,13 @@
 - Links to Ticket Registration
 
 ### Changed
-- Coming soon text to links.
+- Coming soon text to links
 - Site description
 
 ## [1.0.1] - 2017-08-17
+### Added
+- Aiden's profile
+
 ### Changed
 - Speaker and Team headlings
 - James' role title
