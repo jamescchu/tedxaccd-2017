@@ -13,7 +13,6 @@ const moveTo = new MoveTo();
 const dom = Barba.Pjax.Dom;
 const plyr = Plyr;
 
-
 dom.wrapperId = "js--wrapper";
 dom.containerClass = "js--container";
 Barba.Pjax.ignoreClassLink = "pjax--disable";
@@ -23,14 +22,13 @@ function refreshLoad() {
   loadMap();
 
   const triggerMove = document.getElementsByClassName('js--trigger');
-  
+
   plyr.setup({
     controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
   })
 
   const modal = new VanillaModal({
     clickOutside: true,
-    onClose: plyr.get('#promo')[0].restart(),
   });
 
   for (var i = 0; i < triggerMove.length; i++) {
