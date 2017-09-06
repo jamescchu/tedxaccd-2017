@@ -46,8 +46,8 @@
 .modal-inner {
   position: relative;
   overflow: hidden;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 80%;
+  max-height: 80%;
   overflow-x: hidden;
   overflow-y: auto;
   background: #fff;
