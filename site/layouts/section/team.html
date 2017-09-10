@@ -13,12 +13,14 @@
     <h3>Students</h3>
     <div class="content--flex-between">
     {{ range sort $.Site.Data.team ".id" }}
+      <a href="{{ $.Site.BaseURL }}team/{{ .slug }}">
       <div class="content__list">
         <!-- TODO: ADD PROFILE PHOTO -->
-        <!-- <div class="content__thumb"><img src="http://via.placeholder.com/500x500"></div> -->
+        <div class="content__thumb"><img src="{{ $.Site.BaseURL }}images/team/{{ .slug }}.jpg"></div>
         <h2>{{ .name }}</h2>
         <p>{{ .role }}</p>
-        <a href="{{ $.Site.BaseURL }}team/{{ .slug }}" class="content__link--arrow">View Profile</a>
+        <span class="content__link--arrow">View Profile</span>
+        </a>
       </div>
     {{ end }}
     </div>
@@ -32,7 +34,7 @@
     {{ range $.Site.Data.advisors }}
     <div class="content__list">
       <!-- TODO: ADD PROFILE PHOTO -->
-      <!-- <div class="content__thumb"><img src="http://via.placeholder.com/500x500"></div> -->
+      <div class="content__thumb"><img src="{{ $.Site.BaseURL }}images/team/{{ .slug }}.jpg"></div>
       <h2>{{ .name }}</h2>
       <p>{{ .role }}</p>
       <a href="{{ $.Site.BaseURL }}team/{{ .slug }}" class="content__link--arrow">View Profile</a>

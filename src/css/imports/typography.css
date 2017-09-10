@@ -104,6 +104,7 @@ p {
 }
 
 a, .faux--link {
+  cursor: pointer;
   font-family: var(--serif-italic);
   color: var(--primary);
   text-decoration: none;

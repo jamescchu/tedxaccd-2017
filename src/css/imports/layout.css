@@ -501,6 +501,13 @@ label[for="id__menu-state"] {
 
 .content__photo {
     margin: 0 0 4.8rem 0;
+    width: inital;
+    @media (--medium) {
+      width: 35rem;
+    }
+    @media (--large) {
+      width: 48rem;
+    }
 }
 
 .content__map {
