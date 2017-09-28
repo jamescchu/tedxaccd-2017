@@ -254,6 +254,12 @@ const setProgress = () => {
     const y =
       window.scrollY || window.pageYOffset || document.documentElement.scrollTop
     progress = y / endPoint * 100
+    if (progress >= 100) {
+      progress = 100
+    }
+    if (progress <= 0 ) {
+      progress = 0
+    }
     progressBar.style.width = `${progress}%`
     push.style.marginLeft = `${progress}%`
   } catch (e) {
@@ -266,9 +272,8 @@ var setMetrics = () => {
   requestTick()
 }
 
-var getEndPoint = () =>
-  body.scrollHeight -
-  (window.innerHeight || document.documentElement.clientHeight)
+var getEndPoint = () => 
+  body.scrollHeight - (window.innerHeight || document.documentElement.clientHeight)
 
 setMetrics()
 window.addEventListener('scroll', onScroll, false)
