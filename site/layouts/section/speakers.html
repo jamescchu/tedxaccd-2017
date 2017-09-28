@@ -7,12 +7,30 @@
     </div>
   </div>
 </div>
-<!-- TODO: INSERT SPEAKERS -->
+
 <section class="content">
+  <div class="content__container">
+    <h3>Speakers</h3>
+    <div class="content--flex-between">
+    {{ range sort $.Site.Data.speakers ".id" }}
+    {{ if eq .release "true" }}
+    <div class="content__list">
+      <div class="content__thumb"><img src="{{ $.Site.BaseURL }}images/speakers/{{ .slug }}.jpg"></div>
+      <h2>{{ .name }}</h2>
+      <p>{{ .role }}</p>
+      <a href="{{ $.Site.BaseURL }}speakers/{{ .slug }}" class="content__link--arrow">View Profile</a>
+    </div>
+    {{ end }}
+    {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- <section class="content">
   <div class="content__container content--wrap">
     <h2>Coming Soon</h2>
     <p>We will be releasing more information on our speaker line-up in the near future. Please check back soon!</p>
   </div>
-</section>
+</section> -->
 
 {{ partial "footer" . }}
