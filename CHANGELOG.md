@@ -1,4 +1,18 @@
 # Change log
+## [1.2.0] - 2017-09-28
+### Added
+- Speaker Profile Photos
+- Speaker Information
+
+### Changed
+- Speakers listing page for modular releases
+
+## [1.1.2] - 2017-09-09
+### Added
+- Team profile photos
+
+### Changed
+- Kristen's role title
 
 ## [1.1.1] - 2017-09-06
 ### Added
