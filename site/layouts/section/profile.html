@@ -44,7 +44,7 @@
 
   <section class="content">
     <div class="content__container">
-      <!-- <div class="content__photo"><img src="http://via.placeholder.com/500x500"></div> -->
+      <div class="content__photo"><img src="{{ $.Site.BaseURL }}images/team/{{ (index $.Site.Data.advisors .File.BaseFileName).slug }}.jpg"></div>
       <h2>{{ (index $.Site.Data.advisors .File.BaseFileName).role | title }}</h2>
       {{ if (index $.Site.Data.advisors .File.BaseFileName).quote }}
       <blockquote class="content__quote">
@@ -58,6 +58,40 @@
       {{ end }}
       <h3 class="content__about">About</h3>
       <p>{{ (index $.Site.Data.advisors .File.BaseFileName).bio }}</p>
+    </div>
+  </section>
+{{ else if eq .Params.class "speakers" }}
+  <div class="hero">
+    <div class="hero__container">
+      <div class="hero__return">
+        <a href="{{ .Site.BaseURL }}{{ .Params.group }}" class="hero__link--arrow">{{ .Params.group | title }}</a>
+      </div>
+      <div class="hero__heading">
+        <h1>{{ (index $.Site.Data.speakers .File.BaseFileName).name | title }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="content__container">
+      <div class="content__photo"><img src="{{ $.Site.BaseURL }}images/speakers/{{ (index $.Site.Data.speakers .File.BaseFileName).slug }}.jpg"></div>
+      <h2>{{ (index $.Site.Data.speakers .File.BaseFileName).role | title }}</h2>
+      {{ if (index $.Site.Data.speakers .File.BaseFileName).quote }}
+      <blockquote class="content__quote">
+        "{{ (index $.Site.Data.speakers .File.BaseFileName).quote }}"
+        {{ if (index $.Site.Data.speakers .File.BaseFileName).author }}
+        <span class="content__author">
+          - {{ (index $.Site.Data.speakers .File.BaseFileName).author }}
+        </span>
+        {{ end }}
+      </blockquote>
+      {{ end }}
+      {{ if (index $.Site.Data.speakers .File.BaseFileName).fact }}
+      <h3 class="content__about">Random Fact</h3>
+      <p>{{ (index $.Site.Data.speakers .File.BaseFileName).fact }}</p>
+      {{ end }}
+      <h3 class="content__about">About</h3>
+      <p>{{ (index $.Site.Data.speakers .File.BaseFileName).bio }}</p>
     </div>
   </section>
 {{ end }}

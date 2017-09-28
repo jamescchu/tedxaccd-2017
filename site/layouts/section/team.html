@@ -15,7 +15,6 @@
     {{ range sort $.Site.Data.team ".id" }}
       <a href="{{ $.Site.BaseURL }}team/{{ .slug }}">
       <div class="content__list">
-        <!-- TODO: ADD PROFILE PHOTO -->
         <div class="content__thumb"><img src="{{ $.Site.BaseURL }}images/team/{{ .slug }}.jpg"></div>
         <h2>{{ .name }}</h2>
         <p>{{ .role }}</p>
@@ -33,7 +32,6 @@
     <div class="content--flex-between">
     {{ range $.Site.Data.advisors }}
     <div class="content__list">
-      <!-- TODO: ADD PROFILE PHOTO -->
       <div class="content__thumb"><img src="{{ $.Site.BaseURL }}images/team/{{ .slug }}.jpg"></div>
       <h2>{{ .name }}</h2>
       <p>{{ .role }}</p>
