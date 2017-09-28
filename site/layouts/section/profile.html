@@ -91,7 +91,7 @@
       <p>{{ (index $.Site.Data.speakers .File.BaseFileName).fact }}</p>
       {{ end }}
       <h3 class="content__about">About</h3>
-      <p>{{ (index $.Site.Data.speakers .File.BaseFileName).bio }}</p>
+      <p>{{ (index $.Site.Data.speakers .File.BaseFileName).bio | safeHTML }}</p>
     </div>
   </section>
 {{ end }}
