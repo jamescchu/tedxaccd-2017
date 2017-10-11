@@ -536,7 +536,7 @@ label[for="id__menu-state"] {
     justify-content: space-between;
     flex-wrap: wrap;
     @media (--medium) {
-        padding: 0rem 0 2.4rem 0;
+        padding: 0 0 2.4rem 0;
         width: var(--med-width);
         margin: 0 auto;
     }
@@ -545,7 +545,7 @@ label[for="id__menu-state"] {
     }
 }
 
-.footer__nav, .footer__social, .footer__cta {
+.footer__nav, .footer__social {
     padding: 2.4rem 0 0 0;
 }
 
