@@ -31,7 +31,7 @@ enableRobotsTXT = true
 
     [[params.about.section]]
       heading = "Summary"
-      body = "On November 4th, join us to hear 14 unique and diverse topics related to failure. The day will be broken into 3 sessions filled in-between with interactive booths and activities. Lunch and snacks will be provided followed by a reception."
+      body = "On November 4th, join us to hear 12 unique and diverse topics related to failure. The day will be broken into 3 sessions filled in-between with interactive booths and activities. Lunch and snacks will be provided followed by a reception."
       cta = ""
       url = ""
 

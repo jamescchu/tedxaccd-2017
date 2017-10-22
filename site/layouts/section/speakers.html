@@ -13,7 +13,7 @@
     <h3>Speakers</h3>
     <div class="content--flex-between">
     {{ range sort $.Site.Data.speakers ".id" }}
-    {{ if eq .release "true" }}
+    {{ if eq .release "true"}}
     <div class="content__list">
       <div class="content__thumb"><img src="{{ $.Site.BaseURL }}images/speakers/{{ .slug }}.jpg"></div>
       <h2>{{ .name }}</h2>
