@@ -16,8 +16,8 @@
       <a href="{{ $.Site.BaseURL }}team/{{ .slug }}">
       <div class="content__list">
         <div class="content__thumb"><img src="{{ $.Site.BaseURL }}images/team/{{ .slug }}.jpg"></div>
-        <h2>{{ .name }}</h2>
-        <p>{{ .role }}</p>
+        <h2>{{ .name | title }}</h2>
+        <p>{{ .role | title }}</p>
         <span class="content__link--arrow">View Profile</span>
         </a>
       </div>
@@ -33,8 +33,8 @@
     {{ range $.Site.Data.advisors }}
     <div class="content__list">
       <div class="content__thumb"><img src="{{ $.Site.BaseURL }}images/team/{{ .slug }}.jpg"></div>
-      <h2>{{ .name }}</h2>
-      <p>{{ .role }}</p>
+      <h2>{{ .name | title}}</h2>
+      <p>{{ .role | title}}</p>
       <a href="{{ $.Site.BaseURL }}team/{{ .slug }}" class="content__link--arrow">View Profile</a>
     </div>
     {{ end }}
