@@ -33,16 +33,15 @@ function refreshLoad() {
     ],
   })
 
-  const modal = new VanillaModal({
-    clickOutside: true,
-  })
-
   for (let i = 0; i < triggerMove.length; i++) {
     moveTo.registerTrigger(triggerMove[i])
   }
   if (window.location.href.includes('#promo')) {
     modal.open('#promo')
   } else if (location.pathname == '/') {
+    const modal = new VanillaModal({
+      clickOutside: true,
+    })
     downIcon.classList.add('show-icon')
     downIcon.classList.remove('hide-icon')
   } else {
