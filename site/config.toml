@@ -74,6 +74,22 @@ enableRobotsTXT = true
       role = "Sponsorship Coordinator"
       contact = "Sophia de Lara"
       email = "sophia@tedxaccd.com"
+      
+    [[params.partner.gold]]
+      name = "Sodexo"
+      logo = "sodexo.png"
+      
+    [[params.partner.silver]]
+      name = "Idealab"
+      logo = "idealab.png"
+      
+    [[params.partner.silver]]
+      name = "David Martin"
+      logo = "david.png"
+      
+    [[params.partner.bronze]]
+      name = "H.M.C.T."
+      logo = "hmct.png"
 
   [params.footer]
     [[params.footer.social]]

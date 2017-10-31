@@ -17,6 +17,36 @@
   </div>
 </section>
 
+<section class="content">
+  <div class="content__container content--wrap">
+    <h2>Gold Partner</h2>
+    {{ range $.Site.Params.partner.gold }}
+    <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
+    <h3>{{ .name | title}}</h3>
+    {{ end }}
+  </div>
+</section>
+
+<section class="content">
+  <div class="content__container content--wrap">
+    <h2>Silver Partner</h2>
+    {{ range $.Site.Params.partner.silver }}
+    <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
+    <h3>{{ .name | title}}</h3>
+    {{ end }}
+  </div>
+</section>
+
+<section class="content">
+  <div class="content__container content--wrap">
+    <h2>Bronze Partner</h2>
+    {{ range $.Site.Params.partner.bronze }}
+    <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
+    <h3>{{ .name | title}}</h3>
+    {{ end }}
+  </div>
+</section>
+
 <!-- TODO: ADD PARTNERS -->
 
 {{ partial "footer" . }}
