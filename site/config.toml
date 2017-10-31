@@ -80,16 +80,16 @@ enableRobotsTXT = true
       logo = "sodexo.png"
       
     [[params.partner.silver]]
+      name = "H.M.C.T."
+      logo = "hmct.png"
+      
+    [[params.partner.silver]]
       name = "Idealab"
       logo = "idealab.png"
       
     [[params.partner.silver]]
       name = "David Martin"
       logo = "david.png"
-      
-    [[params.partner.silver]]
-      name = "H.M.C.T."
-      logo = "hmct.png"
 
   [params.footer]
     [[params.footer.social]]
