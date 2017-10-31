@@ -78,18 +78,31 @@ enableRobotsTXT = true
     [[params.partner.gold]]
       name = "Sodexo"
       logo = "sodexo.png"
+      url = "http://www.sodexousa.com/"
+      host = "sodexousa.com"
+      
+    [[params.partner.gold]]
+      name = "Full Circle"
+      logo = "fullcircle.png"
+      url = "http://www.artcenter.edu/about/support/fullcircle.html"
+      host = "artcenter.edu"
       
     [[params.partner.silver]]
       name = "H.M.C.T."
       logo = "hmct.png"
+      url = "http://hmctartcenter.org/"
+      host = "hmctartcenter.org"
       
     [[params.partner.silver]]
       name = "Idealab"
       logo = "idealab.png"
+      url = "https://www.idealab.com/"
+      host = "idealab.com"
       
     [[params.partner.silver]]
       name = "David Martin"
       logo = "david.png"
+      url = "#"
 
   [params.footer]
     [[params.footer.social]]

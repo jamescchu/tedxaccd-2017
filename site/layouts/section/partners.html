@@ -21,8 +21,13 @@
   <div class="content__container content--wrap">
     <h2>Gold Partner</h2>
     {{ range $.Site.Params.partner.gold }}
-    <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
-    <h3>{{ .name | title}}</h3>
+    <a href="{{ .url }}">
+      <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
+      <h3>{{ .name | title }}</h3>
+      {{ if .host }}
+      <span class="content__link--arrow">{{ .host }}</span>
+      {{ end }}
+    </a>
     {{ end }}
   </div>
 </section>
@@ -31,21 +36,26 @@
   <div class="content__container content--wrap">
     <h2>Silver Partner</h2>
     {{ range $.Site.Params.partner.silver }}
-    <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
-    <h3>{{ .name | title}}</h3>
+    <a href="{{ .url }}">
+      <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
+      <h3>{{ .name | title }}</h3>
+      {{ if .host }}
+      <span class="content__link--arrow">{{ .host }}</span>
+      {{ end }}
+    </a>
     {{ end }}
   </div>
 </section>
 
-<section class="content">
+<!-- <section class="content">
   <div class="content__container content--wrap">
     <h2>Bronze Partner</h2>
     {{ range $.Site.Params.partner.bronze }}
-    <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
-    <h3>{{ .name | title}}</h3>
-    {{ end }}
+    <a href="{{ .url }}">
+      <div class="content__partners"><img src="{{ $.Site.BaseURL }}images/sponsor/{{ .logo }}"></div>
+    </a>    {{ end }}
   </div>
-</section>
+</section> -->
 
 <!-- TODO: ADD PARTNERS -->
 
