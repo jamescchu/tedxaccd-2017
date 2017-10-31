@@ -87,7 +87,7 @@ enableRobotsTXT = true
       name = "David Martin"
       logo = "david.png"
       
-    [[params.partner.bronze]]
+    [[params.partner.silver]]
       name = "H.M.C.T."
       logo = "hmct.png"
 
