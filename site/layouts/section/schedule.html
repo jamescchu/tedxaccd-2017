@@ -19,7 +19,7 @@
 {{ range $.Site.Params.schedule.session }}
 <section class="content content--list">
   <div class="content__container content--wrap">
-    <h2 data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    <h2>{{ .heading }}</h2>
     {{ range .slot }}
     <p class="content__format">{{ .time }}</p>
     <h3>{{ .heading }}</h3>

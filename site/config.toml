@@ -109,7 +109,7 @@ enableRobotsTXT = true
     
     [[params.schedule.section]]
       heading = "Saturday, November 4th"
-      body = "With the entire event focused on the topic of failure, this is how the day will progress."
+      body = ""
     
     [[params.schedule.session]]
       heading = "Registration"
@@ -117,13 +117,13 @@ enableRobotsTXT = true
       [[params.schedule.session.slot]]
         time = "09:00 AM"
         heading = "Check-in"
-        body = "Breakfast and coffee will be provided, please bring your ticketing information"
+        body = "Breakfast and coffee provided. Sign up for Junk Battle during Lunch"
         slug = ""
         
       [[params.schedule.session.slot]]
         time = "09:30 AM"
         heading = "Doors Open"
-        body = "The Ahmanson Auditorium will open for all guests to seat"
+        body = "The Ahmanson Auditorium open for all guests to seat"
         slug = ""
         
     [[params.schedule.session]]
@@ -132,7 +132,7 @@ enableRobotsTXT = true
       [[params.schedule.session.slot]]
         time = "10:00 AM"
         heading = "Event Introduction"
-        body = "A word from the organizers before we get this show on the road"
+        body = "A word from the organizers"
         slug = ""
         
       [[params.schedule.session.slot]]
@@ -165,13 +165,13 @@ enableRobotsTXT = true
       [[params.schedule.session.slot]]
         time = "11:35 AM – 12:30 PM"
         heading = "Lunch Break"
-        body = "Food will be provided in the Cafe"
+        body = ""
         slug = ""
         
       [[params.schedule.session.slot]]
         time = "11:35 AM"
         heading = "Junk Battle"
-        body = "In partnership with Junk Lab, this is a competition to make something amazing and useful out of a big pile of stuff pulled from ArtCenter’s waste stream."
+        body = "In partnership with Junk Lab, guests will upcycle furniture with ArtCenter’s waste stream."
         slug = ""
         
     [[params.schedule.session]]
@@ -219,13 +219,7 @@ enableRobotsTXT = true
     [[params.schedule.session.slot]]
       time = "02:30 PM – 03:30 PM"
       heading = "Break"
-      body = "Enjoy a chat with everyone else around you and round 2 of Junk Battle!"
-      slug = ""
-      
-    [[params.schedule.session.slot]]
-      time = "02:30 PM"
-      heading = "Junk Battle Part 2"
-      body = "The continuation of Junk Battle from Junk Lab"
+      body = "Enjoy a chat with everyone else around you. Snacks provided"
       slug = ""
       
   [[params.schedule.session]]
@@ -264,7 +258,7 @@ enableRobotsTXT = true
     [[params.schedule.session.slot]]
       time = "05:15 PM"
       heading = "Closing Remarks"
-      body = "Short message before we move onto dinner reception"
+      body = ""
       slug = ""
       
   [[params.schedule.session]]
@@ -272,20 +266,20 @@ enableRobotsTXT = true
     
     [[params.schedule.session.slot]]
       time = "05:30 PM – 8:00 PM"
-      heading = "Dinner Reception"
-      body = "Food and Alcohol will be provided"
+      heading = "Reception"
+      body = "Small bites and alcohol will be provided"
       slug = ""
       
     [[params.schedule.session.slot]]
       time = "05:30 PM"
       heading = "Live Performance: Ready Player Two"
-      body = "Featuring Jericho Law; London Pearson; Jean Lee; David Lee"
+      body = "Featuring Jericho Law, London Pearson, Jean Lee, and David Lee"
       slug = ""
       
     [[params.schedule.session.slot]]
-      time = "05:30 PM"
+      time = "06:30 PM"
       heading = "Live Performance: One Step Closer"
-      body = "Featuring Miky Tayoba Estefania Padilla"
+      body = "Featuring Miky Tayoba and Estefania Padilla"
       slug = ""
 
   [params.footer]
