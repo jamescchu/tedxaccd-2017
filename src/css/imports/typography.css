@@ -81,6 +81,7 @@ h3, .hero--subheading {
   color: var(--secondary);
   font-family: var(--sans-medium);
   font-size: 1.6rem;
+  margin-top: 1.6rem;
   @media (--medium) {
     font-size: 1.8rem;
   }
@@ -191,6 +192,9 @@ a:hover {
   font-family: var(--mono);
   color: var(--primary);
   font-size: 1.6rem;
+  @media (--medium) {
+    font-size: 2rem;
+  }
   @media (--large) {
     font-size: 2.4rem;
   }

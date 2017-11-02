@@ -103,6 +103,190 @@ enableRobotsTXT = true
       name = "David Martin"
       logo = "david.png"
       url = "#"
+      
+  [params.schedule]
+    heading = "Schedule"
+    
+    [[params.schedule.section]]
+      heading = "Saturday, November 4th"
+      body = "With the entire event focused on the topic of failure, this is how the day will progress."
+    
+    [[params.schedule.session]]
+      heading = "Registration"
+      
+      [[params.schedule.session.slot]]
+        time = "09:00 AM"
+        heading = "Check-in"
+        body = "Breakfast and coffee will be provided, please bring your ticketing information"
+        slug = ""
+        
+      [[params.schedule.session.slot]]
+        time = "09:30 AM"
+        heading = "Doors Open"
+        body = "The Ahmanson Auditorium will open for all guests to seat"
+        slug = ""
+        
+    [[params.schedule.session]]
+      heading = "Session One"
+      
+      [[params.schedule.session.slot]]
+        time = "10:00 AM"
+        heading = "Event Introduction"
+        body = "A word from the organizers before we get this show on the road"
+        slug = ""
+        
+      [[params.schedule.session.slot]]
+        time = "10:10 AM"
+        heading = "Bruce Heavin"
+        body = "Co-Founder of Lynda.com, ArtCenter Board of Trustees"
+        slug = "bruce-heavin"
+        
+      [[params.schedule.session.slot]]
+        time = "10:30 AM"
+        heading = "Shirin Hashem"
+        body = "Fashion Consultant and Special Events Producer"
+        slug = "shirin-hashem"
+      
+      [[params.schedule.session.slot]]
+        time = "10:50 AM"
+        heading = "Sara Ortloff Khoury"
+        body = "Director of User Experience Design at Google"
+        slug = "sara-khoury"
+        
+      [[params.schedule.session.slot]]
+        time = "11:10 AM"
+        heading = "Akuyoe Graham"
+        body = "Awardwinning Playwright, Actor, and Educator"
+        slug = "akuyoe-graham"
+        
+    [[params.schedule.session]]
+      heading = "Lunch"
+      
+      [[params.schedule.session.slot]]
+        time = "11:35 AM – 12:30 PM"
+        heading = "Lunch Break"
+        body = "Food will be provided in the Cafe"
+        slug = ""
+        
+      [[params.schedule.session.slot]]
+        time = "11:35 AM"
+        heading = "Junk Battle"
+        body = "In partnership with Junk Lab, this is a competition to make something amazing and useful out of a big pile of stuff pulled from ArtCenter’s waste stream."
+        slug = ""
+        
+    [[params.schedule.session]]
+      heading = "Session Two"
+      
+      [[params.schedule.session.slot]]
+        time = "12:35 PM"
+        heading = "TED Video"
+        body = "An official, pre-recorded TED Talk will be featured"
+        slug = ""
+        
+      [[params.schedule.session.slot]]
+        time = "12:55 PM"
+        heading = "Word from Fred Fehlau"
+        body = "A quick message from our provost at ArtCenter"
+        slug = ""
+        
+      [[params.schedule.session.slot]]
+        time = "01:00 PM"
+        heading = "Alan Castel"
+        body = "Professor of Psychology at UCLA"
+        slug = "alan-castel"
+      
+      [[params.schedule.session.slot]]
+        time = "01:20 PM"
+        heading = "Tracy Drain"
+        body = "Systems Engineer at JPL"
+        slug = "sara-khoury"
+        
+      [[params.schedule.session.slot]]
+        time = "01:40 PM"
+        heading = "Mary Sue Milliken"
+        body = "Chef, Restraunteur, Author, TV Personality"
+        slug = "mary-milliken"
+        
+      [[params.schedule.session.slot]]
+        time = "02:00 PM"
+        heading = "AB Cassidy"
+        body = "Comedian, Writer, and Actor"
+        slug = "ab-cassidy"
+        
+  [[params.schedule.session]]
+    heading = "Break"
+    
+    [[params.schedule.session.slot]]
+      time = "02:30 PM – 03:30 PM"
+      heading = "Break"
+      body = "Enjoy a chat with everyone else around you and round 2 of Junk Battle!"
+      slug = ""
+      
+    [[params.schedule.session.slot]]
+      time = "02:30 PM"
+      heading = "Junk Battle Part 2"
+      body = "The continuation of Junk Battle from Junk Lab"
+      slug = ""
+      
+  [[params.schedule.session]]
+    heading = "Session Three"
+    
+    [[params.schedule.session.slot]]
+      time = "03:35 PM"
+      heading = "TED Video"
+      body = "An official, pre-recorded TED Talk will be featured"
+      slug = ""
+      
+    [[params.schedule.session.slot]]
+      time = "03:55 PM"
+      heading = "Jasmine Henderson"
+      body = "Professional Soccer Player, World Record Holder, Motivational Speaker, and Author"
+      slug = "jasmine-henderson"
+    
+    [[params.schedule.session.slot]]
+      time = "04:15 PM"
+      heading = "Noah Minuskin"
+      body = "Tattoo Artist, Business Owner, ArtCenter Illustration Alum"
+      slug = "noah-minuskin"
+      
+    [[params.schedule.session.slot]]
+      time = "04:35 PM"
+      heading = "Story Musgrave"
+      body = "Astronaut, Physician, Scientist, Teacher, Mentor, and much more"
+      slug = "story-musgrave"
+      
+    [[params.schedule.session.slot]]
+      time = "04:55 PM"
+      heading = "Charlie Hodges"
+      body = "Professional Dancer; Product Design Student at ArtCenter"
+      slug = "charlie-hodges"
+      
+    [[params.schedule.session.slot]]
+      time = "05:15 PM"
+      heading = "Closing Remarks"
+      body = "Short message before we move onto dinner reception"
+      slug = ""
+      
+  [[params.schedule.session]]
+    heading = "Reception"
+    
+    [[params.schedule.session.slot]]
+      time = "05:30 PM – 8:00 PM"
+      heading = "Dinner Reception"
+      body = "Food and Alcohol will be provided"
+      slug = ""
+      
+    [[params.schedule.session.slot]]
+      time = "05:30 PM"
+      heading = "Live Performance: Ready Player Two"
+      body = "Featuring Jericho Law; London Pearson; Jean Lee; David Lee"
+      slug = ""
+      
+    [[params.schedule.session.slot]]
+      time = "05:30 PM"
+      heading = "Live Performance: One Step Closer"
+      body = "Featuring Miky Tayoba Estefania Padilla"
+      slug = ""
 
   [params.footer]
     [[params.footer.social]]

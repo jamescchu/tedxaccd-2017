@@ -1,0 +1,35 @@
+{{ partial "header" . }} {{ partial "svg/inline" . }} {{ partial "nav" . }}
+
+<div class="hero">
+  <div class="hero__container">
+    <div class="hero__heading">
+      <h1>{{ $.Site.Params.schedule.heading | title }}</h1>
+    </div>
+  </div>
+</div>
+{{ range $.Site.Params.schedule.section }}
+<section class="content">
+  <div class="content__container content--wrap">
+    <h2 data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    <p data-aos="fade-up" data-aos-easing="ease-out" data-aos-delay="50">{{ .body | safeHTML }}</p>
+  </div>
+</section>
+{{ end }}
+
+{{ range $.Site.Params.schedule.session }}
+<section class="content content--list">
+  <div class="content__container content--wrap">
+    <h2 data-aos="fade-up" data-aos-easing="ease-out">{{ .heading }}</h2>
+    {{ range .slot }}
+    <p class="content__format">{{ .time }}</p>
+    <h3>{{ .heading }}</h3>
+    <p>{{ .body }}</p>
+    {{ if .slug }}
+      <a href="/speakers/{{ .slug }}" target="_blank" class="content__link--arrow">View Profile</a>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ partial "footer" . }}
