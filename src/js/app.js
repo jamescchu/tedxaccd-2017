@@ -16,6 +16,7 @@ dom.containerClass = 'js--container'
 Barba.Pjax.ignoreClassLink = 'pjax--disable'
 
 function refreshLoad() {
+  window.scrollTo(0, 0);
   setMetrics()
   loadMap()
 
