@@ -1,10 +1,16 @@
 {{ partial "header" . }} {{ partial "svg/inline" . }}{{ partial "promo" . }} {{ partial "nav" . }}
 <div class="hero hero--section">
+  
   <div class="hero__container">
+    
     <div class="hero__heading">
       <h1>{{ $.Site.Params.index.heading | safeHTML }}</h1>
       <a href="/schedule" class="content__link--arrow">View Schedule</a>
     </div>
+    <video poster="/images/TEDxACCD_2017-HD.jpg" id="bgvid" playsinline autoplay muted loop>
+      <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+    <source src="/videos/TEDxACCD_2017-HD.mp4" type="video/mp4">
+    </video>
     <div class="hero__details">
       <h2 class="hero--subheading">{{ $.Site.Params.index.date }}</h2>
       <h3>{{ $.Site.Params.index.location }}</h3>

@@ -86,6 +86,17 @@
     letter-spacing: 1rem;
   }
 }
+
+.ani-glitch--fast:before {
+  animation-delay: 0;
+  animation: noise-anim-2 1s infinite linear alternate-reverse;
+}
+
+.ani-glitch--fast:after {
+  animation-delay: 0;
+  animation: noise-anim 1s infinite linear alternate-reverse;
+}
+
 .ani-glitch::after {
   content: attr(data-text);
   position: absolute;
