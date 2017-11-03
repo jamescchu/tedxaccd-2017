@@ -22,17 +22,17 @@ function refreshLoad() {
 
   const triggerMove = document.getElementsByClassName('js--trigger')
 
-  plyr.setup({
-    controls: [
-      'play-large',
-      'play',
-      'progress',
-      'current-time',
-      'mute',
-      'volume',
-      'fullscreen',
-    ],
-  })
+  // plyr.setup({
+  //   controls: [
+  //     'play-large',
+  //     'play',
+  //     'progress',
+  //     'current-time',
+  //     'mute',
+  //     'volume',
+  //     'fullscreen',
+  //   ],
+  // })
 
   for (let i = 0; i < triggerMove.length; i++) {
     moveTo.registerTrigger(triggerMove[i])
